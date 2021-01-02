@@ -10,9 +10,39 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Dublin Rent Prices</title>
+    <title>Open Rent</title>
 </head>
 <body>
+
+    <header>
+        <!-- top navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo logo black-text">Open Rent</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="black-text" href="#">Home</a></li>
+                    <li><a class="black-text" href="#">Profile</a></li>
+                    <li><a class="black-text" href="#">New Tenancy</a></li>
+                    <li><a class="black-text" href="#">Manage Tenancies</a></li>
+                    <li><a class="black-text" href="#">Log Out</a></li>
+                    <li><a class="black-text" href="#">Log In</a></li>
+                    <li><a class="black-text" href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- mobile side navbar -->
+        <ul class="sidenav white-text" id="mobile-demo">
+            <li><h4 class="logo text-shadow center-align">Open Rent</h4></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">New Tenancy</a></li>
+            <li><a href="#">Manage Tenancies</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </header>
 
     {% block content %}
     {% endblock %}

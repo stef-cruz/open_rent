@@ -1,3 +1,28 @@
-body {
-  background-color: red;
+@import 'variables';
+@import 'nav';
+
+//
+// General Styling
+//
+
+* {
+  margin: 0;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+body,
+footer {
+  font-family: $paragraph;
+}
+
+.text-shadow {
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0, 0.5);
 }

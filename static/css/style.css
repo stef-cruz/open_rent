@@ -1,5 +1,36 @@
-body {
-  background-color: red;
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue:100,200,300,400,500,600,700|Open+Sans:100,200,300,400,500,600,700");
+.logo {
+  font-family: "Bebas Neue", serif;
+}
+
+.nav-wrapper {
+  background-color: #76ff03;
+}
+
+.sidenav {
+  background-color: #ff6d00;
+}
+
+* {
+  margin: 0;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+body,
+footer {
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-shadow {
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
