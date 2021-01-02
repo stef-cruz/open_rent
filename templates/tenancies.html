@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Extending the base template</h2>
-
     {% for tenancy in tenancies %}
         {{ tenancy.address }} <br>
         {{ tenancy.latitude }} <br>
