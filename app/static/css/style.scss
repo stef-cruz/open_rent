@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'nav';
+@import 'footer';
 
 //
 // General Styling
@@ -7,15 +8,7 @@
 
 * {
   margin: 0;
-}
-
-h2 {
-  font-size: 3.2rem;
-}
-
-p,
-a {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 body,

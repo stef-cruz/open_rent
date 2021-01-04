@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="105">
+          <list size="106">
             <item index="0" class="java.lang.String" itemvalue="scikit-learn" />
             <item index="1" class="java.lang.String" itemvalue="pickleshare" />
             <item index="2" class="java.lang.String" itemvalue="py" />
@@ -110,6 +110,7 @@
             <item index="102" class="java.lang.String" itemvalue="proto-plus" />
             <item index="103" class="java.lang.String" itemvalue="aiohttp" />
             <item index="104" class="java.lang.String" itemvalue="google-auth" />
+            <item index="105" class="java.lang.String" itemvalue="pymongo" />
           </list>
         </value>
       </option>

@@ -1,0 +1,47 @@
+.footer {
+  background-color: black;
+  color: white;
+
+  &__logo {
+    margin: 1.5rem 0;
+
+    &-heading {
+      font-family: $title;
+      margin-bottom: 0;
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__nav {
+    text-decoration: none;
+    margin: 1.5rem 0;
+
+    a {
+      color: white;
+    }
+  }
+
+  &__social {
+    margin: 1.5rem 0;
+
+    a {
+      color: white;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__copyright {
+    @include flexbox;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
