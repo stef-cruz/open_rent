@@ -1,5 +1,9 @@
 .logo {
   font-family: $title;
+
+  @include bp(desktop) {
+    margin-left: 2rem;
+  }
 }
 
 .nav-wrapper {

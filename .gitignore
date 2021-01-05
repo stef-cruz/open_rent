@@ -1,5 +1,5 @@
 env.py
 __pycache__/
 yarn.lock
+.idea/
 .idea
-.idea/*

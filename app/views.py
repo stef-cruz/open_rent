@@ -2,7 +2,6 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 
-# the app variable from the app package
 from app import app
 from app.database import DB_TENANCIES
 

@@ -2,6 +2,11 @@
 .logo {
   font-family: "Bebas Neue", serif;
 }
+@media (min-width: 64rem) {
+  .logo {
+    margin-left: 2rem;
+  }
+}
 
 .nav-wrapper {
   background-color: #76ff03;

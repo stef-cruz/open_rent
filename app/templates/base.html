@@ -19,15 +19,14 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo logo black-text">Open Rent</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="black-text" href="#">Home</a></li>
                     <li><a class="black-text" href="#">Profile</a></li>
                     <li><a class="black-text" href="#">New Tenancy</a></li>
                     <li><a class="black-text" href="#">Manage Tenancies</a></li>
                     <li><a class="black-text" href="#">Log Out</a></li>
-                    <li><a class="black-text" href="#">Log In</a></li>
-                    <li><a class="black-text" href="#">Register</a></li>
+                    <li><a class="black-text" href="{{ url_for('register') }}">Log In</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,7 +39,6 @@
             <li><a href="#">Manage Tenancies</a></li>
             <li><a href="#">Log Out</a></li>
             <li><a href="#">Log In</a></li>
-            <li><a href="#">Register</a></li>
         </ul>
     </header>
     <main>
@@ -62,7 +60,6 @@
                         <li><a href="#">Manage Tenancies</a></li>
                         <li><a href="#">Log Out</a></li>
                         <li><a href="#">Log In</a></li>
-                        <li><a href="#">Register</a></li>
                     </ul>
                 </div>
                 <div class="col s12 m6 offset-m6 footer__social">
