@@ -1,0 +1,10 @@
+.register {
+  button {
+    background-color: $prim-colour;
+    color: black;
+
+    &:hover {
+      background-color: $prim-colour-dark;
+    }
+  }
+}

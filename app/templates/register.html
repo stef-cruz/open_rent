@@ -3,7 +3,7 @@
 
 <h3 class="center-align">Log in</h3>
 
-<div class="container">
+<div class="container register">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register')}}">
             <div class="card-panel">
@@ -12,6 +12,13 @@
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" class="validate">
                         <label for="username">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-envelope prefix"></i>
+                        <input id="email" name="email" type="email" class="validate">
+                        <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
@@ -27,6 +34,11 @@
                         <input id="confirm_password" name="confirm_password" type="password" class="validate">
                         <label for="confirm_password">Confirm Password</label>
                     </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="col s8 btn-large offset-s2">
+                        Log in <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
         </form>
