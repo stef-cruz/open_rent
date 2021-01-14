@@ -68,6 +68,11 @@
 .user-auth__signup {
   text-align: center;
 }
+.user-auth span {
+  font-size: 1.2rem;
+  margin-left: 3rem;
+  color: rgba(0, 0, 0, 0.5);
+}
 
 * {
   margin: 0;

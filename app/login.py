@@ -11,6 +11,11 @@ from app.database import MONGO, DB_USERS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+
+        if request.form.get('confirm-password') != request.form.get('password'):
+            flash("Password does not match, try again.")
+            return redirect(url_for("register"))
+
         # Check if username exists in db
         existing_user = DB_USERS.find_one({
             "username": request.form.get("username").lower()
