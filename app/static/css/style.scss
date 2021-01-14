@@ -21,3 +21,9 @@ footer {
 .text-shadow {
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0, 0.5);
 }
+
+.flash {
+  background-color: $sec-colour;
+  line-height: 2;
+  color: white;
+}

@@ -1,4 +1,4 @@
-.register {
+.user-auth {
   button {
     background-color: $prim-colour;
     color: black;
@@ -6,5 +6,9 @@
     &:hover {
       background-color: $prim-colour-dark;
     }
+  }
+
+  &__signup {
+    text-align: center;
   }
 }

@@ -58,12 +58,15 @@
   font-size: 1rem;
 }
 
-.register button {
+.user-auth button {
   background-color: #76ff03;
   color: black;
 }
-.register button:hover {
+.user-auth button:hover {
   background-color: #60d200;
+}
+.user-auth__signup {
+  text-align: center;
 }
 
 * {
@@ -78,6 +81,12 @@ footer {
 
 .text-shadow {
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.flash {
+  background-color: #ff6d00;
+  line-height: 2;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
