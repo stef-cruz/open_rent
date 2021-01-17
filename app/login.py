@@ -7,7 +7,7 @@ from app import app
 from app.database import MONGO, DB_USERS
 
 
-# Registration
+# REGISTER FUNCTION
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -43,7 +43,7 @@ def register():
     return render_template('register.html')
 
 
-# Log in
+# LOG IN FUNCTION
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -71,4 +71,11 @@ def login():
     # GET method
     return render_template('login.html')
 
-# Log out
+
+# LOG OUT FUNCTION
+@app.route("/logout")
+def logout():
+    # remove user session from cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))

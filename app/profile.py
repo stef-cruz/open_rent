@@ -11,4 +11,8 @@ def profile(username):
     # fetch username from db
     username = DB_USERS.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
