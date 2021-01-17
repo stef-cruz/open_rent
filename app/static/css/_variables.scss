@@ -12,16 +12,16 @@ $paragraph: "Open Sans", sans-serif;
 $normal-text-size: 1.6rem;
 
 //Colours
-$prim-colour: #76ff03;
+$prim-colour: #68ff5b;
 $prim-colour-dark:#60d200;
 $sec-colour: #ff6d00;
 $ter-colour: #e040fb;
 
 // Mixins
-@mixin flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@mixin flexbox($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 

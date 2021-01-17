@@ -39,7 +39,7 @@
   }
 
   &__copyright {
-    @include flexbox;
+    @include flexbox(flex, center, center);
     p {
       font-size: 1rem;
     }

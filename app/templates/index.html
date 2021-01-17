@@ -1,12 +1,83 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            User driven website of rent prices in Ireland.
+<!--Hero-->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="row">
+            <div class="col">
+                <div class="hero-container__icons">
+                    <img src="{{ url_for('static', filename='images/icons8-country-house.png') }}" alt="House icon">
+                    <i class="fas fa-plus"></i>
+                    <img src="{{ url_for('static', filename='images/icons8-money-bag.png') }}" alt="Money bag icon">
+                    <i class="fas fa-plus"></i>
+                    <img src="{{ url_for('static', filename='images/icons8-ireland-map.png') }}" alt="Ireland map icon">
+                </div>
+                <h2>User driven website of rent prices in Ireland.</h2>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!--Content divider-->
+<section class="divider">
+    <div class="container">
+        <div class="row">
+            <div class="col divider__content">
+                <p><span>REFER US TO YOUR FRIENDS!</span>
+                    <i class="far fa-smile"></i>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> -
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener">Twitter</a> -
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Insta</a>
+                 </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Map-->
+<section>
+
+</section>
+
+<!--How it works-->
+<section>
+    <div class="container">
+        <h4>How does it work?</h4>
+        <div class="row">
+            <div class="col">
+                <div>
+                    Log in to OpenRent
+                </div>
+                <div>
+                    Add how much you pay for rent and the location
+                </div>
+                <div>
+                    Done! The info will be displayed on the map
+                </div>
+
+            </div>
+            <div class="col">
+                Right
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Ethos -->
+<section>
+    <div class="container">
+        <h4>Ethos</h4>
+        <div class="row">
+            <div class="col">
+                <p>Always wondered what are the rent prices practiced in the market? Same here.
+                    Our goal is to create a user driven database of rent prices in Ireland so we,
+                    the customers, know how much rent is being charged in the city.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

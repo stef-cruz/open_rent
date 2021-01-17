@@ -9,12 +9,36 @@
 }
 
 .nav-wrapper {
-  background-color: #76ff03;
-  box-shadow: 0.2rem 0.2rem #76ff03;
+  background-color: #68ff5b;
+  box-shadow: 0.2rem 0.2rem #68ff5b;
 }
 
 .sidenav {
   background-color: #ff6d00;
+}
+
+.hero {
+  background-color: #68ff5b;
+}
+.hero .hero-container {
+  padding: 5rem 0;
+}
+.hero .hero-container h2 {
+  font-weight: 700;
+  text-align: center;
+  margin: 3rem 0;
+}
+.hero .hero-container__icons {
+  text-align: center;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+}
+.hero .hero-container__icons i {
+  margin: 1rem;
+  color: white;
 }
 
 .footer {
@@ -59,11 +83,11 @@
 }
 
 .user-auth button {
-  background-color: #76ff03;
+  background-color: #68ff5b;
   color: black;
 }
 .user-auth button:hover {
-  background-color: #60d200;
+  background-color: #ff6d00;
 }
 .user-auth__signup {
   text-align: center;
@@ -72,6 +96,22 @@
   font-size: 1.2rem;
   margin-left: 3rem;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.divider {
+  background-color: #ff6d00;
+  height: 4rem;
+  font-weight: 100;
+}
+.divider a {
+  text-decoration: none;
+  color: black;
+}
+.divider span, .divider i {
+  padding-right: 3rem;
+}
+.divider__content {
+  margin: 1rem 0;
 }
 
 * {

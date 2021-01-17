@@ -1,0 +1,25 @@
+.hero {
+  background-color: $prim-colour;
+
+  .hero-container {
+    padding: 5rem 0;
+
+    h2 {
+      font-weight: 700;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    &__icons {
+      text-align: center;
+      @include flexbox(flex, space-between, center);
+      width: 40%;
+      margin: 0 auto;
+
+      i {
+        margin: 1rem;
+        color: white;
+      }
+    }
+  }
+}
