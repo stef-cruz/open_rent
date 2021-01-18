@@ -1,6 +1,6 @@
 .divider {
   background-color: $sec-colour;
-  height: 4rem;
+  height: 6rem;
   font-weight: 100;
 
   a {
@@ -8,11 +8,37 @@
     color: black;
   }
 
-  span, i {
-    padding-right: 3rem;
+  i {
+    display: none;
+  }
+
+  @include bp(tablet) {
+    height: 4rem;
+
+    i,span {
+      padding-right: 2rem;
+      display: inline;
+    }
   }
 
   &__content {
     margin: 1rem 0;
+    // Animation source https://colibriwp.com/blog/scrolling-text/
+    div {
+      /* Starting position */
+      transform:translateX(100%);
+      /* Apply animation to this element */
+      animation: slide-horizontal 30s linear infinite;
+      text-align: center;
+    }
+    /* Move it (define the animation) */
+    @keyframes slide-horizontal {
+      0%   {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
   }
 }

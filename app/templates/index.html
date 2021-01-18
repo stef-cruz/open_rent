@@ -23,17 +23,18 @@
 <section class="divider">
     <div class="container">
         <div class="row">
-            <div class="col divider__content">
-                <p><span>REFER US TO YOUR FRIENDS!</span>
+            <div class="col s12 divider__content">
+                <div>
+                    <span>REFER US TO YOUR FRIENDS!</span>
                     <i class="far fa-smile"></i>
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> -
                     <a href="https://www.twitter.com/" target="_blank" rel="noopener">Twitter</a> -
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener">Insta</a>
-                 </p>
-
+                </div>
             </div>
         </div>
     </div>
+
 </section>
 
 <!--Map-->
@@ -43,23 +44,26 @@
 
 <!--How it works-->
 <section>
-    <div class="container">
+    <div class="container steps">
         <h4>How does it work?</h4>
         <div class="row">
-            <div class="col">
-                <div>
+            <div class="col s12 m6 steps__wrapper">
+                <div class="steps__one">
+                    <img src="{{ url_for('static', filename='images/icons8-circled-1.png') }}" alt="Step 1">
                     Log in to OpenRent
                 </div>
-                <div>
+                <div class="steps__two">
+                    <img src="{{ url_for('static', filename='images/icons8-circled-2.png') }}" alt="Step 2">
                     Add how much you pay for rent and the location
                 </div>
-                <div>
+                <div class="steps__three">
+                    <img src="{{ url_for('static', filename='images/icons8-circled-3.png') }}" alt="Step 3">
                     Done! The info will be displayed on the map
                 </div>
 
             </div>
-            <div class="col">
-                Right
+            <div class="col s12 m6 steps__illustration">
+                <img src="{{ url_for('static', filename='images/woman-in-house.png') }}" alt="Woman in house">
             </div>
         </div>
     </div>
@@ -71,10 +75,9 @@
         <h4>Ethos</h4>
         <div class="row">
             <div class="col">
-                <p>Always wondered what are the rent prices practiced in the market? Same here.
-                    Our goal is to create a user driven database of rent prices in Ireland so we,
-                    the customers, know how much rent is being charged in the city.
-                </p>
+                <p>Have you always wondered what are the rent prices practiced in the market? Same here.</p>
+                <p>Our goal is to create a user driven database of rent prices in Ireland so we,
+                    the customers, know how much rent is being charged in the city.</p>
             </div>
         </div>
     </div>

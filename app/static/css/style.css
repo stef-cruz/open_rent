@@ -41,6 +41,26 @@
   color: white;
 }
 
+.steps h4 {
+  margin: 3rem 0;
+}
+.steps__wrapper img {
+  display: grid;
+}
+.steps__one {
+  margin-bottom: 3rem;
+}
+.steps__two {
+  margin-bottom: 3rem;
+  margin-left: 4rem;
+}
+.steps__three {
+  margin-bottom: 3rem;
+}
+.steps__illustration img {
+  width: 100%;
+}
+
 .footer {
   background-color: black;
   color: white;
@@ -100,18 +120,43 @@
 
 .divider {
   background-color: #ff6d00;
-  height: 4rem;
+  height: 6rem;
   font-weight: 100;
 }
 .divider a {
   text-decoration: none;
   color: black;
 }
-.divider span, .divider i {
-  padding-right: 3rem;
+.divider i {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .divider {
+    height: 4rem;
+  }
+  .divider i, .divider span {
+    padding-right: 2rem;
+    display: inline;
+  }
 }
 .divider__content {
   margin: 1rem 0;
+  /* Move it (define the animation) */
+}
+.divider__content div {
+  /* Starting position */
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  animation: slide-horizontal 30s linear infinite;
+  text-align: center;
+}
+@keyframes slide-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 * {

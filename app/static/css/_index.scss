@@ -23,3 +23,34 @@
     }
   }
 }
+
+.steps {
+  h4 {
+    margin: 3rem 0;
+  }
+
+  &__wrapper {
+    img {
+      display: grid;
+    }
+  }
+
+  &__one {
+    margin-bottom: 3rem;
+  }
+
+  &__two {
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+  }
+
+  &__three {
+    margin-bottom: 3rem;
+  }
+
+  &__illustration {
+    img {
+      width: 100%;
+    }
+  }
+}
