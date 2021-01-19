@@ -45,7 +45,7 @@
 <!--How it works-->
 <section>
     <div class="container steps">
-        <h4>How does it work?</h4>
+        <h3>How does it work?</h3>
         <div class="row">
             <div class="col s12 m6 steps__wrapper">
                 <div class="steps__one">
@@ -60,24 +60,61 @@
                     <img src="{{ url_for('static', filename='images/icons8-circled-3.png') }}" alt="Step 3">
                     Done! The info will be displayed on the map
                 </div>
-
             </div>
             <div class="col s12 m6 steps__illustration">
+                <!-- TODO: align illustration horizontally in the container  -->
                 <img src="{{ url_for('static', filename='images/woman-in-house.png') }}" alt="Woman in house">
+            </div>
+        </div>
+        <div class="row">
+            <button class="col s10 m6 btn-large offset-s1 offset-m3">
+                <a href="{{ url_for('register') }}">Register here <i class="fas fa-paper-plane"></i></a>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!--Map -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Rent Map</h4>
             </div>
         </div>
     </div>
 </section>
 
-<!--Ethos -->
+<!--About / Why OpenRent -->
+<section class="about">
+    <div class="container center-align">
+        <div class="row">
+            <div class="col about__hero">
+                <h2>Why OpenRent?</h2>
+                <p>To bring the rental information to everyone and empower the people with knowledge.</p>
+            </div>
+            <div class="col s5 about__card">
+                <div class="card-panel">
+                    <span class="black-text">For you: <br> Find out what are the rent prices practiced in the Irish market.</span>
+                </div>
+            </div>
+            <div class="col s5 about__card">
+                <div class="card-panel">
+                    <span class="black-text">For the community: <br> create a database of rent prices in Ireland.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Contact -->
 <section>
-    <div class="container">
-        <h4>Ethos</h4>
+    <div class="container contact">
+        <h2>Let's Chat</h2>
         <div class="row">
             <div class="col">
-                <p>Have you always wondered what are the rent prices practiced in the market? Same here.</p>
-                <p>Our goal is to create a user driven database of rent prices in Ireland so we,
-                    the customers, know how much rent is being charged in the city.</p>
+                <p>Whether you fancy a chat or want to talk about our mission, we're here for you.</p>
             </div>
         </div>
     </div>

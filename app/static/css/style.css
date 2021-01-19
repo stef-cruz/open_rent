@@ -41,24 +41,49 @@
   color: white;
 }
 
-.steps h4 {
-  margin: 3rem 0;
+.steps h3 {
+  margin: 5rem 0;
+  font-weight: 600;
 }
 .steps__wrapper img {
   display: grid;
 }
 .steps__one {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
 }
 .steps__two {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-left: 4rem;
+  font-size: 1.5rem;
 }
 .steps__three {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
 }
 .steps__illustration img {
   width: 100%;
+}
+.steps button {
+  background-color: black;
+}
+.steps button:hover {
+  background-color: #ff6d00;
+}
+.steps button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.about__hero {
+  margin: 20rem 0;
+}
+.about__card .card-panel {
+  background-color: #68ff5b;
+  border-radius: 2rem;
+  height: 20rem;
+  width: 15rem;
 }
 
 .footer {

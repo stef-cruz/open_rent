@@ -25,8 +25,9 @@
 }
 
 .steps {
-  h4 {
-    margin: 3rem 0;
+  h3 {
+    margin: 5rem 0;
+    font-weight: 600;
   }
 
   &__wrapper {
@@ -36,21 +37,53 @@
   }
 
   &__one {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
   }
 
   &__two {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     margin-left: 4rem;
+    font-size: 1.5rem;
   }
 
   &__three {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
   }
 
   &__illustration {
     img {
       width: 100%;
+    }
+  }
+
+  button {
+    background-color: black;
+
+    &:hover {
+      background-color: $sec-colour;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.about {
+  &__hero {
+    margin: 20rem 0;
+  }
+
+  &__card {
+    .card-panel {
+      background-color: $prim-colour;
+      border-radius: 2rem;
+      height: 20rem;
+      width: 15rem;
     }
   }
 }
