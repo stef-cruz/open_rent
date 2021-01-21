@@ -123,3 +123,25 @@
     }
     }
   }
+
+.contact {
+  background-color: $prim-colour;
+  padding: 10rem 0;
+
+  button {
+    background-color: white;
+    margin: 3rem 0;
+
+    &:hover {
+      background-color: black;
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      color: black;
+      font-size: 1.2rem;
+    }
+  }
+}

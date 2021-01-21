@@ -118,6 +118,25 @@
   top: -8rem;
 }
 
+.contact {
+  background-color: #68ff5b;
+  padding: 10rem 0;
+}
+.contact button {
+  background-color: white;
+  margin: 3rem 0;
+}
+.contact button:hover {
+  background-color: black;
+}
+.contact button:hover a {
+  color: white;
+}
+.contact button a {
+  color: black;
+  font-size: 1.2rem;
+}
+
 .footer {
   background-color: black;
   color: white;
