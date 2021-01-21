@@ -89,23 +89,25 @@
 <section class="about">
     <div class="container center-align">
         <div class="row">
-            <div class="col about__hero">
+            <div class="col s12 about__hero">
                 <h2>Why OpenRent?</h2>
                 <p>To bring the rental information to everyone and empower the people with knowledge.</p>
             </div>
-            <div class="col s5 about__card">
+            <div class="col s12 m6 about__card">
                 <div class="card-panel">
-                    <span class="black-text">For you: <br> Find out what are the rent prices practiced in the Irish market.</span>
+                    <img class="img-one" src="{{ url_for('static', filename='images/for-you.png') }}" alt="Man with magnifying glass">
+                    <div class="black-text txt-one"><span>FOR YOU</span><br> Find out what are the rent prices practiced in the Irish market.</div>
                 </div>
             </div>
-            <div class="col s5 about__card">
+            <div class="col s12 m6 about__card">
                 <div class="card-panel">
-                    <span class="black-text">For the community: <br> create a database of rent prices in Ireland.</span>
+                    <img class="img-two-right" src="{{ url_for('static', filename='images/for-the-community-boy.png') }}" alt="Man with hand up waving">
+                    <div class="black-text txt-two"><span>FOR THE <br> COMMUNITY</span><br> User friendly database of rent prices in Ireland.</div>
+                    <img class="img-two-left" src="{{ url_for('static', filename='images/for-the-community-girl.png') }}" alt="Woman with hand up waving">
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 <!-- Contact -->

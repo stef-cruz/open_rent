@@ -74,16 +74,52 @@
 }
 
 .about {
-  &__hero {
-    margin: 20rem 0;
-  }
+  margin: 20rem 0;
 
   &__card {
     .card-panel {
       background-color: $prim-colour;
       border-radius: 2rem;
       height: 20rem;
-      width: 15rem;
+      margin: 4rem 1rem;
+    }
+
+    span {
+      font-family: $title;
+      font-size: 1.8rem;
+    }
+
+    .img-one {
+      height: 7.2rem;
+      background-size: cover;
+      position: relative;
+      top: -3rem;
+      left: -4rem;
+    }
+
+    .txt-one {
+      margin-top: -2rem;
+    }
+
+    .img-two-right {
+        height: 10rem;
+        background-size: cover;
+        position: relative;
+        top: -4rem;
+        left: 7rem;
+      }
+
+    .img-two-left {
+      height: 8.5rem;
+      background-size: cover;
+      position: relative;
+      top: -8.2rem;
+      left: -7rem;
+    }
+
+    .txt-two {
+      position: relative;
+      top: -8rem;
+    }
     }
   }
-}
