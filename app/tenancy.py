@@ -8,10 +8,10 @@ from app.database import DB_TENANCIES
 
 @app.route("/add_tenancy")
 def add_tenancy():
-    return render_template("tenancies.html")
+    return render_template("add-tenancy.html")
 
 
-@app.route("/get_tenancy")
-def get_tenancies():
+@app.route("/view_tenancy")
+def view_tenancies():
     tenancies = DB_TENANCIES.find()
-    return render_template("tenancies.html", tenancies=tenancies)
+    return render_template("view-tenancy.html", tenancies=tenancies)

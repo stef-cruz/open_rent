@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Get Tenancy</h3>
+
+<div class="container">
+
+    <!--Get Tenancy -->
+    <div class="row">
+        <div class="col">
+            {% for tenancy in tenancies %}
+            {{ tenancy.address }} <br>
+            {{ tenancy.category_type }} <br>
+            {{ tenancy.start_date }} <br>
+            {{ tenancy.end_date }} <br>
+            {{ tenancy.price }} <br>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row">
+        <!--Edit Tenancy -->
+        <div class="col s12 m4 ">
+            <button class="btn-large" type="submit">
+                Edit Tenancy
+            </button>
+        </div>
+
+        <!--Delete Tenancy -->
+        <div class="col s12 m4 ">
+            <button class="btn-large" type="submit">
+                Delete Tenancy
+            </button>
+        </div>
+
+        <!--View Map / All Tenancies -->
+        <div class="col s12 m4 ">
+            <button class="btn-large" type="submit">
+                View Map
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
