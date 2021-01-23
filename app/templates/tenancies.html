@@ -1,6 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container">
+    <form class="card-panel">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="address" name="address" type="text">
+                <label for="address">Address</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="latitude" name="latitude" type="text">
+                <label for="latitude">Latitude</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="longitude" name="longitude" type="text">
+                <label for="longitude">Longitude</label>
+            </div>
+            <div class="input-field col s12">
+                <select required>
+                    <option value="" disabled selected>Accommodation Type</option>
+                    <option value="1">Room</option>
+                    <option value="2">Apartment</option>
+                    <option value="3">House</option>
+                </select>
+                <label>Select Accommodation Type</label>
+            </div>
+            <div class="input-field col s6">
+                <label>Tenancy Start Date</label>
+                <input type="text" class="datepicker">
+            </div>
+            <div class="input-field col s6">
+                <label>Tenancy End Date</label>
+                <input type="text" class="datepicker">
+            </div>
+            <div class="input-field col s12">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="price" name="price" type="text">
+                <label for="price">Price</label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col s8 offset-s2 btn-large" type="submit">
+                <p>Add Tenancy</p>
+            </button>
+        </div>
+    </form>
+</div>
+
+
     {% for tenancy in tenancies %}
         {{ tenancy.address }} <br>
         {{ tenancy.latitude }} <br>

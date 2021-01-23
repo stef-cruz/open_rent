@@ -21,7 +21,7 @@
   background-color: #68ff5b;
 }
 .hero .hero-container {
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 .hero .hero-container h2 {
   font-weight: 700;
@@ -66,9 +66,13 @@
 }
 .steps button {
   background-color: black;
+  margin: 3rem 0;
 }
 .steps button:hover {
   background-color: #ff6d00;
+}
+.steps button:hover a {
+  color: black;
 }
 .steps button a {
   text-decoration: none;
@@ -79,41 +83,53 @@
 .about {
   margin: 20rem 0;
 }
+@media (min-width: 64rem) {
+  .about__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .about__card .card-panel {
   background-color: #68ff5b;
   border-radius: 2rem;
   height: 20rem;
   margin: 4rem 1rem;
 }
+@media (min-width: 64rem) {
+  .about__card .card-panel {
+    width: 20rem;
+  }
+}
 .about__card span {
   font-family: "Bebas Neue", serif;
   font-size: 1.8rem;
 }
-.about__card .img-one {
+.about__card .img-left {
   height: 7.2rem;
   background-size: cover;
   position: relative;
   top: -3rem;
   left: -4rem;
 }
-.about__card .txt-one {
+.about__card .txt-left {
   margin-top: -2rem;
 }
-.about__card .img-two-right {
+.about__card .img-right {
   height: 10rem;
   background-size: cover;
   position: relative;
   top: -4rem;
   left: 7rem;
 }
-.about__card .img-two-left {
+.about__card .img-right-two {
   height: 8.5rem;
   background-size: cover;
   position: relative;
   top: -8.2rem;
   left: -7rem;
 }
-.about__card .txt-two {
+.about__card .txt-right {
   position: relative;
   top: -8rem;
 }

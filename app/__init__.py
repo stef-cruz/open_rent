@@ -12,3 +12,4 @@ from app import database
 from app import views
 from app import login
 from app import profile
+from app import tenancy

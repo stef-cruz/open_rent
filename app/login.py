@@ -10,6 +10,7 @@ from app.database import MONGO, DB_USERS
 # REGISTER FUNCTION
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    """Create user in database and return user's profile page"""
     if request.method == 'POST':
 
         if request.form.get('confirm-password') != request.form.get('password'):
@@ -46,6 +47,7 @@ def register():
 # LOG IN FUNCTION
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    """Log in user in the app and return user's profile page"""
     if request.method == 'POST':
         # check if username exists in db
         existing_user = DB_USERS.find_one(
@@ -75,7 +77,7 @@ def login():
 # LOG OUT FUNCTION
 @app.route("/logout")
 def logout():
-    # remove user session from cookies
+    """Log user out of the app and return to log in page"""
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
