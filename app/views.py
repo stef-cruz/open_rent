@@ -3,7 +3,6 @@ from flask import (
     redirect, request, session, url_for)
 
 from app import app
-from app.database import DB_TENANCIES
 
 
 # Index view

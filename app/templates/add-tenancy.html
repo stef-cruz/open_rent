@@ -3,14 +3,14 @@
 
 <h3 class="center-align">Add Tenancy</h3>
 
-<div class="container">
+<section class="container">
     <div class="card-panel">
         <form action="" method="POST">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-circle prefix"></i>
-                    <input id="address" name="address" type="text">
-                    <label for="address">Enter Address</label>
+                    <input id="address" name="address" type="text" placeholder="Enter an Address">
+                    <label for="address">Address</label>
                 </div>
                 <div class="input-field col s12">
                     <select required>
@@ -50,6 +50,12 @@
             </div>
         </div>
     </div>
-</div>
+    <div id="map"></div>
+</section>
 
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly" defer></script>
 {% endblock %}
