@@ -2,6 +2,15 @@ click==7.1.2
 dnspython==2.0.0
 Flask==1.1.2
 Flask-PyMongo==2.3.0
+google-api-core==1.22.3
+google-auth==1.22.0
+google-cloud-core==1.4.2
+google-cloud-documentai==0.3.0
+google-cloud-storage==1.31.2
+google-crc32c==1.0.0
+google-resumable-media==1.0.0
+googleapis-common-protos==1.52.0
+googlemaps==4.4.2
 itsdangerous==1.1.0
-pymongo==3.11.0
+pymongo==3.11.2
 Werkzeug==1.0.1

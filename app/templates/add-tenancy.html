@@ -13,21 +13,21 @@
                     <label for="address">Address</label>
                 </div>
                 <div class="input-field col s12">
-                    <select required>
-                        <option value="" disabled selected>Accommodation Type</option>
-                        <option value="1">Room</option>
-                        <option value="2">Apartment</option>
-                        <option value="3">House</option>
+                    <select id="accommodation_type" name="accommodation_type" required>
+                        <option value="" disabled selected>Room, Apartment or House</option>
+                        <option value="room">Room</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
                     </select>
-                    <label>Select Accommodation Type</label>
+                    <label for="accommodation_type">Select Accommodation Type</label>
                 </div>
                 <div class="input-field col s12 m4">
-                    <label>Tenancy Start Date</label>
-                    <input type="text" class="datepicker">
+                    <label for="start_date">Tenancy Start Date</label>
+                    <input type="text" class="datepicker" id="start_date" name="start_date">
                 </div>
                 <div class="input-field col s12 m4">
-                    <label>Tenancy End Date</label>
-                    <input type="text" class="datepicker">
+                    <label for="end_date">Tenancy End Date</label>
+                    <input type="text" class="datepicker" id="end_date" name="end_date">
                 </div>
                 <div class="input-field col s12 m4">
                     <i class="fas fa-user-circle prefix"></i>
