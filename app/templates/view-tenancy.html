@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Get Tenancy</h3>
+<h3 class="center-align">View Tenancy</h3>
 
 <section class="container">
 
     <!--Get Tenancy -->
     <div class="row">
         <div class="col">
-            {% for tenancy in tenancies %}
+            {{ tenancy._id }} <br>
             {{ tenancy.address }} <br>
-            {{ tenancy.category_type }} <br>
+            {{ tenancy.accommodation_type }} <br>
             {{ tenancy.start_date }} <br>
             {{ tenancy.end_date }} <br>
             {{ tenancy.price }} <br>
-            {% endfor %}
         </div>
     </div>
 
