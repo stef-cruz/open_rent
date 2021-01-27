@@ -4,19 +4,18 @@
 <h3 class="center-align">View Tenancy</h3>
 
 <section class="container">
-
-    <!--Get Tenancy -->
+    <!-- Get Tenancy -->
     <div class="row">
         <div class="col">
-            {{ tenancy._id }} <br>
-            {{ tenancy.address }} <br>
+            {{ tenancy.address_1 }} <br>
+            {{ tenancy.address_2 }} <br>
             {{ tenancy.accommodation_type }} <br>
             {{ tenancy.start_date }} <br>
             {{ tenancy.end_date }} <br>
             {{ tenancy.price }} <br>
         </div>
     </div>
-
+    <!-- ./Get Tenancy -->
     <div class="row">
         <!--Edit Tenancy -->
         <div class="col s12 m4 ">
@@ -24,14 +23,14 @@
                 Edit Tenancy
             </button>
         </div>
-
-        <!--Delete Tenancy -->
+        <!-- ./Edit Tenancy -->
+        <!-- Delete Tenancy -->
         <div class="col s12 m4 ">
             <button class="btn-large" type="submit">
                 Delete Tenancy
             </button>
         </div>
-
+        <!-- ./Delete Tenancy -->
         <!--View Map / All Tenancies -->
         <div class="col s12 m4 ">
             <button class="btn-large" type="submit">

@@ -9,8 +9,7 @@ from app.database import DB_USERS
 # PROFILE VIEW
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    """Return the user's profile page"""
-    # fetch username from db
+    """Fetch username from db and return the user's profile page"""
     username = DB_USERS.find_one(
         {"username": session["user"]})["username"]
 

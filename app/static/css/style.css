@@ -251,6 +251,37 @@
   }
 }
 
+.welcome-user {
+  margin: 4rem 0;
+}
+.welcome-user span {
+  font-size: 2.6rem;
+  color: #ff6d00;
+  text-decoration: underline;
+}
+
+.my-profile {
+  margin-bottom: 5rem;
+}
+.my-profile button {
+  background-color: #68ff5b;
+  color: black;
+}
+.my-profile button:hover {
+  background-color: #ff6d00;
+}
+
+.my-tenancies {
+  margin-bottom: 5rem;
+}
+.my-tenancies button {
+  background-color: #68ff5b;
+  color: black;
+}
+.my-tenancies button:hover {
+  background-color: #ff6d00;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;

@@ -16,6 +16,6 @@ function initMap() {
     };
 
     // Auto complete address
-    const input = document.getElementById("address");
+    const input = document.getElementById("address_1");
     const autocomplete = new google.maps.places.Autocomplete(input, options);
 }
