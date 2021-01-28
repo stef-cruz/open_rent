@@ -251,34 +251,38 @@
   }
 }
 
+.profile {
+  margin-bottom: 5rem;
+}
+
 .welcome-user {
   margin: 4rem 0;
 }
 .welcome-user span {
-  font-size: 2.6rem;
-  color: #ff6d00;
-  text-decoration: underline;
+  font-size: 2rem;
+  font-family: "Bebas Neue", serif;
 }
 
-.my-profile {
-  margin-bottom: 5rem;
-}
-.my-profile button {
+.my-profile #first-name,
+.my-profile #last-name,
+.my-profile #email-address {
   background-color: #68ff5b;
-  color: black;
+  border-bottom: none;
 }
-.my-profile button:hover {
-  background-color: #ff6d00;
+.my-profile label {
+  color: black;
 }
 
 .my-tenancies {
   margin-bottom: 5rem;
 }
-.my-tenancies button {
-  background-color: #68ff5b;
-  color: black;
+
+.button-profile {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
 }
-.my-tenancies button:hover {
+.button-profile:hover {
   background-color: #ff6d00;
 }
 

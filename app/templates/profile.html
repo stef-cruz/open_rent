@@ -16,54 +16,81 @@
     </div>
     <!-- ./flash message -->
 
-    <h3 class="center-align welcome-user">Welcome, <span>{{ username }}</span></h3>
+    <h3 class="center-align welcome-user"><span>Welcome,</span><br> {{ username }}</h3>
 
     <!-- Profile -->
-    <h4>My Profile</h4>
+    <ul class="collapsible expandable">
+        <li>
+            <div class="collapsible-header"><i class="fas fa-user-circle prefix"></i>My Details</div>
+            <div class="collapsible-body">
+                <!-- Profile -->
+                <form class="my-profile">
+                    <div class="row">
+                        <div class="col s8">
+                            <button class="btn-small button-profile" type="submit">Edit Profile</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" name="first-name" type="text">
+                        </div>
+                        <div class="col s12 m6">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" name="last-name" type="text">
+                        </div>
+                        <div class="col s12">
+                            <label for="email-address">Email Address</label>
+                            <input id="email-address" name="email-address" type="email">
+                        </div>
+                    </div>
+                </form>
+                <!-- ./Profile -->
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="fas fa-home"></i>My Tenancies</div>
+            <div class="collapsible-body">
+                <!-- Tenancies -->
+                <div class="my-tenancies">
+                    <div class="row">
+                        <div class="s8">
+                            <a href="{{ url_for('add_tenancy') }}"><button class="btn-small button-profile">Add Tenancy</button></a>
+                        </div>
+                    </div>
+                    {% for tenancy in user_tenancies %}
+                    <div class="card-panel">
+                        <div class="row">
+                            <div class="col">
+                                {{ tenancy.address_1 }} <br>
+                                {{ tenancy.address_2 }} <br>
+                                {{ tenancy.accommodation_type }} <br>
+                                {{ tenancy.start_date }} <br>
+                                {{ tenancy.end_date }} <br>
+                                {{ tenancy.price }} <br>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                    <!-- ./Tenancies -->
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="fas fa-user-times"></i>Privacy</div>
+            <div class="collapsible-body">
+                <!-- Delete profile -->
+                <div class="row">
+                    <div class="col">
+                        <p>We respect your data and privacy. If you wish to delete your account and purge your data, <a
+                                href="" type="submit">click here</a>.</p>
+                    </div>
+                </div>
+                <!-- ./Delete profile -->
+            </div>
+        </li>
+    </ul>
 
-    <form class="card-panel my-profile">
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="name" name="name" type="text">
-                <label for="name">Name</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="surname" name="surname" type="text">
-                <label for="surname">Surname</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="email" name="email" type="email">
-                <label for="email">Email Address</label>
-            </div>
-        </div>
-        <div class="row">
-            <button class="col s8 offset-s2 btn-large" type="submit">Edit Profile</button>
-        </div>
-    </form>
-    <!-- ./Profile -->
-
-    <!-- Tenancies -->
-    <h4>My Tenancies</h4>
-    <div class="card-panel my-tenancies">
-        <div class="row">
-            <div class="col">
-                {% for tenancy in user_tenancies %}
-                    {{ tenancy.address_1 }} <br>
-                    {{ tenancy.address_2 }} <br>
-                    {{ tenancy.accommodation_type }} <br>
-                    {{ tenancy.start_date }} <br>
-                    {{ tenancy.end_date }} <br>
-                    {{ tenancy.price }} <br>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="row">
-            <a href="{{ url_for('add_tenancy') }}"><button class="col s8 offset-s2 btn-large">Add Tenancy</button></a>
-        </div>
-    </div>
     <!-- ./Tenancies -->
 </section>
 

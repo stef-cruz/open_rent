@@ -13,4 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         {yearRange: 15,
             format: 'dd mmmm yyyy'
         });
+    //Profile page, Collapsible
+    var elems = document.querySelectorAll('.collapsible.expandable');
+    var instances = M.Collapsible.init(elems, {
+        accordion: false
+    });
 });
