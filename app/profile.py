@@ -3,18 +3,18 @@ from flask import (
     redirect, request, session, url_for)
 
 from app import app
-from app.database import DB_USERS
+from app.database import DB_USERS, DB_TENANCIES
 
 
 # PROFILE VIEW
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """Fetch username from db and return the user's profile page"""
-    username = DB_USERS.find_one(
-        {"username": session["user"]})["username"]
-
     if session["user"]:
-        return render_template("profile.html", username=username)
+        username = DB_USERS.find_one(
+            {"username": session["user"]})["username"]
+        user_tenancies = DB_TENANCIES.find({'created_by': username})
+        return render_template("profile.html", username=username, user_tenancies=user_tenancies)
 
     return redirect(url_for("login"))
 

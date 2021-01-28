@@ -49,6 +49,18 @@
     <h4>My Tenancies</h4>
     <div class="card-panel my-tenancies">
         <div class="row">
+            <div class="col">
+                {% for tenancy in user_tenancies %}
+                    {{ tenancy.address_1 }} <br>
+                    {{ tenancy.address_2 }} <br>
+                    {{ tenancy.accommodation_type }} <br>
+                    {{ tenancy.start_date }} <br>
+                    {{ tenancy.end_date }} <br>
+                    {{ tenancy.price }} <br>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
             <a href="{{ url_for('add_tenancy') }}"><button class="col s8 offset-s2 btn-large">Add Tenancy</button></a>
         </div>
     </div>
