@@ -48,7 +48,7 @@ def add_tenancy():
                     DB_TENANCIES.insert_one(tenancy)
                     flash("Tenancy Successfully Added")
                     # get ID from tenancy added
-                    tenancy_added = DB_TENANCIES.find_one({'address': address})
+                    tenancy_added = DB_TENANCIES.find_one({'address_1': address})
                     tenancy_id = tenancy_added.get('_id')
                     # display tenancy added
                     return redirect(url_for("view_tenancy", tenancy_id=tenancy_id))
@@ -70,7 +70,12 @@ def view_tenancy(tenancy_id):
         {'_id': ObjectId(tenancy_id)})
     return render_template("view-tenancy.html", tenancy=tenancy)
 
-# EDIT TENANCY
 
+# EDIT TENANCY
+@app.route("/edit_tenancy/<tenancy_id>", methods=["GET", "POST"])
+def edit_tenancy(tenancy_id):
+    tenancy = DB_TENANCIES.find_one(
+        {'_id': ObjectId(tenancy_id)})
+    return render_template("edit-tenancy.html", tenancy=tenancy)
 
 # DELETE TENANCY

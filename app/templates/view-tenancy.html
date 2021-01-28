@@ -19,9 +19,9 @@
     <div class="row">
         <!--Edit Tenancy -->
         <div class="col s12 m4 ">
-            <button class="btn-large" type="submit">
-                Edit Tenancy
-            </button>
+            <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
+                <button class="btn-large" type="submit">Edit Tenancy</button>
+            </a>
         </div>
         <!-- ./Edit Tenancy -->
         <!-- Delete Tenancy -->
@@ -48,5 +48,6 @@
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/map.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly"
+        defer></script>
 {% endblock %}
