@@ -55,25 +55,61 @@
                 <div class="my-tenancies">
                     <div class="row">
                         <div class="s8">
-                            <a href="{{ url_for('add_tenancy') }}"><button class="btn-small button-profile">Add Tenancy</button></a>
+                            <a href="{{ url_for('add_tenancy') }}">
+                                <button class="btn-small button-profile">Add Tenancy</button>
+                            </a>
                         </div>
                     </div>
                     {% for tenancy in user_tenancies %}
-                    <div class="card-panel">
-                        <div class="row">
+                    <div class="card-panel my-tenancies__card">
+                        <div class="row table-responsive">
                             <div class="col">
-                                {{ tenancy.address_1 }} <br>
-                                {{ tenancy.address_2 }} <br>
-                                {{ tenancy.accommodation_type }} <br>
-                                {{ tenancy.start_date }} <br>
-                                {{ tenancy.end_date }} <br>
-                                {{ tenancy.price }} <br>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>Address 1</th>
+                                        <td>{{ tenancy.address_1 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address 2</th>
+                                        <td>{{ tenancy.address_2 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Accommodation</th>
+                                        <td>{{ tenancy.accommodation_type }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <td>{{ tenancy.start_date }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>End Date</th>
+                                        <td>{{ tenancy.end_date }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Price</th>
+                                        <td>{{ tenancy.price }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row center-align">
+                            <div class="col s12 m6">
+                                <a href="">
+                                    <button class="btn-small button-tenancy">Edit Tenancy</button>
+                                </a>
+                            </div>
+                            <div class="col s12 m6">
+                                <a href="">
+                                    <button class="btn-small button-tenancy">Delete Tenancy</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
-                    <!-- ./Tenancies -->
+                <!-- ./Tenancies -->
             </div>
         </li>
         <li>

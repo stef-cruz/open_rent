@@ -25,13 +25,43 @@
 }
 
 .my-tenancies {
-  margin-bottom: 5rem;
+
+  &__card {
+    background-color: $prim-colour;
+    margin: 2rem 0;
+    font-weight: 100;
+    padding-top: 3rem;
+
+    th {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+
+      @include bp(tablet) {
+        @include flexbox(flex, center, center);
+      }
+
+    }
+  }
 }
 
 .button-profile {
   margin: 1rem 0;
   background-color: black;
   color: white;
+
+  &:hover {
+    background-color: $sec-colour;
+  }
+}
+
+.button-tenancy {
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
 
   &:hover {
     background-color: $sec-colour;

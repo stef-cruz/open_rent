@@ -273,8 +273,25 @@
   color: black;
 }
 
-.my-tenancies {
-  margin-bottom: 5rem;
+.my-tenancies__card {
+  background-color: #68ff5b;
+  margin: 2rem 0;
+  font-weight: 100;
+  padding-top: 3rem;
+}
+.my-tenancies__card th {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.my-tenancies__card .table-responsive {
+  overflow-x: auto;
+}
+@media (min-width: 48rem) {
+  .my-tenancies__card .table-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .button-profile {
@@ -283,6 +300,15 @@
   color: white;
 }
 .button-profile:hover {
+  background-color: #ff6d00;
+}
+
+.button-tenancy {
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+}
+.button-tenancy:hover {
   background-color: #ff6d00;
 }
 
