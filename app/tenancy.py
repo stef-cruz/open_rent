@@ -6,7 +6,7 @@ import os
 import googlemaps
 
 from app import app
-from app.database import DB_TENANCIES
+from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES
 
 # GOOGLE API KEY
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
@@ -47,18 +47,24 @@ def add_tenancy():
                     }
                     DB_TENANCIES.insert_one(tenancy)
                     flash("Tenancy Successfully Added")
+
                     # get ID from tenancy added
                     tenancy_added = DB_TENANCIES.find_one({'address_1': address})
                     tenancy_id = tenancy_added.get('_id')
+
                     # display tenancy added
                     return redirect(url_for("view_tenancy", tenancy_id=tenancy_id))
+
                 flash('Please enter an address in Dublin City.')
                 return redirect(url_for("add_tenancy"))
+
             flash('Please enter a valid address.')
             return redirect(url_for("add_tenancy"))
 
-        # GET method
-        return render_template("add-tenancy.html")
+        # Get accommodation type from db
+        accommodation_types = DB_ACCOMMODATION_TYPES.find()
+        return render_template("add-tenancy.html", accommodation_types=accommodation_types)
+
     # If user not logged in
     return redirect(url_for("login"))
 

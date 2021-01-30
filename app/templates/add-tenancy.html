@@ -39,10 +39,9 @@
                 <div class="input-field col s12">
                     <select id="accommodation_type" name="accommodation_type" required>
                         <option value="" disabled selected>Room, Apartment or House</option>
-                        <option value="apartment">Entire Apartment</option>
-                        <option value="house">Entire House</option>
-                        <option value="room">Room (Shared Bathroom)</option>
-                        <option value="ensuite-room">Ensuite Room</option>
+                        {% for accommodation_type in accommodation_types %}
+                        <option value="{{ accommodation_type.accommodation_type }}">{{ accommodation_type.accommodation_type }}</option>
+                        {% endfor %}
                     </select>
                     <label for="accommodation_type">Select Accommodation Type</label>
                 </div>

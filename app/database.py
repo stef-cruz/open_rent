@@ -14,5 +14,5 @@ MONGO = PyMongo(app)
 # Set database collections as constants
 DB_USERS = MONGO.db.users
 DB_TENANCIES = MONGO.db.tenancies
-DB_CATEGORIES = MONGO.db.categories
+DB_ACCOMMODATION_TYPES = MONGO.db.accommodation_types
 
