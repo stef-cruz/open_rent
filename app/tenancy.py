@@ -82,6 +82,7 @@ def view_tenancy(tenancy_id):
 def edit_tenancy(tenancy_id):
     tenancy = DB_TENANCIES.find_one(
         {'_id': ObjectId(tenancy_id)})
-    return render_template("edit-tenancy.html", tenancy=tenancy)
+    accommodation_types = DB_ACCOMMODATION_TYPES.find()
+    return render_template("edit-tenancy.html", tenancy=tenancy, accommodation_types=accommodation_types)
 
 # DELETE TENANCY
