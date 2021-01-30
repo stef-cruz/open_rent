@@ -316,6 +316,59 @@
   text-align: center;
 }
 
+.add-tenancy #address_1,
+.add-tenancy #address_2,
+.add-tenancy #start_date,
+.add-tenancy #end_date,
+.add-tenancy #price {
+  background-color: #68ff5b;
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+}
+.add-tenancy label {
+  color: black;
+  font-size: 1.2rem;
+}
+.add-tenancy .helper-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.add-tenancy__inputs {
+  margin-bottom: 4rem;
+}
+
+.form-margin {
+  margin: 1rem 0;
+}
+
+.form-margin-select {
+  margin-bottom: 2rem;
+}
+
+.button-add-tenancy {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+}
+.button-add-tenancy:hover {
+  background-color: #ff6d00;
+}
+
+input.select-dropdown.dropdown-trigger {
+  background-color: #68ff5b;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-content li > span {
+  color: black;
+}
+
+.select-wrapper .caret {
+  z-index: 1;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;
@@ -334,6 +387,10 @@ footer {
   background-color: #ff6d00;
   line-height: 2;
   color: white;
+}
+
+.heading-section {
+  margin: 5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

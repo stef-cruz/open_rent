@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Edit Tenancy</h3>
+<h3 class="center-align heading-section">Edit Tenancy</h3>
 
 <section class="container">
     <div class="card-panel">
@@ -39,11 +39,11 @@
                 <div class="input-field col s12">
                     <select id="accommodation_type" name="accommodation_type" required>
                         <option value="" disabled>Choose Accommodation Type</option>
-                        {% for accommodation_type in accommodation_types %}
-                            {% if accommodation_type.accommodation_type == tenancy.accommodation_type %}
-                                <option value="{{ accommodation_type.accommodation_type }}" selected>{{ accommodation_type.accommodation_type }}</option>
+                        {% for type in accommodation_types %}
+                            {% if type.accommodation_type == tenancy.accommodation_type %}
+                                <option value="{{ accommodation_type.accommodation_type }}" selected>{{ type.accommodation_type }}</option>
                             {% else %}
-                                <option value="{{ accommodation_type.accommodation_type }}">{{ accommodation_type.accommodation_type }}</option>
+                                <option value="{{ accommodation_type.accommodation_type }}">{{ type.accommodation_type }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>

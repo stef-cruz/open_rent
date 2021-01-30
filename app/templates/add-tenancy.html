@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Add Tenancy</h3>
+<h3 class="center-align heading-section">Add Tenancy</h3>
 
-<section class="container">
+<section class="container add-tenancy">
     <div class="card-panel">
         <form method="POST" action="{{ url_for('add_tenancy')}}">
             <!-- Flash message -->
@@ -20,65 +20,63 @@
             </div>
             <!-- ./Flash message -->
 
-            <div class="row">
+            <div class="row add-tenancy__inputs">
                 <!-- Address Line 1 -->
-                <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix"></i>
-                    <input id="address_1" name="address_1" type="text"
-                           placeholder="Clanbrassil Street Lower, Portobello, Dublin 8">
+                <div class="col s12 form-margin">
                     <label for="address_1">Address Line 1</label>
+                    <input id="address_1" name="address_1" type="text" placeholder="">
+                    <span class="helper-text">e.g. Clanbrassil Street Lower, Portobello, Dublin 8</span>
                 </div>
                 <!-- ./Address Line 1 -->
                 <!-- Address Line 2 -->
-                <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix"></i>
-                    <input id="address_2" name="address_2" type="text" placeholder="Apartment 25, Lombard Court ">
+                <div class="col s12 form-margin">
                     <label for="address_2">Address Line 2</label>
+                    <input id="address_2" name="address_2" type="text">
+                    <span class="helper-text">e.g. Apartment 25, Lombard Court</span>
                 </div>
                 <!-- ./Address Line 2 -->
                 <!-- Accommodation Type -->
-                <div class="input-field col s12">
+                <div class="col s12 form-margin-select">
+                    <label for="accommodation_type">Accommodation Type</label>
                     <select id="accommodation_type" name="accommodation_type" required>
                         <option value="" disabled selected>Choose Accommodation Type</option>
-                        {% for accommodation_type in accommodation_types %}
-                            <option value="{{ accommodation_type.accommodation_type }}">{{
-                                accommodation_type.accommodation_type }}
+                        {% for type in accommodation_types %}
+                            <option value="{{ type.accommodation_type }}">{{
+                                type.accommodation_type }}
                             </option>
                         {% endfor %}
                     </select>
-                    <label for="accommodation_type">Accommodation Type</label>
                 </div>
                 <!-- ./Accommodation Type -->
                 <!-- Start Date -->
-                <div class="input-field col s12 m4">
+                <div class="col s12 m4 form-margin">
                     <label for="start_date">Tenancy Start Date</label>
                     <input type="text" class="datepicker" id="start_date" name="start_date">
                 </div>
                 <!-- ./Start Date -->
                 <!-- End Date -->
-                <div class="input-field col s12 m4">
+                <div class="col s12 m4 form-margin">
                     <label for="end_date">Tenancy End Date</label>
                     <input type="text" class="datepicker" id="end_date" name="end_date">
                 </div>
                 <!-- ./End Date -->
                 <!-- Price -->
-                <div class="input-field col s12 m4">
-                    <i class="fas fa-user-circle prefix"></i>
-                    <input id="price" name="price" type="text">
+                <div class="col s12 m4 form-margin">
                     <label for="price">Price</label>
+                    <input id="price" name="price" type="text">
                 </div>
                 <!-- ./Price -->
             </div>
             <!-- Submit Tenancy -->
             <div class="row">
-                <button class="col s8 offset-s2 btn-large" type="submit">Add Tenancy</button>
+                <button class="col s8 offset-s2 btn-large button-add-tenancy" type="submit">Add Tenancy <i class="fas fa-map-marked-alt"></i></button>
             </div>
             <!-- ./Submit Tenancy -->
         </form>
         <div class="row center-align">
             <div class="col s12">
                 <a href="{{ url_for('profile', username=session['user']) }}">
-                    <button class="btn-small">Discard</button>
+                    <button class="btn-small button-add-tenancy">Discard <i class="fas fa-times-circle"></i></button>
                 </a>
             </div>
         </div>

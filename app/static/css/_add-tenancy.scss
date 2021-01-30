@@ -1,0 +1,59 @@
+.add-tenancy {
+  #address_1,
+  #address_2,
+  #start_date,
+  #end_date,
+  #price {
+    background-color: $prim-colour;
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+  }
+
+  label {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .helper-text {
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(black, 0.5);
+  }
+
+  &__inputs {
+    margin-bottom: 4rem;
+  }
+}
+
+.form-margin {
+  margin: 1rem 0;
+}
+
+.form-margin-select {
+  margin-bottom: 2rem;
+}
+
+.button-add-tenancy {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: $sec-colour;
+  }
+}
+
+//Overwrite select input style
+input.select-dropdown.dropdown-trigger {
+  background-color: $prim-colour;
+  font-family: $paragraph;
+}
+
+.dropdown-content li>span {
+  color: black;
+}
+
+.select-wrapper .caret {
+  z-index: 1;
+}
