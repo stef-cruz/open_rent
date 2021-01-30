@@ -1,12 +1,12 @@
 from bson.objectid import ObjectId
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, abort)
 import os
 import googlemaps
 
 from app import app
-from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES
+from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, DB_USERS
 
 # GOOGLE API KEY
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
@@ -72,6 +72,7 @@ def add_tenancy():
 # VIEW TENANCY
 @app.route("/view_tenancy/<tenancy_id>")
 def view_tenancy(tenancy_id):
+    """Return tenancy added in add_tenancy function"""
     tenancy = DB_TENANCIES.find_one(
         {'_id': ObjectId(tenancy_id)})
     return render_template("view-tenancy.html", tenancy=tenancy)
@@ -85,7 +86,7 @@ def edit_tenancy(tenancy_id):
         2- If address is valid
         3- If address is in Dublin
 
-        :return all tenancies
+        :return edit page
         """
 
     if session["user"]:
@@ -129,4 +130,20 @@ def edit_tenancy(tenancy_id):
     # If user not logged in
     return redirect(url_for("login"))
 
+
 # DELETE TENANCY
+@app.route("/delete_tenancy/<tenancy_id>")
+def delete_tenancy(tenancy_id):
+    """Delete tenancy from the database. Check if user is logged in.
+
+        :return user's profile page
+        """
+    if session["user"]:
+        username = DB_USERS.find_one(
+            {"username": session["user"]})["username"]
+        current_tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
+        if username == current_tenancy['created_by']:
+            DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
+        flash("Tenancy successfully deleted")
+        return redirect(url_for('profile', username=username))
+    return redirect(url_for('login_page'))
