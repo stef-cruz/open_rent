@@ -3,7 +3,7 @@
 
 <h3 class="center-align heading-section">Add Tenancy</h3>
 
-<section class="container add-tenancy">
+<section class="container add-edit-tenancy">
     <div class="card-panel">
         <form method="POST" action="{{ url_for('add_tenancy')}}">
             <!-- Flash message -->
@@ -20,7 +20,7 @@
             </div>
             <!-- ./Flash message -->
 
-            <div class="row add-tenancy__inputs">
+            <div class="row add-edit-tenancy__inputs">
                 <!-- Address Line 1 -->
                 <div class="col s12 form-margin">
                     <label for="address_1">Address Line 1</label>
@@ -68,15 +68,18 @@
                 <!-- ./Price -->
             </div>
             <!-- Submit Tenancy -->
-            <div class="row">
-                <button class="col s8 offset-s2 btn-large button-add-tenancy" type="submit">Add Tenancy <i class="fas fa-map-marked-alt"></i></button>
+            <div class="row center-align">
+                <div class="col s12">
+                    <button class="btn-large button-add-edit-tenancy" type="submit">
+                        Add Tenancy <i class="fas fa-map-marked-alt"></i></button>
+                </div>
             </div>
             <!-- ./Submit Tenancy -->
         </form>
         <div class="row center-align">
             <div class="col s12">
                 <a href="{{ url_for('profile', username=session['user']) }}">
-                    <button class="btn-small button-add-tenancy">Discard <i class="fas fa-times-circle"></i></button>
+                    <button class="btn-small button-add-edit-tenancy">Discard <i class="fas fa-times-circle"></i></button>
                 </a>
             </div>
         </div>

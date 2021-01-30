@@ -316,26 +316,26 @@
   text-align: center;
 }
 
-.add-tenancy #address_1,
-.add-tenancy #address_2,
-.add-tenancy #start_date,
-.add-tenancy #end_date,
-.add-tenancy #price {
+.add-edit-tenancy #address_1,
+.add-edit-tenancy #address_2,
+.add-edit-tenancy #start_date,
+.add-edit-tenancy #end_date,
+.add-edit-tenancy #price {
   background-color: #68ff5b;
   border-bottom: none;
   margin-bottom: 0;
   margin-top: 0.2rem;
 }
-.add-tenancy label {
+.add-edit-tenancy label {
   color: black;
   font-size: 1.2rem;
 }
-.add-tenancy .helper-text {
+.add-edit-tenancy .helper-text {
   font-style: italic;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
-.add-tenancy__inputs {
+.add-edit-tenancy__inputs {
   margin-bottom: 4rem;
 }
 
@@ -347,12 +347,12 @@
   margin-bottom: 2rem;
 }
 
-.button-add-tenancy {
+.button-add-edit-tenancy {
   margin: 1rem 0;
   background-color: black;
   color: white;
 }
-.button-add-tenancy:hover {
+.button-add-edit-tenancy:hover {
   background-color: #ff6d00;
 }
 
