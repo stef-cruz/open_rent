@@ -18,4 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Collapsible.init(elems, {
         accordion: false
     });
+    //Profile page, delete tenancy button
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
 });

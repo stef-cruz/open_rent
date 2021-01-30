@@ -312,6 +312,10 @@
   background-color: #ff6d00;
 }
 
+.modal-footer {
+  text-align: center;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;

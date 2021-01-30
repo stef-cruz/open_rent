@@ -101,9 +101,26 @@
                                 </a>
                             </div>
                             <div class="col s12 m6">
-                                <a href="{{ url_for('delete_tenancy', tenancy_id=tenancy._id) }}">
+                                <a href="#modal-delete" class="modal-trigger">
                                     <button class="btn-small button-tenancy">Delete Tenancy</button>
                                 </a>
+                            </div>
+                            <!-- Modal Structure -->
+                            <div id="modal-delete" class="modal">
+                                <div class="modal-content">
+                                    <h4>Delete Tenancy</h4>
+                                    <p>Are you sure you want to this delete tenancy? This action is irreversible.</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 m6">
+                                        <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close">
+                                            <button class="btn-small button-profile">Cancel</button></a>
+                                    </div>
+                                    <div class="col s12 m6">
+                                        <a href="{{ url_for('delete_tenancy', tenancy_id=tenancy._id) }}" class="modal-close">
+                                            <button class="btn-small button-profile">Delete Tenancy</button></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
