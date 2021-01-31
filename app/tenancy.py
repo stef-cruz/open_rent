@@ -134,7 +134,9 @@ def edit_tenancy(tenancy_id):
 # DELETE TENANCY
 @app.route("/delete_tenancy/<tenancy_id>")
 def delete_tenancy(tenancy_id):
-    """Delete tenancy from the database. Check if user is logged in.
+    """Delete tenancy from the database. Checks:
+    1- If user logged in
+    2- If session username is who created the tenancy
 
         :return user's profile page
         """
@@ -145,5 +147,5 @@ def delete_tenancy(tenancy_id):
         if username == current_tenancy['created_by']:
             DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
         flash("Tenancy successfully deleted")
-        return redirect(url_for('profile', username=username))
+        return redirect(url_for('profile'))
     return redirect(url_for('login_page'))

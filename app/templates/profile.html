@@ -27,21 +27,38 @@
                 <form class="my-profile">
                     <div class="row">
                         <div class="col s8">
-                            <button class="btn-small button-profile" type="submit">Edit Profile</button>
+                            <a href="">
+                                <button class="btn-small button-profile" type="submit">Edit Profile</button>
+                            </a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m6">
+                            {% if user_details.first_name %}
                             <label for="first-name">First Name</label>
-                            <input id="first-name" name="first-name" type="text">
+                            <input id="first-name" name="first-name" type="text" value="{{ user_details.first_name }}" disabled>
+                            {% else %}
+                            <label for="disabled">First Name</label>
+                            <input id="disabled" type="text" disabled>
+                            {% endif %}
                         </div>
                         <div class="col s12 m6">
+                            {% if user_details.last_name %}
                             <label for="last-name">Last Name</label>
-                            <input id="last-name" name="last-name" type="text">
+                            <input id="last-name" name="last-name" type="text" value="{{ user_details.last_name }}" disabled>
+                            {% else %}
+                            <label for="disabled">Last Name</label>
+                            <input id="disabled" type="text" disabled>
+                            {% endif %}
                         </div>
                         <div class="col s12">
+                            {% if user_details.email_address %}
                             <label for="email-address">Email Address</label>
-                            <input id="email-address" name="email-address" type="email">
+                            <input id="email-address" name="email-address" type="email" value="{{ user_details.email_address }}" disabled>
+                            {% else %}
+                            <label for="disabled">Email Address</label>
+                            <input id="disabled" type="text" disabled>
+                            {% endif %}
                         </div>
                     </div>
                 </form>

@@ -269,6 +269,9 @@
   background-color: #68ff5b;
   border-bottom: none;
 }
+.my-profile #disabled {
+  background-color: rgba(104, 255, 91, 0.5);
+}
 .my-profile label {
   color: black;
 }
@@ -316,6 +319,9 @@
   text-align: center;
 }
 
+.add-edit-tenancy {
+  margin-bottom: 5rem;
+}
 .add-edit-tenancy #address_1,
 .add-edit-tenancy #address_2,
 .add-edit-tenancy #start_date,
