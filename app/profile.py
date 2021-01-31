@@ -65,6 +65,6 @@ def delete_profile(user_id):
         current_user = DB_USERS.find_one({'_id': ObjectId(user_id)})
         if username == current_user['username']:
             DB_USERS.remove({'_id': ObjectId(user_id)})
-        flash("Profile successfully deleted")
+            session.pop("user")
         return redirect(url_for('index'))
     return redirect(url_for('login'))
