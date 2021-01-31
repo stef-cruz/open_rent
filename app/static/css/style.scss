@@ -26,12 +26,45 @@ footer {
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0, 0.5);
 }
 
+//Flash Messages
+
 .flash {
   background-color: $sec-colour;
   line-height: 2;
   color: white;
 }
 
+//Heading
+
 .heading-section {
   margin: 5rem 0;
+}
+
+// Button
+
+.button-black {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: $sec-colour;
+  }
+}
+
+// Form
+
+.form-margin {
+  margin: 1rem 0;
+}
+
+.form-margin-select {
+  margin: 1rem 0 2rem 0;
+  border-bottom: none;
+}
+
+.helper-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(black, 0.5);
 }

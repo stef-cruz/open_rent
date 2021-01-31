@@ -1,20 +1,30 @@
 .user-auth {
-  button {
-    background-color: $prim-colour;
-    color: black;
 
-    &:hover {
-      background-color: $sec-colour;
-    }
+  #username,
+  #password,
+  #confirm-password {
+    background-color: $prim-colour;
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+    font-family: $paragraph;
+  }
+
+  label {
+    color: black;
+    font-size: 1.2rem;
   }
 
   &__signup {
     text-align: center;
-  }
 
-  span {
+    a {
+      color: $sec-colour;
+    }
+  }
+  
+  label {
     font-size: 1.2rem;
-    margin-left: 3rem;
-    color: rgba(black, 0.5);
   }
 }
+

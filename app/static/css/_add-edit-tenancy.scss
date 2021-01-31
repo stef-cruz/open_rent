@@ -18,33 +18,8 @@
     font-size: 1.2rem;
   }
 
-  .helper-text {
-    font-style: italic;
-    font-size: 1rem;
-    color: rgba(black, 0.5);
-  }
-
   &__inputs {
     margin-bottom: 4rem;
-  }
-}
-
-.form-margin {
-  margin: 1rem 0;
-}
-
-.form-margin-select {
-  margin: 1rem 0 2rem 0;
-  border-bottom: none;
-}
-
-.button-add-edit-tenancy {
-  margin: 1rem 0;
-  background-color: black;
-  color: white;
-
-  &:hover {
-    background-color: $sec-colour;
   }
 }
 
