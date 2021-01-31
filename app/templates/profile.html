@@ -24,10 +24,10 @@
             <div class="collapsible-header"><i class="fas fa-user-circle prefix"></i>My Details</div>
             <div class="collapsible-body">
                 <!-- Profile -->
-                <form class="my-profile">
+                <div class="my-profile">
                     <div class="row">
                         <div class="col s8">
-                            <a href="">
+                            <a href="{{ url_for('edit_profile', user_id=user_details._id) }}">
                                 <button class="btn-small button-profile" type="submit">Edit Profile</button>
                             </a>
                         </div>
@@ -35,8 +35,8 @@
                     <div class="row">
                         <div class="col s12 m6">
                             {% if user_details.first_name %}
-                            <label for="first-name">First Name</label>
-                            <input id="first-name" name="first-name" type="text" value="{{ user_details.first_name }}" disabled>
+                            <label for="first_name">First Name</label>
+                            <input id="first_name" name="first-name" type="text" value="{{ user_details.first_name }}" disabled>
                             {% else %}
                             <label for="disabled">First Name</label>
                             <input id="disabled" type="text" disabled>
@@ -44,8 +44,8 @@
                         </div>
                         <div class="col s12 m6">
                             {% if user_details.last_name %}
-                            <label for="last-name">Last Name</label>
-                            <input id="last-name" name="last-name" type="text" value="{{ user_details.last_name }}" disabled>
+                            <label for="last_name">Last Name</label>
+                            <input id="last_name" name="last-name" type="text" value="{{ user_details.last_name }}" disabled>
                             {% else %}
                             <label for="disabled">Last Name</label>
                             <input id="disabled" type="text" disabled>
@@ -53,15 +53,15 @@
                         </div>
                         <div class="col s12">
                             {% if user_details.email_address %}
-                            <label for="email-address">Email Address</label>
-                            <input id="email-address" name="email-address" type="email" value="{{ user_details.email_address }}" disabled>
+                            <label for="email_address">Email Address</label>
+                            <input id="email_address" name="email-address" type="email" value="{{ user_details.email_address }}" disabled>
                             {% else %}
                             <label for="disabled">Email Address</label>
                             <input id="disabled" type="text" disabled>
                             {% endif %}
                         </div>
                     </div>
-                </form>
+                </div>
                 <!-- ./Profile -->
             </div>
         </li>

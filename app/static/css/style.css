@@ -263,9 +263,9 @@
   font-family: "Bebas Neue", serif;
 }
 
-.my-profile #first-name,
-.my-profile #last-name,
-.my-profile #email-address {
+.my-profile #first_name,
+.my-profile #last_name,
+.my-profile #email_address {
   background-color: #68ff5b;
   border-bottom: none;
 }
@@ -331,6 +331,7 @@
   border-bottom: none;
   margin-bottom: 0;
   margin-top: 0.2rem;
+  font-family: "Open Sans", sans-serif;
 }
 .add-edit-tenancy label {
   color: black;
@@ -350,7 +351,8 @@
 }
 
 .form-margin-select {
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem 0;
+  border-bottom: none;
 }
 
 .button-add-edit-tenancy {
@@ -373,6 +375,51 @@ input.select-dropdown.dropdown-trigger {
 
 .select-wrapper .caret {
   z-index: 1;
+}
+
+.select-wrapper input.select-dropdown {
+  border-bottom: none;
+}
+
+.edit-profile {
+  margin-bottom: 5rem;
+}
+.edit-profile #username,
+.edit-profile #first_name,
+.edit-profile #last_name,
+.edit-profile #email_address {
+  background-color: #68ff5b;
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+.edit-profile #disabled {
+  background-color: rgba(104, 255, 91, 0.5);
+}
+.edit-profile label {
+  color: black;
+  font-size: 1.2rem;
+}
+.edit-profile__inputs {
+  margin-bottom: 4rem;
+}
+
+.form-margin {
+  margin: 1rem 0;
+}
+
+.form-margin-select {
+  margin-bottom: 2rem;
+}
+
+.button-edit-profile {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+}
+.button-edit-profile:hover {
+  background-color: #ff6d00;
 }
 
 * {

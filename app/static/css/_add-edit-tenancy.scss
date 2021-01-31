@@ -10,6 +10,7 @@
     border-bottom: none;
     margin-bottom: 0;
     margin-top: 0.2rem;
+    font-family: $paragraph;
   }
 
   label {
@@ -33,7 +34,8 @@
 }
 
 .form-margin-select {
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem 0;
+  border-bottom: none;
 }
 
 .button-add-edit-tenancy {
@@ -58,4 +60,8 @@ input.select-dropdown.dropdown-trigger {
 
 .select-wrapper .caret {
   z-index: 1;
+}
+
+.select-wrapper input.select-dropdown {
+  border-bottom: none;
 }

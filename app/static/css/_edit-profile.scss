@@ -1,0 +1,45 @@
+.edit-profile {
+  margin-bottom: 5rem;
+
+  #username,
+  #first_name,
+  #last_name,
+  #email_address {
+    background-color: $prim-colour;
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+    font-family: $paragraph;
+  }
+
+  #disabled {
+    background-color: rgba($prim-colour, 0.5);
+  }
+
+  label {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  &__inputs {
+    margin-bottom: 4rem;
+  }
+}
+
+.form-margin {
+  margin: 1rem 0;
+}
+
+.form-margin-select {
+  margin-bottom: 2rem;
+}
+
+.button-edit-profile {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: $sec-colour;
+  }
+}
