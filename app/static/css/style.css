@@ -119,19 +119,19 @@
   height: 10rem;
   background-size: cover;
   position: relative;
-  top: -4rem;
-  left: 7rem;
+  top: -5rem;
+  left: 9rem;
 }
 .about__card .img-right-two {
   height: 8.5rem;
   background-size: cover;
   position: relative;
-  top: -8.2rem;
-  left: -7rem;
+  top: -15rem;
+  left: -10rem;
 }
 .about__card .txt-right {
   position: relative;
-  top: -8rem;
+  top: -10rem;
 }
 
 .contact {
