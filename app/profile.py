@@ -35,17 +35,12 @@ def edit_profile(user_id):
         """
     if session["user"]:
         if request.method == 'POST':
-            DB_USERS.update_one({'_id': ObjectId(user_id)},
-                                {"$set": {"first_name": request.form.get("first_name"),
-                                          "last_name": request.form.get("last_name"),
-                                          "email_address": request.form.get("email_address")}}
-                                )
-            # edited_profile = {
-            #     "username": request.form.get("username"),
-            #     "first_name": request.form.get("first_name"),
-            #     "last_name": request.form.get("last_name"),
-            #     "email_address": request.form.get("email_address")}
-            # DB_USERS.update({"_id": ObjectId(user_id)}, edited_profile)
+            DB_USERS.update_one(
+                {'_id': ObjectId(user_id)},
+                {"$set": {"first_name": request.form.get("first_name"),
+                          "last_name": request.form.get("last_name"),
+                          "email_address": request.form.get("email_address")}
+                 })
             flash("Profile Successfully Updated")
 
         # Search for user id in DB
@@ -55,8 +50,21 @@ def edit_profile(user_id):
     return redirect(url_for("login"))
 
 
-
 # DELETE PROFILE
-@app.route("/delete_profile/<username>", methods=["GET", "POST"])
-def delete_profile(username):
-    return
+@app.route("/delete_profile/<user_id>", methods=["GET", "POST"])
+def delete_profile(user_id):
+    """Delete profile from the database. Checks:
+    1- If user logged in
+    2- If session username is who is logged in
+
+        :return login page
+        """
+    if session["user"]:
+        username = DB_USERS.find_one(
+            {"username": session["user"]})["username"]
+        current_user = DB_USERS.find_one({'_id': ObjectId(user_id)})
+        if username == current_user['username']:
+            DB_USERS.remove({'_id': ObjectId(user_id)})
+        flash("Profile successfully deleted")
+        return redirect(url_for('index'))
+    return redirect(url_for('login'))

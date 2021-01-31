@@ -147,5 +147,5 @@ def delete_tenancy(tenancy_id):
         if username == current_tenancy['created_by']:
             DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
         flash("Tenancy successfully deleted")
-        return redirect(url_for('profile'))
-    return redirect(url_for('login_page'))
+        return redirect(url_for('login'))
+    return redirect(url_for('login'))
