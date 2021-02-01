@@ -149,3 +149,10 @@ def delete_tenancy(tenancy_id):
         flash("Tenancy successfully deleted")
         return redirect(url_for('login'))
     return redirect(url_for('login'))
+
+
+# GET TENANCIES
+@app.route("/rents_map")
+def rents_map ():
+    tenancies = DB_TENANCIES.find()
+    return render_template("rents-map.html", tenancies=tenancies)

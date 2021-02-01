@@ -50,6 +50,24 @@ footer {
   &:hover {
     background-color: $sec-colour;
   }
+
+  &:focus {
+    background-color: $sec-colour;
+  }
+}
+
+.button-white {
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+
+  &:hover {
+    background-color: $prim-colour;
+  }
+
+  &:focus {
+    background-color: $prim-colour;
+  }
 }
 
 // Form

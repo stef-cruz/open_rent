@@ -25,9 +25,10 @@
 }
 
 .steps {
+  margin-top: 10rem;
+
   h3 {
     margin: 5rem 0;
-    font-weight: 600;
   }
 
   &__wrapper {
@@ -75,6 +76,26 @@
       font-size: 1.2rem;
     }
   }
+}
+
+.map-section {
+  margin-top: 10rem;
+
+  h2 {
+    font-family: $title;
+  }
+
+  &__bg {
+    background-color: $prim-colour;
+    height: 15rem;
+    position: relative;
+  }
+
+  &__fg {
+    position: absolute;
+    margin-top: 4rem;
+  }
+
 }
 
 .about {

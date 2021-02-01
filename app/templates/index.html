@@ -43,8 +43,8 @@
 </section>
 
 <!--How it works-->
-<section>
-    <div class="container steps">
+<section class="steps">
+    <div class="container">
         <h3>How does it work?</h3>
         <div class="row">
             <div class="col s12 m6 steps__wrapper">
@@ -75,12 +75,13 @@
 </section>
 
 <!--Map -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h4>Rent Map</h4>
-            </div>
+<section class="map-section">
+    <div class="row center-align map-section__bg">
+        <div class="col s12 map-section__fg">
+            <h2>Rents Map</h2>
+            <a href="{{ url_for('rents_map') }}">
+                <button class="btn-large button-white">See Rents Map</button>
+            </a>
         </div>
     </div>
 </section>
@@ -90,7 +91,7 @@
     <div class="container center-align">
         <div class="row">
             <div class="col s12 about__hero">
-                <h2>Why OpenRent?</h2>
+                <h3>Why OpenRent?</h3>
                 <p>To bring rental information to everyone creating a database of rent prices in Ireland.</p>
             </div>
             <div class="col s12 m6 about__card">

@@ -41,9 +41,11 @@
   color: white;
 }
 
+.steps {
+  margin-top: 10rem;
+}
 .steps h3 {
   margin: 5rem 0;
-  font-weight: 600;
 }
 .steps__wrapper img {
   display: grid;
@@ -78,6 +80,22 @@
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+}
+
+.map-section {
+  margin-top: 10rem;
+}
+.map-section h2 {
+  font-family: "Bebas Neue", serif;
+}
+.map-section__bg {
+  background-color: #68ff5b;
+  height: 15rem;
+  position: relative;
+}
+.map-section__fg {
+  position: absolute;
+  margin-top: 4rem;
 }
 
 .about {
@@ -420,6 +438,21 @@ footer {
 }
 .button-black:hover {
   background-color: #ff6d00;
+}
+.button-black:focus {
+  background-color: #ff6d00;
+}
+
+.button-white {
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+}
+.button-white:hover {
+  background-color: #68ff5b;
+}
+.button-white:focus {
+  background-color: #68ff5b;
 }
 
 .form-margin {
