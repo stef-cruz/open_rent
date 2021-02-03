@@ -1,3 +1,27 @@
 #map {
   height: 40rem;
 }
+
+.hidden-coordinates {
+  display: none;
+}
+
+.gm-style .gm-style-iw {
+  font-weight: 400;
+}
+
+.infowindow {
+  &__price {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__address {
+    font-size: 1rem;
+  }
+
+  &__type {
+    font-size: 0.9rem;
+    color: rgba(black, 0.5);
+  }
+}

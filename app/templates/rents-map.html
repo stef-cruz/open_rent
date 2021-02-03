@@ -3,7 +3,7 @@
 
 <h3 class="center-align heading-section">Rents Map</h3>
 
-<section>
+<section class="rents-map">
     <div id="map"></div>
     {% for tenancy in tenancies %}
     <div class="card-panel">
@@ -13,22 +13,22 @@
                     <tbody>
                     <tr>
                         <th>Address 1</th>
-                        <td>{{ tenancy.address_1 }}</td>
+                        <td class="js-address-1">{{ tenancy.address_1 }}</td>
                     </tr>
                     <tr>
                         <th>Address 2</th>
-                        <td>{{ tenancy.address_2 }}</td>
+                        <td class="js-address-2">{{ tenancy.address_2 }}</td>
                     </tr>
-                    <tr>
+                    <tr class="hidden-coordinates">
                         <th>Lat & Long</th>
-                        <td id="lat-long">
-                            <div class="lat">{{ tenancy.latitude }}</div>
-                            <div class="long">{{ tenancy.longitude }}</div>
+                        <td class="js-lat-long">
+                            <div class="js-lat">{{ tenancy.latitude }}</div>
+                            <div class="js-long">{{ tenancy.longitude }}</div>
                         </td>
                     </tr>
                     <tr>
                         <th>Accommodation</th>
-                        <td>{{ tenancy.accommodation_type }}</td>
+                        <td class="js-type">{{ tenancy.accommodation_type }}</td>
                     </tr>
                     <tr>
                         <th>Start Date</th>
@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <th>Price</th>
-                        <td>{{ tenancy.price }}</td>
+                        <td class="js-price">€{{ tenancy.price }}</td>
                     </tr>
                     </tbody>
                 </table>

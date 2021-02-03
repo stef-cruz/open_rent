@@ -16,10 +16,20 @@ function initMap() {
     };
 
     //Adding markers
-    let latLong = document.querySelectorAll("#lat-long")
-    let latValue = document.getElementsByClassName("lat")
-    let longValue = document.getElementsByClassName("long")
-    let content = '<div>test</div>';
+    let latLong = document.querySelectorAll(".js-lat-long")
+    let latValue = document.getElementsByClassName("js-lat")
+    let longValue = document.getElementsByClassName("js-long")
+    let price = document.getElementsByClassName("js-price")
+    let addressOne = document.getElementsByClassName("js-address-1")
+    let addressTwo = document.getElementsByClassName("js-address-2")
+    let type = document.getElementsByClassName("js-type")
+    // let content =
+    //     '<div class="infowindow">' +
+    //         '<p class="infowindow__price">' + document.getElementsByClassName("js-price") + '</p>' +
+    //         '<p class="infowindow__address">' + document.getElementsByClassName("js-address-1") + '</p>' +
+    //         '<p class="infowindow__address">' + document.getElementsByClassName("js-address-2") + '</p>' +
+    //         '<p class="infowindow__type">' + document.getElementsByClassName("js-type") + '</p>' +
+    //     '</div>';
 
     //Convert lat and long to float, source https://stackoverflow.com/questions/20585055/how-to-fix-uncaught-invalidvalueerror-setposition-not-a-latlng-or-latlnglitera/20585117
     for (let i = 0; i < latLong.length; i++) {
@@ -29,8 +39,18 @@ function initMap() {
                 lng: parseFloat(longValue[i].innerHTML) },
             map: map,
             });
+
+        let content =
+            '<div class="infowindow">' +
+            '<p class="infowindow__price">' + price[i].innerHTML + '</p>' +
+            '<p class="infowindow__address">' + addressOne[i].innerHTML + '</p>' +
+            '<p class="infowindow__address">' + addressTwo[i].innerHTML + '</p>' +
+            '<p class="infowindow__type">' + type[i].innerHTML + '</p>' +
+            '</div>';
+
         addInfoWindow(marker, content)
     }
+
 
     //Add Info Window, source https://developers.google.com/maps/documentation/javascript/events#MarkerEvents
     function addInfoWindow(marker, content) {
@@ -43,12 +63,7 @@ function initMap() {
     }
 
     // Auto complete address
-    try {
-        const input = document.getElementById("address_1");
-        const autocomplete = new google.maps.places.Autocomplete(input, options);
-    }
-    catch(err) {
-        console.log("Autocomplete address works on Add Tenancy page")
-    }
+    const input = document.getElementById("address_1");
+    const autocomplete = new google.maps.places.Autocomplete(input, options);
 }
 

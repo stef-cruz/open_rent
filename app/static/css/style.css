@@ -411,6 +411,26 @@ input.select-dropdown.dropdown-trigger {
   height: 40rem;
 }
 
+.hidden-coordinates {
+  display: none;
+}
+
+.gm-style .gm-style-iw {
+  font-weight: 400;
+}
+
+.infowindow__price {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.infowindow__address {
+  font-size: 1rem;
+}
+.infowindow__type {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;
