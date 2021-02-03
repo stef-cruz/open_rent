@@ -407,6 +407,10 @@ input.select-dropdown.dropdown-trigger {
   margin-bottom: 4rem;
 }
 
+#map {
+  height: 40rem;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;

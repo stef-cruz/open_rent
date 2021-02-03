@@ -4,11 +4,7 @@
 <h3 class="center-align heading-section">Rents Map</h3>
 
 <section>
-    <div class="row">
-        <div class="col">
-            <div id="map"></div>
-        </div>
-    </div>
+    <div id="map"></div>
     {% for tenancy in tenancies %}
     <div class="card-panel">
         <div class="row table-responsive">
@@ -22,6 +18,13 @@
                     <tr>
                         <th>Address 2</th>
                         <td>{{ tenancy.address_2 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Lat & Long</th>
+                        <td id="lat-long">
+                            <div class="lat">{{ tenancy.latitude }}</div>
+                            <div class="long">{{ tenancy.longitude }}</div>
+                        </td>
                     </tr>
                     <tr>
                         <th>Accommodation</th>
