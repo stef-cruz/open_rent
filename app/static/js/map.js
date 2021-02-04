@@ -23,13 +23,6 @@ function initMap() {
     let addressOne = document.getElementsByClassName("js-address-1")
     let addressTwo = document.getElementsByClassName("js-address-2")
     let type = document.getElementsByClassName("js-type")
-    // let content =
-    //     '<div class="infowindow">' +
-    //         '<p class="infowindow__price">' + document.getElementsByClassName("js-price") + '</p>' +
-    //         '<p class="infowindow__address">' + document.getElementsByClassName("js-address-1") + '</p>' +
-    //         '<p class="infowindow__address">' + document.getElementsByClassName("js-address-2") + '</p>' +
-    //         '<p class="infowindow__type">' + document.getElementsByClassName("js-type") + '</p>' +
-    //     '</div>';
 
     //Convert lat and long to float, source https://stackoverflow.com/questions/20585055/how-to-fix-uncaught-invalidvalueerror-setposition-not-a-latlng-or-latlnglitera/20585117
     for (let i = 0; i < latLong.length; i++) {

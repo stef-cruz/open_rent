@@ -301,34 +301,10 @@
   color: black;
 }
 
-.my-tenancies__card {
-  background-color: #68ff5b;
-  margin: 2rem 0;
-  font-weight: 100;
-  padding-top: 3rem;
-}
-.my-tenancies__card th {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.my-tenancies__card .table-responsive {
-  overflow-x: auto;
-}
-@media (min-width: 48rem) {
-  .my-tenancies__card .table-responsive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.button-profile {
-  margin: 1rem 0;
-  background-color: black;
-  color: white;
-}
-.button-profile:hover {
-  background-color: #ff6d00;
+.my-tenancies .card-buttons {
+  display: grid;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .button-tenancy {
@@ -411,10 +387,6 @@ input.select-dropdown.dropdown-trigger {
   height: 40rem;
 }
 
-.hidden-coordinates {
-  display: none;
-}
-
 .gm-style .gm-style-iw {
   font-weight: 400;
 }
@@ -429,6 +401,56 @@ input.select-dropdown.dropdown-trigger {
 .infowindow__type {
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.rents-map__card {
+  background-color: #68ff5b;
+  margin: 2rem 0;
+  font-weight: 100;
+  padding-top: 3rem;
+}
+.rents-map__card .hidden-coordinates {
+  display: none;
+}
+
+.card-tenancy {
+  background-color: #68ff5b;
+  margin: 2rem 0;
+  font-weight: 100;
+  padding-top: 3rem;
+}
+
+.card-content {
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+}
+.card-content__key, .card-content__value {
+  padding-right: 8px;
+  display: inline-block;
+}
+.card-content__key p, .card-content__value p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.card-content__key {
+  width: 30%;
+  margin-right: 1.2rem;
+  padding-top: 0.2rem;
+  vertical-align: top;
+}
+.card-content__key p {
+  font-weight: 700;
+}
+.card-content__value {
+  position: relative;
+  width: 60%;
+}
+.card-content hr {
+  height: 0.1rem;
+  margin: 2rem 0;
+  background-color: #ff6d00;
+  border: 0;
 }
 
 * {

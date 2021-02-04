@@ -2,10 +2,6 @@
   height: 40rem;
 }
 
-.hidden-coordinates {
-  display: none;
-}
-
 .gm-style .gm-style-iw {
   font-weight: 400;
 }
@@ -23,5 +19,18 @@
   &__type {
     font-size: 0.9rem;
     color: rgba(black, 0.5);
+  }
+}
+
+.rents-map {
+  &__card {
+    background-color: $prim-colour;
+    margin: 2rem 0;
+    font-weight: 100;
+    padding-top: 3rem;
+
+    .hidden-coordinates {
+      display: none;
+    }
   }
 }

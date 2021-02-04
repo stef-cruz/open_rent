@@ -1,0 +1,49 @@
+//CSS shared between profile.html & rents-map.html
+
+.card-tenancy {
+  background-color: $prim-colour;
+  margin: 2rem 0;
+  font-weight: 100;
+  padding-top: 3rem;
+}
+
+.card-content {
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+
+  &__key,
+  &__value {
+    padding-right: 8px;
+    display: inline-block;
+  }
+
+  &__key p,
+  &__value p {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  &__key {
+    width: 30%;
+    margin-right: 1.2rem;
+    padding-top: 0.2rem;
+    vertical-align: top;
+  }
+
+  &__key p {
+    font-weight: 700;
+  }
+
+  &__value {
+    position: relative;
+    width: 60%;
+  }
+
+  hr {
+    height: 0.1rem;
+    margin: 2rem 0;
+    background-color: $sec-colour;
+    border: 0;
+  }
+}
