@@ -34,24 +34,28 @@ function initMap() {
             });
 
         let content =
-            '<div class="infowindow">' +
+            '<div class="infowindow" id="js-infowindow-adress">' +
             '<p class="infowindow__price">' + price[i].innerHTML + '</p>' +
             '<p class="infowindow__address">' + addressOne[i].innerHTML + '</p>' +
             '<p class="infowindow__address">' + addressTwo[i].innerHTML + '</p>' +
             '<p class="infowindow__type">' + type[i].innerHTML + '</p>' +
             '</div>';
 
-        addInfoWindow(marker, content)
+        InfoWindow(marker, content)
     }
 
-
     //Add Info Window, source https://developers.google.com/maps/documentation/javascript/events#MarkerEvents
-    function addInfoWindow(marker, content) {
-        const infowindow = new google.maps.InfoWindow({
-            content: content,
-        });
-        marker.addListener("click", () => {
-            infowindow.open(marker.get("map"), marker);
+
+    //Ensure infoWindow closes every time a new marker is clicked, source https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked
+    let addInfoWindow = new google.maps.InfoWindow();
+
+    function InfoWindow(marker, content) {
+        google.maps.event.addListener(marker, 'click', function () {
+            // set content
+            addInfoWindow.setContent(content);
+            // open infowindow on the marker
+            addInfoWindow.open(map, marker);
+            displayTenancy();
         });
     }
 

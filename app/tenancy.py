@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for, abort)
 import os
 import googlemaps
+from datetime import datetime, date, time
 
 from app import app
 from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, DB_USERS
@@ -43,7 +44,8 @@ def add_tenancy():
                         "start_date": request.form.get("start_date"),
                         "end_date": request.form.get("end_date"),
                         "price": request.form.get("price"),
-                        "created_by": session["user"]
+                        "created_by": session["user"],
+                        "date": time.strftime("%Y-%m-%d")
                     }
                     DB_TENANCIES.insert_one(tenancy)
                     flash("Tenancy Successfully Added")
@@ -110,7 +112,8 @@ def edit_tenancy(tenancy_id):
                         "start_date": request.form.get("start_date"),
                         "end_date": request.form.get("end_date"),
                         "price": request.form.get("price"),
-                        "created_by": session["user"]
+                        "created_by": session["user"],
+                        "date": time.strftime("%Y-%m-%d")
                     }
                     DB_TENANCIES.update({"_id": ObjectId(tenancy_id)}, edited_tenancy)
                     flash("Tenancy Successfully Updated")

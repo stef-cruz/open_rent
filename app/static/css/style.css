@@ -403,18 +403,16 @@ input.select-dropdown.dropdown-trigger {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.rents-map__card {
-  background-color: #68ff5b;
-  margin: 2rem 0;
-  font-weight: 100;
-  padding-top: 3rem;
+.hidden-coordinates {
+  display: none;
 }
-.rents-map__card .hidden-coordinates {
+
+#card-tenancy {
   display: none;
 }
 
 .card-tenancy {
-  background-color: #68ff5b;
+  background-color: rgba(0, 0, 0, 0.2);
   margin: 2rem 0;
   font-weight: 100;
   padding-top: 3rem;
