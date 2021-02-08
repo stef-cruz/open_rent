@@ -20,7 +20,7 @@ function waitForElementToDisplay(selector, callback, checkFrequencyInMs, timeout
 
 function displayTenancy() {
 
-    //Get number of tenancies on rents-map.html
+    //Get number of tenancies on rent-register.html
     let cardTenancies = document.getElementsByClassName("js-card-tenancy");
 
     //Clear previous results
@@ -30,7 +30,7 @@ function displayTenancy() {
         }
     }
 
-    //Get Lat & Long from rents-map.html
+    //Get Lat & Long from rent-register.html
     let rentsMapLat = document.getElementsByClassName("js-lat");
     let rentsMapLong = document.getElementsByClassName("js-long");
 
@@ -40,7 +40,7 @@ function displayTenancy() {
     let infoWindowLong = document.getElementById("js-infowindow__long").innerHTML;
 
     for (let i = 0; i < cardTenancies.length; i++) {
-        //if lat long from infoWindow == lat long from tenancies on rents-map.html, display: block
+        //if lat long from infoWindow == lat long from tenancies on rent-register.html, display: block
         if (rentsMapLat[i].innerHTML == infoWindowLat && rentsMapLong[i].innerHTML == infoWindowLong) {
             cardTenancies[i].style.display = "block";
         }

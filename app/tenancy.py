@@ -155,7 +155,7 @@ def delete_tenancy(tenancy_id):
 
 
 # GET TENANCIES
-@app.route("/rents_map")
-def rents_map ():
+@app.route("/rent_register")
+def rent_register ():
     tenancies = DB_TENANCIES.find()
-    return render_template("rents-map.html", tenancies=tenancies)
+    return render_template("rent-register.html", tenancies=tenancies)
