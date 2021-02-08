@@ -13,7 +13,7 @@
                     <i class="fas fa-plus"></i>
                     <img src="{{ url_for('static', filename='images/icons8-ireland-map.png') }}" alt="Ireland map icon">
                 </div>
-                <h2>User driven website of rent prices in Ireland.</h2>
+                <h2>Welcome to the first user driven rent register in Dublin.</h2>
             </div>
         </div>
     </div>
@@ -62,7 +62,6 @@
                 </div>
             </div>
             <div class="col s12 m6 steps__illustration">
-                <!-- TODO: align illustration horizontally in the container  -->
                 <img src="{{ url_for('static', filename='images/woman-in-house.png') }}" alt="Woman in house">
             </div>
         </div>
@@ -74,15 +73,22 @@
     </div>
 </section>
 
-<!--Map -->
+<!-- Map link -->
 <section class="map-section">
-    <div class="row center-align map-section__bg">
-        <div class="col s12 map-section__fg">
-            <h2>Rents Map</h2>
-            <a href="{{ url_for('rent_register') }}">
-                <button class="btn-large button-white">View Map</button>
-            </a>
+    <div class="row center-align">
+        <div class="col s12 m8 map-section__bg--left">
+            <div class="content-left">
+                <p>Rent Register</p>
+            </div>
         </div>
+        <a href="{{ url_for('rent_register') }}">
+            <div class="col s12 m4 map-section__bg--right">
+                <div class="content-right">
+                    <i class="fas fa-angle-double-right"></i>
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+            </div>
+        </a>
     </div>
 </section>
 
@@ -96,15 +102,23 @@
             </div>
             <div class="col s12 m6 about__card">
                 <div class="card-panel">
-                    <img class="img-left" src="{{ url_for('static', filename='images/for-you.png') }}" alt="Man with magnifying glass">
-                    <div class="black-text txt-left"><span>FOR YOU</span><br> Find out what are the rent prices practiced in the Irish market.</div>
+                    <img class="img-left" src="{{ url_for('static', filename='images/for-you.png') }}"
+                         alt="Man with magnifying glass">
+                    <div class="black-text txt-left"><span>FOR YOU</span><br> Find out what are the rent prices
+                        practiced in the Irish market.
+                    </div>
                 </div>
             </div>
             <div class="col s12 m6 about__card">
                 <div class="card-panel">
-                    <img class="img-right" src="{{ url_for('static', filename='images/for-the-community-boy.png') }}" alt="Man with hand up waving">
-                    <div class="black-text txt-right"><span>FOR THE <br> COMMUNITY</span><br> To provide user driven data of the private rented sector and <br> track the market in Ireland.</div>
-                    <img class="img-right-two" src="{{ url_for('static', filename='images/for-the-community-girl.png') }}" alt="Woman with hand up waving">
+                    <img class="img-right" src="{{ url_for('static', filename='images/for-the-community-boy.png') }}"
+                         alt="Man with hand up waving">
+                    <div class="black-text txt-right"><span>FOR THE <br> COMMUNITY</span><br> To provide user driven
+                        data of the private rented sector and <br> track the market in Ireland.
+                    </div>
+                    <img class="img-right-two"
+                         src="{{ url_for('static', filename='images/for-the-community-girl.png') }}"
+                         alt="Woman with hand up waving">
                 </div>
             </div>
         </div>

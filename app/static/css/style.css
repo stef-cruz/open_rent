@@ -65,6 +65,7 @@
 }
 .steps__illustration img {
   width: 100%;
+  padding: 5rem 0;
 }
 .steps button {
   background-color: black;
@@ -83,23 +84,35 @@
 }
 
 .map-section {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
-.map-section h2 {
-  font-family: "Bebas Neue", serif;
-}
-.map-section__bg {
+.map-section__bg--left {
   background-color: #68ff5b;
   height: 15rem;
-  position: relative;
+  padding: 0;
 }
-.map-section__fg {
-  position: absolute;
-  margin-top: 4rem;
+.map-section__bg--left .content-left {
+  padding: 5rem 0;
+}
+.map-section__bg--left .content-left p {
+  font-family: "Bebas Neue", serif;
+  font-size: 4rem;
+}
+.map-section__bg--right {
+  background-color: #ff6d00;
+  height: 15rem;
+  padding: 0;
+}
+.map-section__bg--right .content-right {
+  padding: 5rem 0;
+}
+.map-section__bg--right .content-right i {
+  font-size: 5rem;
+  color: white;
 }
 
 .about {
-  margin: 20rem 0;
+  margin: 15rem 0;
 }
 @media (min-width: 64rem) {
   .about__card {

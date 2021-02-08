@@ -56,6 +56,7 @@
   &__illustration {
     img {
       width: 100%;
+      padding: 5rem 0;
     }
   }
 
@@ -79,27 +80,42 @@
 }
 
 .map-section {
-  margin-top: 10rem;
+  margin-top: 15rem;
 
-  h2 {
-    font-family: $title;
-  }
-
-  &__bg {
+  &__bg--left {
     background-color: $prim-colour;
     height: 15rem;
-    position: relative;
+    padding: 0;
+
+    .content-left {
+      padding: 5rem 0;
+
+      p {
+        font-family: $title;
+        font-size: 4rem;
+      }
+    }
   }
 
-  &__fg {
-    position: absolute;
-    margin-top: 4rem;
+  &__bg--right {
+    background-color: $sec-colour;
+    height: 15rem;
+    padding: 0;
+
+    .content-right {
+      padding: 5rem 0;
+
+      i {
+        font-size: 5rem;
+        color: white;
+      }
+    }
   }
 
 }
 
 .about {
-  margin: 20rem 0;
+  margin: 15rem 0;
 
   @include bp(desktop) {
     &__card {
