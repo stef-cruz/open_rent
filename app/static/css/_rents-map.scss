@@ -2,23 +2,32 @@
   height: 40rem;
 }
 
+.rents-map {
+  h5 {
+    margin: 3rem 0 1rem 0;
+  }
+}
+
 .gm-style .gm-style-iw {
   font-weight: 400;
 }
 
 .infowindow {
   &__price {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    margin: 0.3rem 0;
   }
 
   &__address {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
   }
 
   &__type {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgba(black, 0.5);
+    margin: 0.3rem 0;
   }
 }
 
@@ -26,6 +35,11 @@
   display: none;
 }
 
-#card-tenancy {
+.js-card-tenancy {
+  display: none;
+}
+
+#js-infowindow__long,
+#js-infowindow__lat {
   display: none;
 }

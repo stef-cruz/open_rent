@@ -34,11 +34,13 @@ function initMap() {
             });
 
         let content =
-            '<div class="infowindow" id="js-infowindow-adress">' +
+            '<div class="infowindow">' +
             '<p class="infowindow__price">' + price[i].innerHTML + '</p>' +
             '<p class="infowindow__address">' + addressOne[i].innerHTML + '</p>' +
             '<p class="infowindow__address">' + addressTwo[i].innerHTML + '</p>' +
             '<p class="infowindow__type">' + type[i].innerHTML + '</p>' +
+            '<p id="js-infowindow__lat">' + latValue[i].innerHTML + '</p>' +
+            '<p id="js-infowindow__long">' + longValue[i].innerHTML + '</p>' +
             '</div>';
 
         InfoWindow(marker, content)
@@ -55,7 +57,8 @@ function initMap() {
             addInfoWindow.setContent(content);
             // open infowindow on the marker
             addInfoWindow.open(map, marker);
-            displayTenancy();
+            waitForElementToDisplay("#js-infowindow__lat", function(){alert();}, 1000, 9000);
+
         });
     }
 

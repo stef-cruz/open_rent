@@ -8,13 +8,13 @@
     <div id="map"></div>
     <!-- ./Map -->
 
-    <h4 class="center-align heading-section">Tenancies</h4>
+    <h5 class="center-align">Tenancy Details</h5>
 
     <!-- Card Tenancy -->
-    <div class="row" id="card-tenancy">
+    <div class="row">
         {% for tenancy in tenancies %}
-        <div class="col s12 m6 l4">
-            <div class="card-panel card-tenancy">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel card-tenancy js-card-tenancy">
                 <div class="card-content">
                     <h4 class="js-price">€{{ tenancy.price }}</h4>
                     <p class="js-address-1">{{ tenancy.address_1 }}</p>
