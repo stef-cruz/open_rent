@@ -19,5 +19,5 @@ DB_TENANCIES = MONGO.db.tenancies
 DB_ACCOMMODATION_TYPES = MONGO.db.accommodation_types
 
 # Today's date
-TODAY_DATE = date.today().strftime("%d/%m/%Y")
+TODAY_DATE = date.today().strftime("%d/%b/S%Y")
 

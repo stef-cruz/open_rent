@@ -79,7 +79,7 @@
                     </div>
                     <div class="row">
                         {% for tenancy in user_tenancies %}
-                        <div class="col s12 m6">
+                        <div class="col s12 m10 offset-m2">
                             <div class="card-panel card-tenancy">
                                 <div class="card-content">
                                     <h4 class="js-price">€{{ tenancy.price }}</h4>
@@ -109,6 +109,9 @@
                                     </div>
                                     <div class="card-content__value">
                                         <p>{{ tenancy.end_date }}</p>
+                                    </div>
+                                    <div class="card-content__date">
+                                        <p>- Uploaded on {{ tenancy.date }} -</p>
                                     </div>
                                 </div>
                                 <div class="card-buttons">
