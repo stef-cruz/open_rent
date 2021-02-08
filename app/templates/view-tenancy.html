@@ -1,46 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">View Tenancy</h3>
+<h3 class="center-align heading-section">View Tenancy</h3>
 
-<section class="container">
+<section class="container manage-tenancy">
     <!-- Get Tenancy -->
-    <div class="row">
-        <div class="col">
-            {{ tenancy.address_1 }} <br>
-            {{ tenancy.address_2 }} <br>
-            {{ tenancy.accommodation_type }} <br>
-            {{ tenancy.start_date }} <br>
-            {{ tenancy.end_date }} <br>
-            {{ tenancy.price }} <br>
+    <form>
+        <div class="row manage-tenancy__inputs">
+            <div class="col s12 form-margin">
+                <label>Address Line 1</label>
+                <input type="text" id="address_1" value="{{ tenancy.address_1 }}">
+            </div>
+            <div class="col s12 form-margin">
+                <label>Address Line 2</label>
+                <input type="text" id="address_2" value="{{ tenancy.address_2 }}">
+            </div>
+            <div class="col s12 form-margin">
+                <label>Accommodation Type</label>
+                <input type="text" id="accommodation_type_view" value="{{ tenancy.accommodation_type }}">
+            </div>
+            <div class="col s12 form-margin">
+                <label>Start Date</label>
+                <input type="text" id="start_date" value="{{ tenancy.start_date }}">
+            </div>
+            <div class="col s12 form-margin">
+                <label>End Date</label>
+                <input type="text" id="end_date" value="{{ tenancy.end_date }}">
+            </div>
+            <div class="col s12 form-margin">
+                <label>Price</label>
+                <input type="text" id="price" value="{{ tenancy.price }}">
+            </div>
         </div>
-    </div>
+    </form>
+
     <!-- ./Get Tenancy -->
-    <div class="row">
+    <div class="row center-align">
         <!--Edit Tenancy -->
-        <div class="col s12 m4 ">
+        <div class="col s12 m6">
             <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
-                <button class="btn-large" type="submit">Edit Tenancy</button>
+                <button class="btn-large button-black" type="submit">Edit Tenancy <i class="fas fa-edit"></i></button>
             </a>
         </div>
         <!-- ./Edit Tenancy -->
-        <!-- Delete Tenancy -->
-        <div class="col s12 m4 ">
-            <button class="btn-large" type="submit">
-                Delete Tenancy
-            </button>
-        </div>
-        <!-- ./Delete Tenancy -->
         <!--View Map / All Tenancies -->
-        <div class="col s12 m4 ">
-            <button class="btn-large" type="submit">
-                View Map
-            </button>
+        <div class="col s12 m6">
+            <a href="{{ url_for('rent_register') }}">
+                <button class="btn-large button-black" type="submit">View Map <i class="fas fa-map-marked-alt"></i></button>
+            </a>
         </div>
     </div>
 
     <!-- Map -->
-    <div id="map-edit-add-tenancy">
+    <div id="map-tenancy">
         <div id="map"></div>
     </div>
     <!--  ./Map -->

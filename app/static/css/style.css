@@ -320,29 +320,30 @@
   text-align: center;
 }
 
-.add-edit-tenancy {
+.manage-tenancy {
   margin-bottom: 5rem;
 }
-.add-edit-tenancy #address_1,
-.add-edit-tenancy #address_2,
-.add-edit-tenancy #start_date,
-.add-edit-tenancy #end_date,
-.add-edit-tenancy #price {
+.manage-tenancy #address_1,
+.manage-tenancy #address_2,
+.manage-tenancy #start_date,
+.manage-tenancy #end_date,
+.manage-tenancy #price,
+.manage-tenancy #accommodation_type_view {
   background-color: #68ff5b;
   border-bottom: none;
   margin-bottom: 0;
   margin-top: 0.2rem;
   font-family: "Open Sans", sans-serif;
 }
-.add-edit-tenancy label {
+.manage-tenancy label {
   color: black;
   font-size: 1.2rem;
 }
-.add-edit-tenancy__inputs {
+.manage-tenancy__inputs {
   margin-bottom: 4rem;
 }
 
-#map-edit-add-tenancy {
+#map-tenancy {
   display: none;
 }
 

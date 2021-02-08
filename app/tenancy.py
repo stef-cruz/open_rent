@@ -33,7 +33,7 @@ def add_tenancy():
             if geocode_result:
                 latitude = geocode_result[0]["geometry"]["location"]["lat"]
                 longitude = geocode_result[0]["geometry"]["location"]["lng"]
-                if 53.25 >= latitude >= 53.35 or -6.36 <= longitude <= -6.26:
+                if 53.20 >= latitude >= 53.50 or -6.50 <= longitude <= -6.00:
                     tenancy = {
                         "address_1": request.form.get("address_1"),
                         "address_2": request.form.get("address_2"),

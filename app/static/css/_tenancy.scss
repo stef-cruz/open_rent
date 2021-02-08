@@ -1,11 +1,14 @@
-.add-edit-tenancy {
+//Style sheet shared between edit-tenancy.html, view-tenancy.htmt, add-tenancy.html
+
+.manage-tenancy {
   margin-bottom: 5rem;
 
   #address_1,
   #address_2,
   #start_date,
   #end_date,
-  #price {
+  #price,
+  #accommodation_type_view {
     background-color: $prim-colour;
     border-bottom: none;
     margin-bottom: 0;
@@ -23,7 +26,7 @@
   }
 }
 
-#map-edit-add-tenancy {
+#map-tenancy {
   display: none;
 }
 
