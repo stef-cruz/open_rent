@@ -342,6 +342,10 @@
   margin-bottom: 4rem;
 }
 
+#map-edit-add-tenancy {
+  display: none;
+}
+
 input.select-dropdown.dropdown-trigger {
   background-color: #68ff5b;
   font-family: "Open Sans", sans-serif;

@@ -23,6 +23,10 @@
   }
 }
 
+#map-edit-add-tenancy {
+  display: none;
+}
+
 //Overwrite select input style
 input.select-dropdown.dropdown-trigger {
   background-color: $prim-colour;

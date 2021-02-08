@@ -1,4 +1,6 @@
 import os
+from datetime import date
+
 from app import app
 from flask_pymongo import PyMongo
 if os.path.exists("env.py"):
@@ -15,4 +17,7 @@ MONGO = PyMongo(app)
 DB_USERS = MONGO.db.users
 DB_TENANCIES = MONGO.db.tenancies
 DB_ACCOMMODATION_TYPES = MONGO.db.accommodation_types
+
+# Today's date
+TODAY_DATE = date.today().strftime("%d/%m/%Y")
 

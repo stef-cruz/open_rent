@@ -4,10 +4,9 @@ from flask import (
     redirect, request, session, url_for, abort)
 import os
 import googlemaps
-from datetime import datetime, date, time
 
 from app import app
-from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, DB_USERS
+from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, DB_USERS, TODAY_DATE
 
 # GOOGLE API KEY
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
@@ -45,7 +44,7 @@ def add_tenancy():
                         "end_date": request.form.get("end_date"),
                         "price": request.form.get("price"),
                         "created_by": session["user"],
-                        "date": time.strftime("%Y-%m-%d")
+                        "date": TODAY_DATE
                     }
                     DB_TENANCIES.insert_one(tenancy)
                     flash("Tenancy Successfully Added")
@@ -113,7 +112,7 @@ def edit_tenancy(tenancy_id):
                         "end_date": request.form.get("end_date"),
                         "price": request.form.get("price"),
                         "created_by": session["user"],
-                        "date": time.strftime("%Y-%m-%d")
+                        "date": TODAY_DATE
                     }
                     DB_TENANCIES.update({"_id": ObjectId(tenancy_id)}, edited_tenancy)
                     flash("Tenancy Successfully Updated")

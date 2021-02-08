@@ -57,13 +57,9 @@ function initMap() {
             addInfoWindow.setContent(content);
             // open infowindow on the marker
             addInfoWindow.open(map, marker);
-            waitForElementToDisplay("#js-infowindow__lat", function(){alert();}, 100, 9000);
+            waitForElementToDisplay("#js-infowindow__lat", function(){alert();}, 10, 9000);
 
         });
     }
-
-    // Auto complete address
-    const input = document.getElementById("address_1");
-    const autocomplete = new google.maps.places.Autocomplete(input, options);
 }
 
