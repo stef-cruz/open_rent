@@ -67,46 +67,34 @@
   width: 100%;
   padding: 5rem 0;
 }
-.steps button {
-  background-color: black;
-  margin: 3rem 0;
-}
-.steps button:hover {
-  background-color: #ff6d00;
-}
-.steps button:hover a {
-  color: black;
-}
-.steps button a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-}
 
-.map-section {
+.rent-register {
   margin-top: 15rem;
 }
-.map-section__bg--left {
+.rent-register__bg--left {
   background-color: #68ff5b;
   height: 15rem;
   padding: 0;
 }
-.map-section__bg--left .content-left {
-  padding: 5rem 0;
+.rent-register__bg--left .content-left {
+  padding: 4rem 0;
 }
-.map-section__bg--left .content-left p {
+.rent-register__bg--left .content-left p {
   font-family: "Bebas Neue", serif;
   font-size: 4rem;
 }
-.map-section__bg--right {
+.rent-register__bg--left .content-left span {
+  font-family: "Bebas Neue", serif;
+}
+.rent-register__bg--right {
   background-color: #ff6d00;
   height: 15rem;
   padding: 0;
 }
-.map-section__bg--right .content-right {
+.rent-register__bg--right .content-right {
   padding: 5rem 0;
 }
-.map-section__bg--right .content-right i {
+.rent-register__bg--right .content-right i {
   font-size: 5rem;
   color: white;
 }
@@ -168,20 +156,6 @@
 .contact {
   background-color: #68ff5b;
   padding: 10rem 0;
-}
-.contact button {
-  background-color: white;
-  margin: 3rem 0;
-}
-.contact button:hover {
-  background-color: black;
-}
-.contact button:hover a {
-  color: white;
-}
-.contact button a {
-  color: black;
-  font-size: 1.2rem;
 }
 
 .footer {
@@ -320,17 +294,27 @@
   margin-top: 2rem;
 }
 
-.button-tenancy {
-  margin: 1rem 0;
-  background-color: white;
-  color: black;
-}
-.button-tenancy:hover {
-  background-color: #ff6d00;
-}
-
 .modal-content {
   text-align: center;
+}
+
+.rent-register-profile {
+  background-color: #ff6d00;
+  height: 5rem;
+  margin: 4rem 0;
+  padding: 1.5rem 0;
+  font-family: "Bebas Neue", serif;
+}
+.rent-register-profile p {
+  font-size: 2rem;
+}
+.rent-register-profile a {
+  color: black;
+  font-size: 3rem;
+}
+.rent-register-profile i {
+  color: white;
+  font-size: 2rem;
 }
 
 .manage-tenancy {

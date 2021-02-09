@@ -36,7 +36,8 @@
                         <div class="col s12 m6">
                             {% if user_details.first_name %}
                             <label for="first_name">First Name</label>
-                            <input id="first_name" name="first-name" type="text" value="{{ user_details.first_name }}" disabled>
+                            <input id="first_name" name="first-name" type="text" value="{{ user_details.first_name }}"
+                                   disabled>
                             {% else %}
                             <label for="disabled">First Name</label>
                             <input id="disabled" type="text" disabled>
@@ -45,7 +46,8 @@
                         <div class="col s12 m6">
                             {% if user_details.last_name %}
                             <label for="last_name">Last Name</label>
-                            <input id="last_name" name="last-name" type="text" value="{{ user_details.last_name }}" disabled>
+                            <input id="last_name" name="last-name" type="text" value="{{ user_details.last_name }}"
+                                   disabled>
                             {% else %}
                             <label for="disabled">Last Name</label>
                             <input id="disabled" type="text" disabled>
@@ -54,7 +56,8 @@
                         <div class="col s12">
                             {% if user_details.email_address %}
                             <label for="email_address">Email Address</label>
-                            <input id="email_address" name="email-address" type="email" value="{{ user_details.email_address }}" disabled>
+                            <input id="email_address" name="email-address" type="email"
+                                   value="{{ user_details.email_address }}" disabled>
                             {% else %}
                             <label for="disabled">Email Address</label>
                             <input id="disabled" type="text" disabled>
@@ -79,7 +82,7 @@
                     </div>
                     <div class="row">
                         {% for tenancy in user_tenancies %}
-                        <div class="col s12 m10 offset-m2">
+                        <div class="col s12 m10 offset-m1">
                             <div class="card-panel card-tenancy">
                                 <div class="card-content">
                                     <h4 class="js-price">€{{ tenancy.price }}</h4>
@@ -116,26 +119,34 @@
                                 </div>
                                 <div class="card-buttons">
                                     <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
-                                        <button class="btn-large button-tenancy">Edit <i class="fas fa-edit"></i></button>
+                                        <button class="btn-large button-white">Edit <i class="fas fa-edit"></i>
+                                        </button>
                                     </a>
                                     <a href="#modal-delete-tenancy" class="modal-trigger">
-                                        <button class="btn-small button-tenancy">Delete <i class="fas fa-trash"></i></button>
+                                        <button class="btn-small button-white">Delete <i class="fas fa-trash"></i>
+                                        </button>
                                     </a>
                                 </div>
                                 <!-- Modal Delete Tenancy -->
                                 <div id="modal-delete-tenancy" class="modal">
                                     <div class="modal-content">
                                         <h4>Delete Tenancy</h4>
-                                        <p>Are you sure you want to this delete tenancy? This action is irreversible.</p>
+                                        <p>Are you sure you want to this delete tenancy? This action is
+                                            irreversible.</p>
                                     </div>
                                     <div class="row">
                                         <div class="col s12 m6">
                                             <a href="{{ url_for('profile') }}" class="modal-close">
-                                                <button class="btn-small button-black">Cancel <i class="fas fa-times-circle"></i></button></a>
+                                                <button class="btn-small button-black">Cancel <i
+                                                        class="fas fa-times-circle"></i></button>
+                                            </a>
                                         </div>
                                         <div class="col s12 m6">
-                                            <a href="{{ url_for('delete_tenancy', tenancy_id=tenancy._id) }}" class="modal-close">
-                                                <button class="btn-small button-black">Delete Tenancy <i class="fas fa-trash"></i></button></a>
+                                            <a href="{{ url_for('delete_tenancy', tenancy_id=tenancy._id) }}"
+                                               class="modal-close">
+                                                <button class="btn-small button-black">Delete Tenancy <i
+                                                        class="fas fa-trash"></i></button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -168,11 +179,15 @@
                     <div class="row center-align">
                         <div class="col s12 m6">
                             <a href="{{ url_for('profile') }}" class="modal-close">
-                                <button class="btn-small button-black">Cancel <i class="fas fa-times-circle"></i></button></a>
+                                <button class="btn-small button-black">Cancel <i class="fas fa-times-circle"></i>
+                                </button>
+                            </a>
                         </div>
                         <div class="col s12 m6">
                             <a href="{{ url_for('delete_profile', user_id=user_details._id) }}" class="modal-close">
-                                <button class="btn-small button-black">Delete Profile <i class="fas fa-trash"></i></button></a>
+                                <button class="btn-small button-black">Delete Profile <i class="fas fa-trash"></i>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -181,6 +196,23 @@
         </li>
     </ul>
     <!-- ./Tenancies -->
+</section>
+
+<section class="rent-register-profile">
+    <div class="row center-align">
+        <a href="{{ url_for('rent_register') }}">
+            <div class="col s12">
+                <p>
+                    Rent Register
+                    <i class="fas fa-angle-double-right"></i>
+                    <i class="fas fa-angle-double-right"></i>
+                    Check out the map
+                    <i class="fas fa-angle-double-right"></i>
+                    <i class="fas fa-angle-double-right"></i>
+                </p>
+            </div>
+        </a>
+    </div>
 </section>
 
 {% endblock %}

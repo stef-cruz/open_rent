@@ -36,19 +36,30 @@
   }
 }
 
-.button-tenancy {
-  margin: 1rem 0;
-  background-color: white;
-  color: black;
-
-  &:hover {
-    background-color: $sec-colour;
-  }
-}
-
 .modal-content {
   text-align: center;
 }
 
+.rent-register-profile {
+  background-color: $sec-colour;
+  height: 5rem;
+  margin: 4rem 0;
+  padding: 1.5rem 0;
+  font-family: $title;
+
+  p {
+    font-size: 2rem;
+  }
+
+  a {
+    color: black;
+    font-size: 3rem;
+  }
+
+  i {
+    color: white;
+    font-size: 2rem;
+  }
+}
 
 

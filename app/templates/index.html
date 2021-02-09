@@ -37,11 +37,6 @@
 
 </section>
 
-<!--Map-->
-<section>
-
-</section>
-
 <!--How it works-->
 <section class="steps">
     <div class="container">
@@ -65,24 +60,29 @@
                 <img src="{{ url_for('static', filename='images/woman-in-house.png') }}" alt="Woman in house">
             </div>
         </div>
-        <div class="row">
-            <button class="col s10 m6 btn-large offset-s1 offset-m3">
-                <a href="{{ url_for('register') }}">Register here <i class="fas fa-sign-in-alt"></i></a>
-            </button>
+        <div class="row center-align">
+            <div class="col s12">
+                <a href="{{ url_for('register') }}">
+                    <button class="btn-large button-black">
+                        Register here <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
 
 <!-- Map link -->
-<section class="map-section">
+<section class="rent-register">
     <div class="row center-align">
-        <div class="col s12 m8 map-section__bg--left">
+        <div class="col s12 m8 rent-register__bg--left">
             <div class="content-left">
-                <p>Rent Register</p>
+                <p>Rent Register</p><span>Check out the map</span>
             </div>
         </div>
         <a href="{{ url_for('rent_register') }}">
-            <div class="col s12 m4 map-section__bg--right">
+            <div class="col s12 m4 rent-register__bg--right">
                 <div class="content-right">
                     <i class="fas fa-angle-double-right"></i>
                     <i class="fas fa-angle-double-right"></i>
@@ -134,11 +134,12 @@
                 <p>Whether you fancy a chat or want to talk about our mission, we're here for you.</p>
             </div>
         </div>
-        <div class="row">
-            <button class="col s10 m6 btn-large offset-s1 offset-m3">
-                <!-- TODO: create contact page and link here -->
-                <a href="#">Contact us <i class="fas fa-paper-plane"></i></a>
-            </button>
+        <div class="row center-align">
+            <div class="col s12">
+                <a href="#">
+                    <button class="btn-large button-white">Contact us <i class="fas fa-paper-plane"></i></button>
+                </a>
+            </div>
         </div>
     </div>
 </section>
