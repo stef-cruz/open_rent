@@ -30,9 +30,20 @@
   display: none;
 }
 
-//Overwrite select input style
-input.select-dropdown.dropdown-trigger {
+#js-helper-text-select {
+  display: none;
+  color: $sec-colour;
+}
+
+//Overwrite select input default style
+.select-wrapper > input.select-dropdown.dropdown-trigger {
   background-color: $prim-colour;
+  font-family: $paragraph;
+}
+
+.select-year > input.select-dropdown.dropdown-trigger,
+.select-month > input.select-dropdown.dropdown-trigger {
+  background-color: white;
   font-family: $paragraph;
 }
 
@@ -46,4 +57,18 @@ input.select-dropdown.dropdown-trigger {
 
 .select-wrapper input.select-dropdown {
   border-bottom: none;
+}
+
+//Overwrite datepicker default style
+.datepicker-date-display {
+  background-color: $sec-colour;
+}
+
+.datepicker-cancel, .datepicker-today, .datepicker-done {
+  color: black;
+  font-weight: 700;
+}
+
+.datepicker-table td.is-today {
+  color: $sec-colour;
 }

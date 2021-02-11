@@ -344,8 +344,19 @@
   display: none;
 }
 
-input.select-dropdown.dropdown-trigger {
+#js-helper-text-select {
+  display: none;
+  color: #ff6d00;
+}
+
+.select-wrapper > input.select-dropdown.dropdown-trigger {
   background-color: #68ff5b;
+  font-family: "Open Sans", sans-serif;
+}
+
+.select-year > input.select-dropdown.dropdown-trigger,
+.select-month > input.select-dropdown.dropdown-trigger {
+  background-color: white;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -359,6 +370,19 @@ input.select-dropdown.dropdown-trigger {
 
 .select-wrapper input.select-dropdown {
   border-bottom: none;
+}
+
+.datepicker-date-display {
+  background-color: #ff6d00;
+}
+
+.datepicker-cancel, .datepicker-today, .datepicker-done {
+  color: black;
+  font-weight: 700;
+}
+
+.datepicker-table td.is-today {
+  color: #ff6d00;
 }
 
 .edit-profile {
