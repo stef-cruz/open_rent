@@ -67,8 +67,8 @@
                 <!-- Price -->
                 <div class="col s12 m4 form-margin">
                     <label for="price">Price</label>
-                    <input id="price" name="price" type="text" class="validate" pattern="^[0-9]{3,10}$" minlength="3" maxlength="10" required>
-                    <span class="helper-text" data-error="Only numbers, min 3 characters." data-success="Correct"></span>
+                    <input id="price" name="price" type="text" class="validate" pattern="\d{3,4}(,\d{2})*(\.\d{2})?" required>
+                    <span class="helper-text" data-error="Only numbers, dots, commas, min 100, max 9999" data-success="Correct"></span>
                 </div>
                 <!-- ./Price -->
             </div>
