@@ -16,36 +16,48 @@
 <body>
 
     <header>
+
+        <!-- Dropdown Structure -->
+        <ul id="dropdown-profile" class="dropdown-content">
+            <li><a href="{{ url_for('profile') }}">My Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        </ul>
+
         <!-- top navbar -->
         <nav>
             <div class="nav-wrapper">
                 <a href="/" class="brand-logo logo black-text">Open Rent</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="black-text" href="/">Home</a></li>
-                    <!-- TODO: review navbar links -->
                     {% if session.user %}
-                        <li><a class="black-text" href="{{ url_for('profile') }}">Profile</a></li>
                         <li><a class="black-text" href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
-                        <li><a class="black-text" href="">Manage Tenancies</a></li>
-                        <li><a class="black-text" href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                        <li><a class="black-text username dropdown-trigger" data-target="dropdown-profile" href="{{ url_for('profile') }}">{{ username }} <i class="fas fa-user-circle"></i> <i class="fas fa-sort-down"></i></a></li>
                     {% else %}
+                        <li><a class="black-text" href="/">Home</a></li>
+                        <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                        <li><a class="black-text" href="/">Contact Us</a></li>
                         <li><a class="black-text" href="{{ url_for('login') }}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
+
+
+
         <!-- mobile side navbar -->
         <ul class="sidenav white-text" id="mobile-demo">
             <li><h4 class="logo text-shadow center-align">Open Rent</h4></li>
-            <li><a href="/">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile') }}">Profile</a></li>
-                <li><a href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
-                <li><a href="">Manage Tenancies</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a class="black-text" href="{{ url_for('profile') }}">{{ username }}<i class="fas fa-user-circle"></i></a></li>
+                <li><a class="black-text" href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
+                <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                <li><a class="black-text" href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a class="black-text" href="/">Home</a></li>
+                <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                <li><a class="black-text" href="/">Contact Us</a></li>
+                <li><a class="black-text" href="{{ url_for('login') }}">Log In</a></li>
             {% endif %}
         </ul>
     </header>
@@ -62,13 +74,14 @@
                 </div>
                 <div class="col s12 m6 footer__nav">
                     <ul>
-                        <li><a href="/">Home</a></li>
                         {% if session.user %}
-                            <li><a href="{{ url_for('profile') }}">Profile</a></li>
-                            <li><a href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
-                            <li><a href="">Manage Tenancies</a></li>
-                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                            <li><a href="/">Contact Us</a></li>
                         {% else %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ url_for('rent_register') }}">Rent Register</a></li>
+                            <li><a href="/">Contact Us</a></li>
                             <li><a href="{{ url_for('login') }}">Log In</a></li>
                         {% endif %}
                     </ul>

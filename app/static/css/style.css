@@ -17,6 +17,29 @@
   background-color: #ff6d00;
 }
 
+.username i {
+  font-size: 1.3rem;
+}
+.username .fa-sort-down {
+  margin-left: 1rem;
+}
+
+.sidenav li > a > i {
+  margin: 0;
+}
+
+.dropdown-content {
+  background-color: #ff6d00;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: white;
+}
+
+.dropdown-content li:hover, .dropdown-content li:active {
+  background-color: rgba(255, 109, 0, 0.1);
+}
+
 .hero {
   background-color: #68ff5b;
 }

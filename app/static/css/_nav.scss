@@ -14,3 +14,31 @@
 .sidenav {
   background-color: $sec-colour;
 }
+
+.username {
+  i {
+    font-size: 1.3rem;
+  }
+
+  .fa-sort-down {
+    margin-left: 1rem;
+  }
+}
+
+.sidenav li > a > i {
+  margin: 0;
+}
+
+// Dropdown nav desktop override
+
+.dropdown-content {
+  background-color: $sec-colour;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: white;
+}
+
+.dropdown-content li:hover, .dropdown-content li:active {
+  background-color: rgba($sec-colour, 0.1) ;
+}
