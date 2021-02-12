@@ -356,7 +356,7 @@
 
 .select-year > input.select-dropdown.dropdown-trigger,
 .select-month > input.select-dropdown.dropdown-trigger {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.01);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -383,6 +383,10 @@
 
 .datepicker-table td.is-today {
   color: #ff6d00;
+}
+
+.datepicker-table td.is-selected {
+  background-color: rgba(255, 109, 0, 0.5);
 }
 
 .edit-profile {

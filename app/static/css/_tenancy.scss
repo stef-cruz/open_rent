@@ -43,7 +43,7 @@
 
 .select-year > input.select-dropdown.dropdown-trigger,
 .select-month > input.select-dropdown.dropdown-trigger {
-  background-color: white;
+  background-color: rgba(black, 0.01);
   font-family: $paragraph;
 }
 
@@ -71,4 +71,8 @@
 
 .datepicker-table td.is-today {
   color: $sec-colour;
+}
+
+.datepicker-table td.is-selected {
+  background-color: rgba($sec-colour, 0.5);
 }
