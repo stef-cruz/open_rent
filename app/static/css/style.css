@@ -300,12 +300,17 @@
 
 .rent-register-profile {
   background-color: #ff6d00;
-  height: 5rem;
+  height: 8.5rem;
   margin: 4rem 0;
   padding: 1.5rem 0;
   font-family: "Bebas Neue", serif;
 }
-.rent-register-profile p {
+@media (min-width: 48rem) {
+  .rent-register-profile {
+    height: 5rem;
+  }
+}
+.rent-register-profile__text {
   font-size: 2rem;
 }
 .rent-register-profile a {

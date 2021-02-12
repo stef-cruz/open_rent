@@ -42,12 +42,16 @@
 
 .rent-register-profile {
   background-color: $sec-colour;
-  height: 5rem;
+  height: 8.5rem;
   margin: 4rem 0;
   padding: 1.5rem 0;
   font-family: $title;
 
-  p {
+  @include bp(tablet) {
+      height: 5rem;
+  }
+
+  &__text {
     font-size: 2rem;
   }
 

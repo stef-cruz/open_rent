@@ -24,19 +24,21 @@
                 <!-- Address Line 1 -->
                 <div class="col s12 form-margin">
                     <label for="address_1">Address Line 1</label>
-                    <input id="address_1" name="address_1" type="text" value="{{ tenancy.address_1 }}">
+                    <input id="address_1" name="address_1" type="text" value="{{ tenancy.address_1 }}" class="validate" required>
+                    <span class="helper-text" data-error="Please enter address" data-success="Correct"></span>
                 </div>
                 <!-- ./Address Line 1 -->
                 <!-- Address Line 2 -->
                 <div class="col s12 form-margin">
                     <label for="address_2">Address Line 2</label>
-                    <input id="address_2" name="address_2" type="text" value="{{ tenancy.address_2 }}">
+                    <input id="address_2" name="address_2" type="text" value="{{ tenancy.address_2 }}" class="validate" required>
+                    <span class="helper-text" data-error="Please enter complement of the address" data-success="Correct"></span>
                 </div>
                 <!-- ./Address Line 2 -->
                 <!-- Accommodation Type -->
                 <div class="col s12 form-margin">
                     <label for="accommodation_type">Accommodation Type</label>
-                    <select id="accommodation_type" name="accommodation_type" required>
+                    <select id="accommodation_type" name="accommodation_type" class="validate" required>
                         <option value="" disabled>Choose Accommodation Type</option>
                         {% for type in accommodation_types %}
                             {% if type.accommodation_type == tenancy.accommodation_type %}
@@ -46,25 +48,29 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-
+                    <span id="js-helper-text-select" class="helper-text">Please select one of the options</span>
                 </div>
                 <!-- ./Accommodation Type -->
                 <!-- Start Date -->
                 <div class="col s12 m4 form-margin">
                     <label for="start_date">Tenancy Start Date</label>
-                    <input type="text" class="datepicker" id="start_date" name="start_date" value="{{ tenancy.start_date }}">
+                    <input type="text" class="datepicker validate" id="start_date" name="start_date" value="{{ tenancy.start_date }}" required>
+                    <span class="helper-text" data-error="Min 1 month" data-success="Correct"></span>
                 </div>
                 <!-- ./Start Date -->
                 <!-- End Date -->
                 <div class="col s12 m4 form-margin">
                     <label for="end_date">Tenancy End Date</label>
-                    <input type="text" class="datepicker" id="end_date" name="end_date" value="{{ tenancy.end_date }}">
+                    <input type="text" class="datepicker validate" id="end_date" name="end_date" value="{{ tenancy.end_date }}" required>
+                    <span class="helper-text" data-error="Min 1 month" data-success="Correct"></span>
                 </div>
                 <!-- ./End Date -->
                 <!-- Price -->
                 <div class="col s12 m4 form-margin">
                     <label for="price">Price</label>
-                    <input id="price" name="price" type="text" value="{{ tenancy.price }}">
+                    <!-- Regex for price, source https://www.html5pattern.com/-->
+                    <input id="price" name="price" type="text" value="{{ tenancy.price }}" class="validate" pattern="\d{3,4}(,\d{2})*(\.\d{2})?" required>
+                    <span class="helper-text" data-error="Only numbers, dots, commas, min 100, max 9999" data-success="Correct"></span>
                 </div>
                 <!-- ./Price -->
             </div>
@@ -94,6 +100,8 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/startEndDateTenancy.js') }}"></script>
+<script src="{{ url_for('static', filename='js/selectInputValidation.js') }}"></script>
 <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly"
         defer></script>

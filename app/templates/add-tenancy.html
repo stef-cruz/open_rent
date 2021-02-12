@@ -32,7 +32,6 @@
                     <label for="address_2">Address Line 2</label>
                     <input id="address_2" name="address_2" type="text" class="validate" required>
                     <span class="helper-text" data-error="Please enter complement of the address" data-success="Correct"></span>
-
                 </div>
                 <!-- ./Address Line 2 -->
                 <!-- Accommodation Type -->
@@ -102,6 +101,7 @@
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/startEndDateTenancy.js') }}"></script>
+<script src="{{ url_for('static', filename='js/selectInputValidation.js') }}"></script>
 <script src="{{ url_for('static', filename='js/mapAutoComplete.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly"
         defer></script>
