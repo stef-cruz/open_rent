@@ -394,6 +394,11 @@
   background-color: rgba(255, 109, 0, 0.5);
 }
 
+.select-month > input.select-dropdown.dropdown-trigger,
+.select-year > input.select-dropdown.dropdown-trigger {
+  font-size: 1rem;
+}
+
 .edit-profile {
   margin-bottom: 5rem;
 }

@@ -76,3 +76,8 @@
 .datepicker-table td.is-selected {
   background-color: rgba($sec-colour, 0.5);
 }
+
+.select-month > input.select-dropdown.dropdown-trigger,
+.select-year > input.select-dropdown.dropdown-trigger {
+  font-size: 1rem;
+}

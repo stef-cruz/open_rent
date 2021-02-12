@@ -13,12 +13,16 @@ var optionsStartDate = {
     autoClose: true,
     showClearBtn: true,
     format: 'dd mmmm yyyy',
-    onSelect: function(el) {
-        const ell = new Date(el);
-        const setMM = ell.getDate();
-        const setMonth = new Date(ell.setMonth(date.getMonth()+1))
-        const setM = new Date(ell.setDate(setMM));
-        setMinEndDate(setM);
+    onSelect: function(selectedDate) {
+        const selectedDateObj = new Date(selectedDate);
+
+        const getMonth = selectedDateObj.getMonth()+1;
+        console.log("getMonth get month " + getMonth)
+
+        const setMonth = new Date(selectedDateObj.setMonth(getMonth))
+        console.log("setMonth " + setMonth)
+
+        setMinEndDate(setMonth);
     }
 };
 
@@ -43,15 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // FUNCTION TO SET MINIMUM DATE WHEN #start_date DATE SELECTED
-var setMinEndDate = function(element) {
+var setMinEndDate = function(MinEndDate) {
     // Get the current date set on #end_date datepicker
-    var instance = M.Datepicker.getInstance(document.querySelector('#end_date'));
-    instance.options.minDate = element;
+    var selectedEndDate = M.Datepicker.getInstance(document.querySelector('#end_date'));
+    selectedEndDate.options.minDate = MinEndDate;
 
     // Check if the #start_date date is greater than the #end_date date and modify by 1 day if true.
-    if (new Date(instance) < element) {
-        instance.setDate(element);
-        document.querySelector('#end_date').val(instance.toString());
+    if (new Date(selectedEndDate) < MinEndDate) {
+        selectedEndDate.setDate(MinEndDate);
+        document.querySelector('#end_date').innerHTML;
     }
 };
 
