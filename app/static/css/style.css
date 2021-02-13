@@ -168,8 +168,14 @@
   height: 8.5rem;
   background-size: cover;
   position: relative;
-  top: -15rem;
+  top: -10rem;
   left: -10rem;
+}
+@media (min-width: 48rem) {
+  .about__card .img-right-two {
+    top: -13rem;
+    left: -9rem;
+  }
 }
 .about__card .txt-right {
   position: relative;

@@ -61,6 +61,15 @@
             </div>
         </div>
         <div class="row center-align">
+            {% if session.user %}
+            <div class="col s12">
+                <a href="{{ url_for('add_tenancy') }}">
+                    <button class="btn-large button-black">
+                        Add Tenancy <i class="fas fa-map-marked-alt"></i></i>
+                    </button>
+                </a>
+            </div>
+            {% else %}
             <div class="col s12">
                 <a href="{{ url_for('register') }}">
                     <button class="btn-large button-black">
@@ -68,7 +77,7 @@
                     </button>
                 </a>
             </div>
-
+            {% endif %}
         </div>
     </div>
 </section>

@@ -151,8 +151,15 @@
       height: 8.5rem;
       background-size: cover;
       position: relative;
-      top: -15rem;
+      top: -10rem;
       left: -10rem;
+    }
+
+    @include bp(tablet) {
+      .img-right-two {
+        top: -13rem;
+        left: -9rem;
+      }
     }
 
     .txt-right {
