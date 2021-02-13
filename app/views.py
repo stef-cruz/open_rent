@@ -1,11 +1,13 @@
-from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+from flask import (render_template,session)
 
 from app import app
+from app.database import DB_USERS
 
 
 # Index view
 @app.route("/")
 def index():
-    return render_template("index.html")
+    if session["user"]:
+        username = DB_USERS.find_one(
+            {"username": session["user"]})["username"]
+        return render_template("index.html", username=username)

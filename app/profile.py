@@ -34,6 +34,8 @@ def edit_profile(user_id):
         :return edit page
         """
     if session["user"]:
+        username = DB_USERS.find_one(
+            {"username": session["user"]})["username"]
         if request.method == 'POST':
             DB_USERS.update_one(
                 {'_id': ObjectId(user_id)},
@@ -45,7 +47,7 @@ def edit_profile(user_id):
 
         # Search for user id in DB
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
-        return render_template("edit-profile.html", user_details=user_details)
+        return render_template("edit-profile.html", user_details=user_details, username=username)
 
     return redirect(url_for("login"))
 
