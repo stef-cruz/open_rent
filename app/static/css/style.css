@@ -538,6 +538,27 @@
   margin: 2rem 0;
 }
 
+.contact-form {
+  margin-bottom: 5rem;
+}
+.contact-form #first_name,
+.contact-form #last_name,
+.contact-form #email_address,
+.contact-form #message {
+  background-color: #68ff5b;
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+.contact-form label {
+  color: black;
+  font-size: 1.2rem;
+}
+.contact-form__inputs {
+  margin-bottom: 4rem;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;

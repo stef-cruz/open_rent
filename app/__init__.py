@@ -13,3 +13,4 @@ from app import views
 from app import login
 from app import profile
 from app import tenancy
+from app import contact

@@ -3,98 +3,64 @@
 
 <h3 class="center-align heading-section">Contact</h3>
 
-<section class="container manage-tenancy">
+<section class="container contact-form">
     <div class="card-panel">
-        <form method="POST" action="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
-            <!-- Flash message -->
-            <div class="row">
-                <div class="col s12">
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <h5 class="center-align flash">{{ message }}</h5>
-                    {% endfor %}
-                    {% endif %}
-                    {% endwith %}
+        <form id="contact-form">
+            <div class="row contact-form__inputs">
+                <!-- First Name -->
+                <div class="col s6 form-margin">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" name="first_name" type="text" minlength="3" maxlength="20" class="validate" required>
+                    <span class="helper-text" data-error="First name is too short" data-success="Correct"></span>
                 </div>
-            </div>
-            <!-- ./Flash message -->
-
-            <div class="row manage-tenancy__inputs">
-                <!-- Address Line 1 -->
+                <!-- ./First Name -->
+                <!-- Last Name -->
+                <div class="col s6 form-margin">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" name="last_name" type="text" minlength="3" maxlength="20" class="validate" required>
+                    <span class="helper-text" data-error="Last name is too short" data-success="Correct"></span>
+                </div>
+                <!-- ./Last Name -->
+                <!-- Email -->
                 <div class="col s12 form-margin">
-                    <label for="address_1">Address Line 1</label>
-                    <input id="address_1" name="address_1" type="text" value="{{ tenancy.address_1 }}">
+                    <label for="email_address">Email Address</label>
+                    <input type="email" id="email_address" name="email_address" class="validate" required>
+                    <span class="helper-text" data-error="Please enter a valid email address" data-success="Correct"></span>
                 </div>
-                <!-- ./Address Line 1 -->
-                <!-- Address Line 2 -->
+                <!-- ./Email -->
+                <!-- Message -->
                 <div class="col s12 form-margin">
-                    <label for="address_2">Address Line 2</label>
-                    <input id="address_2" name="address_2" type="text" value="{{ tenancy.address_2 }}">
+                    <label for="message">Message</label>
+                    <textarea type="text" id="message" name="message" minlength="3" class="validate materialize-textarea" required></textarea>
+                    <span class="helper-text" data-error="Message cannot be blank" data-success="Correct"></span>
                 </div>
-                <!-- ./Address Line 2 -->
-                <!-- Accommodation Type -->
-                <div class="col s12 form-margin">
-                    <label for="accommodation_type">Accommodation Type</label>
-                    <select id="accommodation_type" name="accommodation_type" required>
-                        <option value="" disabled>Choose Accommodation Type</option>
-                        {% for type in accommodation_types %}
-                            {% if type.accommodation_type == tenancy.accommodation_type %}
-                                <option value="{{ type.accommodation_type }}" selected>{{ type.accommodation_type }}</option>
-                            {% else %}
-                                <option value="{{ type.accommodation_type }}">{{ type.accommodation_type }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-
-                </div>
-                <!-- ./Accommodation Type -->
-                <!-- Start Date -->
-                <div class="col s12 m4 form-margin">
-                    <label for="start_date">Tenancy Start Date</label>
-                    <input type="text" class="datepicker" id="start_date" name="start_date" value="{{ tenancy.start_date }}">
-                </div>
-                <!-- ./Start Date -->
-                <!-- End Date -->
-                <div class="col s12 m4 form-margin">
-                    <label for="end_date">Tenancy End Date</label>
-                    <input type="text" class="datepicker" id="end_date" name="end_date" value="{{ tenancy.end_date }}">
-                </div>
-                <!-- ./End Date -->
-                <!-- Price -->
-                <div class="col s12 m4 form-margin">
-                    <label for="price">Price</label>
-                    <input id="price" name="price" type="text" value="{{ tenancy.price }}">
-                </div>
-                <!-- ./Price -->
+                <!-- ./Message -->
             </div>
             <!-- Submit Update -->
             <div class="row center-align">
                 <div class="col s12">
-                    <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
-                        <button class="btn-large button-black" type="submit">Edit Tenancy <i class="fas fa-edit"></i></button>
+                    <a href="#modal-positive" class="modal-trigger">
+                        <button class="btn-large button-black" type="submit">Submit <i class="fas fa-paper-plane"></i></button>
                     </a>
                 </div>
             </div>
             <!-- ./Submit Update -->
         </form>
-        <div class="row center-align">
-            <div class="col s12">
-                <a href="{{ url_for('profile') }}">
-                    <button class="btn-small button-black">Discard <i class="fas fa-times-circle"></i></button>
-                </a>
+        <!-- Modal Positive feedback -->
+        <div id="modal-positive" class="modal">
+            <div class="modal-content js-modal-content"></div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green button-black">Close</a>
             </div>
         </div>
-    </div>
-    <div id="map-tenancy">
-        <div id="map"></div>
+        <!-- ./Modal Positive feedback -->
     </div>
 </section>
 
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/map.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly"
-        defer></script>
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script src="{{ url_for('static', filename='js/email.js') }}"></script>
 {% endblock %}

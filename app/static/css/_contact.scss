@@ -1,0 +1,23 @@
+.contact-form {
+  margin-bottom: 5rem;
+
+  #first_name,
+  #last_name,
+  #email_address,
+  #message {
+    background-color: $prim-colour;
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+    font-family: $paragraph;
+  }
+
+  label {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  &__inputs {
+    margin-bottom: 4rem;
+  }
+}

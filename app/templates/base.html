@@ -36,7 +36,7 @@
                     {% else %}
                         <li><a class="black-text" href="/">Home</a></li>
                         <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
-                        <li><a class="black-text" href="/">Contact Us</a></li>
+                        <li><a class="black-text" href="{{ url_for('contact') }}">Contact Us</a></li>
                         <li><a class="black-text" href="{{ url_for('login') }}">Log In</a></li>
                     {% endif %}
                 </ul>
@@ -56,7 +56,7 @@
             {% else %}
                 <li><a class="black-text" href="/">Home</a></li>
                 <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
-                <li><a class="black-text" href="/">Contact Us</a></li>
+                <li><a class="black-text" href="{{ url_for('contact') }}">Contact Us</a></li>
                 <li><a class="black-text" href="{{ url_for('login') }}">Log In</a></li>
             {% endif %}
         </ul>
@@ -77,11 +77,11 @@
                         {% if session.user %}
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ url_for('rent_register') }}">Rent Register</a></li>
-                            <li><a href="/">Contact Us</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
                         {% else %}
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ url_for('rent_register') }}">Rent Register</a></li>
-                            <li><a href="/">Contact Us</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
                             <li><a href="{{ url_for('login') }}">Log In</a></li>
                         {% endif %}
                     </ul>
