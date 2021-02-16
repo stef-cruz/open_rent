@@ -163,8 +163,10 @@ def delete_tenancy(tenancy_id):
 # GET TENANCIES
 @app.route("/rent_register")
 def rent_register ():
-    if session["user"]:
+    if session:
         username = DB_USERS.find_one(
             {"username": session["user"]})["username"]
+        tenancies = DB_TENANCIES.find()
+        return render_template("rent-register.html", tenancies=tenancies, username=username)
     tenancies = DB_TENANCIES.find()
-    return render_template("rent-register.html", tenancies=tenancies, username=username)
+    return render_template("rent-register.html", tenancies=tenancies)
