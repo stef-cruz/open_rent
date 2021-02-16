@@ -14,7 +14,6 @@
 //
 // General Styling
 //
-
 * {
   margin: 0;
   font-size: 1.4rem;
@@ -30,7 +29,6 @@ footer {
 }
 
 //Flash Messages
-
 .flash {
   background-color: $sec-colour;
   line-height: 2;
@@ -38,13 +36,11 @@ footer {
 }
 
 //Heading
-
 .heading-section {
   margin: 5rem 0;
 }
 
-// Button
-
+//Buttons
 .button-black {
   margin: 1rem 0;
   background-color: black;
@@ -74,7 +70,6 @@ footer {
 }
 
 // Form
-
 .form-margin {
   margin: 1rem 0;
 }

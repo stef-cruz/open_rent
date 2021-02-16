@@ -559,6 +559,10 @@
   margin-bottom: 4rem;
 }
 
+#js-negative-feedback, #js-positive-feedback {
+  display: none;
+}
+
 * {
   margin: 0;
   font-size: 1.4rem;

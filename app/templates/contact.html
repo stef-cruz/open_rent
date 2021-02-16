@@ -6,6 +6,23 @@
 <section class="container contact-form">
     <div class="card-panel">
         <form id="contact-form">
+
+            <!-- Feedback contact form -->
+            <div class="row" id="js-positive-feedback">
+                <div class="col s12">
+                    <h5 class="center-align flash">Your email has been sent, thank you.</h5>
+                </div>
+            </div>
+            <!-- ./Feedback contact form -->
+
+            <!-- Feedback contact form -->
+            <div class="row" id="js-negative-feedback">
+                <div class="col s12">
+                    <h5 class="center-align flash">Something went wrong please try again.</h5>
+                </div>
+            </div>
+            <!-- ./Feedback contact form -->
+
             <div class="row contact-form__inputs">
                 <!-- First Name -->
                 <div class="col s6 form-margin">
@@ -39,21 +56,13 @@
             <!-- Submit Update -->
             <div class="row center-align">
                 <div class="col s12">
-                    <a href="#modal-positive" class="modal-trigger">
+                    <a href="#modal-positive" id="js-modal-trigger">
                         <button class="btn-large button-black" type="submit">Submit <i class="fas fa-paper-plane"></i></button>
                     </a>
                 </div>
             </div>
             <!-- ./Submit Update -->
         </form>
-        <!-- Modal Positive feedback -->
-        <div id="modal-positive" class="modal">
-            <div class="modal-content js-modal-content"></div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green button-black">Close</a>
-            </div>
-        </div>
-        <!-- ./Modal Positive feedback -->
     </div>
 </section>
 
