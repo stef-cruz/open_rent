@@ -83,7 +83,7 @@
                     <div class="row">
                         {% for tenancy in user_tenancies %}
                         <div class="col s12 m10 offset-m1">
-                            <div class="card-panel card-tenancy">
+                            <div class="card-panel card-tenancy js-card-tenancy-profile">
                                 <div class="card-content">
                                     <h4 class="js-price">€{{ tenancy.price }}</h4>
                                     <p class="js-address-1">{{ tenancy.address_1 }}</p>
@@ -99,19 +99,19 @@
                                         <p>Duration:</p>
                                     </div>
                                     <div class="card-content__value">
-                                        <p class="js-duration">X months</p>
+                                        <p class="js-duration-of-tenancy"></p>
                                     </div>
                                     <div class="card-content__key">
                                         <p>Start:</p>
                                     </div>
                                     <div class="card-content__value">
-                                        <p>{{ tenancy.start_date }}</p>
+                                        <p class="js-start-date">{{ tenancy.start_date }}</p>
                                     </div>
                                     <div class="card-content__key">
                                         <p>End:</p>
                                     </div>
                                     <div class="card-content__value">
-                                        <p>{{ tenancy.end_date }}</p>
+                                        <p class="js-end-date">{{ tenancy.end_date }}</p>
                                     </div>
                                     <div class="card-content__date">
                                         <p>- Last Updated: {{ tenancy.date }} -</p>
@@ -213,4 +213,8 @@
     </div>
 </section>
 
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/durationOfTenancyProfile.js') }}"></script>
 {% endblock %}

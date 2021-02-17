@@ -10,13 +10,8 @@ let optionsStartDate = {
     format: 'dd mmmm yyyy',
     onSelect: function(selectedDate) {
         const selectedDateObj = new Date(selectedDate);
-
         const getMonth = selectedDateObj.getMonth()+1;
-        console.log("getMonth get month " + getMonth)
-
-        const setMonth = new Date(selectedDateObj.setMonth(getMonth))
-        console.log("setMonth " + setMonth)
-
+        const setMonth = new Date(selectedDateObj.setMonth(getMonth));
         setMinEndDate(setMonth);
     }
 };

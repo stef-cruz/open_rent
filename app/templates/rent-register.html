@@ -33,19 +33,19 @@
                         <p>Duration:</p>
                     </div>
                     <div class="card-content__value">
-                        <p>X months</p>
+                        <p class="js-duration-of-tenancy"></p>
                     </div>
                     <div class="card-content__key">
                         <p>Start:</p>
                     </div>
                     <div class="card-content__value">
-                        <p>{{ tenancy.start_date }}</p>
+                        <p class="js-start-date">{{ tenancy.start_date }}</p>
                     </div>
                     <div class="card-content__key">
                         <p>End:</p>
                     </div>
                     <div class="card-content__value">
-                        <p>{{ tenancy.end_date }}</p>
+                        <p class="js-end-date">{{ tenancy.end_date }}</p>
                     </div>
                     <div class="card-content__date">
                         <p>- Uploaded on {{ tenancy.date }} -</p>
@@ -70,6 +70,7 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 <script src="{{ url_for('static', filename='js/displayTenancy.js') }}"></script>
+<script src="{{ url_for('static', filename='js/durationOfTenancyRentRegister.js') }}"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyahPifJNOEODhSoMTswXum-vuIfSDF8w&callback=initMap&libraries=places&v=weekly"></script>
 {% endblock %}
