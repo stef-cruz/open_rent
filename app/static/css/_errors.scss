@@ -1,0 +1,13 @@
+.not-found {
+  margin: 5rem 0;
+
+  @include bp(tablet) {
+    text-align: left;
+  }
+
+  img {
+    width: 100%;
+    padding: 5rem 0;
+  }
+}
+

@@ -1,7 +1,7 @@
 from bson.objectid import ObjectId
 from flask import (
     flash, render_template,
-    redirect, session, url_for, request)
+    redirect, session, url_for, request, abort)
 
 from app import app
 from app.database import DB_USERS, DB_TENANCIES
@@ -10,19 +10,24 @@ from app.database import DB_USERS, DB_TENANCIES
 # PROFILE VIEW
 @app.route("/profile")
 def profile():
-    """Fetch username from db and return the user's profile page"""
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    """Fetch username from db and return the user's profile page
+    source: https://pythonise.com/series/learning-flask/flask-session-object"""
+
+    # User exists in DB
+    if not session.get("user") is None:
+        username = session["user"]
+
+        # Fetch user, user tenancies and details
         current_user = DB_USERS.find_one({'username': username})
         user_id = current_user.get('_id')
         user_tenancies = DB_TENANCIES.find({'created_by': username})
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
 
-        return render_template("profile.html", username=username, user_tenancies=user_tenancies,
+        return render_template("profile.html", current_user=current_user, user_tenancies=user_tenancies,
                                user_details=user_details)
 
-    return redirect(url_for("login"))
+    else:
+        return redirect(url_for("login"))
 
 
 # EDIT PROFILE

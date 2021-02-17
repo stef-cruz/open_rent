@@ -20,9 +20,5 @@ for (let i = 0; i < tenancies.length; i++) {
         } else {
             durationOfTenancy[i].innerHTML = `${monthDiff(startDate, endDate)} months`
         }
-
-    console.log(startDate);
-    console.log(endDate);
-    console.log(monthDiff(startDate, endDate));
 }
 

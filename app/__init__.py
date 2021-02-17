@@ -14,3 +14,4 @@ from app import login
 from app import profile
 from app import tenancy
 from app import contact
+from app import errors
