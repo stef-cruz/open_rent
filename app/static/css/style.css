@@ -563,15 +563,15 @@
   display: none;
 }
 
-.not-found {
+.error-handling {
   margin: 5rem 0;
 }
 @media (min-width: 48rem) {
-  .not-found {
+  .error-handling {
     text-align: left;
   }
 }
-.not-found img {
+.error-handling img {
   width: 100%;
   padding: 5rem 0;
 }

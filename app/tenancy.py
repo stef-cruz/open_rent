@@ -28,8 +28,8 @@ def add_tenancy():
         if request.method == 'POST':
             # Geocode to get latitude and longitude of address,
             # source https://github.com/googlemaps/google-maps-services-python
-            address = request.form.get('address_1')
-            geocode_result = gmaps.geocode(address)
+            address_1 = request.form.get('address_1')
+            geocode_result = gmaps.geocode(address_1)
             # Extract lat and long from geocode_result,
             # source https://stackoverflow.com/questions/37311687/extracting-lat-lon-from-geocode-result-list-with-python-google-maps-api
             if geocode_result:
@@ -52,8 +52,11 @@ def add_tenancy():
                     flash("Tenancy Successfully Added")
 
                     # get ID from tenancy added
-                    tenancy_added = DB_TENANCIES.find_one({'address_1': address})
+                    tenancy_added = DB_TENANCIES.find_one({'address_1': address_1})
                     tenancy_id = tenancy_added.get('_id')
+
+                    if not tenancy_id:
+                        abort(500)
 
                     # display tenancy added
                     return redirect(url_for("view_tenancy", tenancy_id=tenancy_id))
@@ -80,9 +83,12 @@ def view_tenancy(tenancy_id):
     if not session.get("user") is None:
         username = session["user"]
         current_user = DB_USERS.find_one({'username': username})
-    tenancy = DB_TENANCIES.find_one(
-        {'_id': ObjectId(tenancy_id)})
-    return render_template("view-tenancy.html", tenancy=tenancy, current_user=current_user)
+        tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
+        if not tenancy:
+            abort(404)
+        return render_template("view-tenancy.html", tenancy=tenancy, current_user=current_user)
+    else:
+        return redirect(url_for("login"))
 
 
 # EDIT TENANCY
@@ -109,7 +115,7 @@ def edit_tenancy(tenancy_id):
             if geocode_result:
                 latitude = geocode_result[0]["geometry"]["location"]["lat"]
                 longitude = geocode_result[0]["geometry"]["location"]["lng"]
-                if 53.25 >= latitude >= 53.35 or -6.36 <= longitude <= -6.26:
+                if 53.25 <= latitude <= 53.41 or -6.36 <= longitude <= -6.26:
                     edited_tenancy = {
                         "address_1": request.form.get("address_1"),
                         "address_2": request.form.get("address_2"),
@@ -132,8 +138,9 @@ def edit_tenancy(tenancy_id):
             return redirect(url_for("edit_tenancy", tenancy_id=tenancy_id))
 
         # Search for tenancy in DB
-        tenancy = DB_TENANCIES.find_one(
-            {'_id': ObjectId(tenancy_id)})
+        tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
+        if not tenancy:
+            abort(404)
         accommodation_types = DB_ACCOMMODATION_TYPES.find()
         return render_template("edit-tenancy.html", tenancy=tenancy, accommodation_types=accommodation_types, current_user=current_user)
 
@@ -154,9 +161,9 @@ def delete_tenancy(tenancy_id):
     if not session.get("user") is None:
         username = session["user"]
         current_user = DB_USERS.find_one({'username': username})
-
         current_tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
-
+        if not current_tenancy:
+            abort(404)
         if current_user == current_tenancy['created_by']:
             DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
         flash("Tenancy successfully deleted")
@@ -173,7 +180,11 @@ def rent_register ():
         username = session["user"]
         current_user = DB_USERS.find_one({'username': username})
         tenancies = DB_TENANCIES.find()
+        if not tenancies:
+            abort(404)
         return render_template("rent-register.html", tenancies=tenancies, current_user=current_user)
     else:
         tenancies = DB_TENANCIES.find()
+        if not tenancies:
+            abort(404)
         return render_template("rent-register.html", tenancies=tenancies)

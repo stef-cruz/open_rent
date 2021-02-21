@@ -4,7 +4,7 @@
 <section class="container">
     <div class="row error-handling center-align">
         <div class="col s12 m6">
-            <h3>Oh dear! It seems like this page does not exist.</h3>
+            <h3>Oh dear! Something went wrong.</h3>
             <a href="{{ url_for('index') }}">
                 <button class="btn-large button-black">
                     Bring me back</i>
@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="col s12 m6">
-            <img src="{{ url_for('static', filename='images/404-not-found.png') }}" alt="404 not found">
+            <img src="{{ url_for('static', filename='images/500-server-error.png') }}" alt="505 server error">
         </div>
     </div>
 </section>
