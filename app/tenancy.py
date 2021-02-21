@@ -158,17 +158,20 @@ def delete_tenancy(tenancy_id):
 
         :return user's profile page
         """
-    if not session.get("user") is None:
-        username = session["user"]
-        current_user = DB_USERS.find_one({'username': username})
+
+    if session:
+        username = DB_USERS.find_one({"username": session["user"]})["username"]
         current_tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
+
         if not current_tenancy:
             abort(404)
-        if current_user == current_tenancy['created_by']:
+
+        if username == current_tenancy['created_by']:
             DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
-        flash("Tenancy successfully deleted")
+            flash("Tenancy successfully deleted")
 
         return redirect(url_for('profile'))
+
     else:
         return redirect(url_for('login'))
 

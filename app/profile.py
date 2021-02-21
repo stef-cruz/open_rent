@@ -40,6 +40,7 @@ def edit_profile(user_id):
         """
     if not session.get("user") is None:
         username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
 
         if request.method == 'POST':
             DB_USERS.update_one(
@@ -52,7 +53,7 @@ def edit_profile(user_id):
 
         # Search for user id in DB
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
-        return render_template("edit-profile.html", user_details=user_details, username=username)
+        return render_template("edit-profile.html", user_details=user_details, current_user=current_user)
 
     else:
         return redirect(url_for("login"))
