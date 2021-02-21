@@ -22,9 +22,9 @@ def add_tenancy():
 
     :return tenancy added
     """
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
         if request.method == 'POST':
             # Geocode to get latitude and longitude of address,
             # source https://github.com/googlemaps/google-maps-services-python
@@ -66,22 +66,23 @@ def add_tenancy():
 
         # Get accommodation type from db
         accommodation_types = DB_ACCOMMODATION_TYPES.find()
-        return render_template("add-tenancy.html", accommodation_types=accommodation_types, username=username)
+        return render_template("add-tenancy.html", accommodation_types=accommodation_types, current_user=current_user)
 
     # If user not logged in
-    return redirect(url_for("login"))
+    else:
+        return redirect(url_for("login"))
 
 
 # VIEW TENANCY
 @app.route("/view_tenancy/<tenancy_id>")
 def view_tenancy(tenancy_id):
     """Return tenancy added in add_tenancy function"""
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
     tenancy = DB_TENANCIES.find_one(
         {'_id': ObjectId(tenancy_id)})
-    return render_template("view-tenancy.html", tenancy=tenancy, username=username)
+    return render_template("view-tenancy.html", tenancy=tenancy, current_user=current_user)
 
 
 # EDIT TENANCY
@@ -95,9 +96,9 @@ def edit_tenancy(tenancy_id):
         :return edit page
         """
 
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
         if request.method == 'POST':
             # Geocode to get latitude and longitude of address,
             # source https://github.com/googlemaps/google-maps-services-python
@@ -134,10 +135,11 @@ def edit_tenancy(tenancy_id):
         tenancy = DB_TENANCIES.find_one(
             {'_id': ObjectId(tenancy_id)})
         accommodation_types = DB_ACCOMMODATION_TYPES.find()
-        return render_template("edit-tenancy.html", tenancy=tenancy, accommodation_types=accommodation_types, username=username)
+        return render_template("edit-tenancy.html", tenancy=tenancy, accommodation_types=accommodation_types, current_user=current_user)
 
     # If user not logged in
-    return redirect(url_for("login"))
+    else:
+        return redirect(url_for("login"))
 
 
 # DELETE TENANCY
@@ -149,24 +151,29 @@ def delete_tenancy(tenancy_id):
 
         :return user's profile page
         """
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
+
         current_tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
-        if username == current_tenancy['created_by']:
+
+        if current_user == current_tenancy['created_by']:
             DB_TENANCIES.remove({'_id': ObjectId(tenancy_id)})
         flash("Tenancy successfully deleted")
+
         return redirect(url_for('profile'))
-    return redirect(url_for('login'))
+    else:
+        return redirect(url_for('login'))
 
 
 # GET TENANCIES
 @app.route("/rent_register")
 def rent_register ():
-    if session:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+        current_user = DB_USERS.find_one({'username': username})
         tenancies = DB_TENANCIES.find()
-        return render_template("rent-register.html", tenancies=tenancies, username=username)
-    tenancies = DB_TENANCIES.find()
-    return render_template("rent-register.html", tenancies=tenancies)
+        return render_template("rent-register.html", tenancies=tenancies, current_user=current_user)
+    else:
+        tenancies = DB_TENANCIES.find()
+        return render_template("rent-register.html", tenancies=tenancies)

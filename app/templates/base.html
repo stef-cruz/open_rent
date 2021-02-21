@@ -32,7 +32,7 @@
                     {% if session.user %}
                         <li><a class="black-text" href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
                         <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
-                        <li><a class="black-text username dropdown-trigger" data-target="dropdown-profile" href="{{ url_for('profile') }}">{{ username }} <i class="fas fa-user-circle"></i> <i class="fas fa-sort-down"></i></a></li>
+                        <li><a class="black-text username dropdown-trigger" data-target="dropdown-profile" href="{{ url_for('profile') }}">{{ current_user.username }} <i class="fas fa-user-circle"></i> <i class="fas fa-sort-down"></i></a></li>
                     {% else %}
                         <li><a class="black-text" href="/">Home</a></li>
                         <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
@@ -49,7 +49,7 @@
         <ul class="sidenav white-text" id="mobile-demo">
             <li><h4 class="logo text-shadow center-align">Open Rent</h4></li>
             {% if session.user %}
-                <li><a class="black-text" href="{{ url_for('profile') }}">{{ username }}<i class="fas fa-user-circle"></i></a></li>
+                <li><a class="black-text" href="{{ url_for('profile') }}">{{ current_user.username }}<i class="fas fa-user-circle"></i></a></li>
                 <li><a class="black-text" href="{{ url_for('add_tenancy') }}">Add Tenancy</a></li>
                 <li><a class="black-text" href="{{ url_for('rent_register') }}">Rent Register</a></li>
                 <li><a class="black-text" href="{{ url_for('logout') }}">Log Out</a></li>
