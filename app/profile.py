@@ -1,7 +1,7 @@
 from bson.objectid import ObjectId
 from flask import (
     flash, render_template,
-    redirect, session, url_for, request, abort)
+    redirect, session, url_for, request)
 
 from app import app
 from app.database import DB_USERS, DB_TENANCIES
@@ -38,9 +38,9 @@ def edit_profile(user_id):
 
         :return edit page
         """
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+
         if request.method == 'POST':
             DB_USERS.update_one(
                 {'_id': ObjectId(user_id)},
@@ -54,7 +54,8 @@ def edit_profile(user_id):
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
         return render_template("edit-profile.html", user_details=user_details, username=username)
 
-    return redirect(url_for("login"))
+    else:
+        return redirect(url_for("login"))
 
 
 # DELETE PROFILE
@@ -66,12 +67,14 @@ def delete_profile(user_id):
 
         :return login page
         """
-    if session["user"]:
-        username = DB_USERS.find_one(
-            {"username": session["user"]})["username"]
+    if not session.get("user") is None:
+        username = session["user"]
+
         current_user = DB_USERS.find_one({'_id': ObjectId(user_id)})
         if username == current_user['username']:
             DB_USERS.remove({'_id': ObjectId(user_id)})
             session.pop("user")
         return redirect(url_for('index'))
-    return redirect(url_for('login'))
+
+    else:
+        return redirect(url_for('login'))
