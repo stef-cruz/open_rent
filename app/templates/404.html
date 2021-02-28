@@ -5,11 +5,9 @@
     <div class="row error-handling center-align">
         <div class="col s12 m6">
             <h3>Oh dear! It seems like this page does not exist.</h3>
-            <a href="{{ url_for('index') }}">
-                <button class="btn-large button-black">
-                    Bring me back</i>
-                </button>
-            </a>
+            <div class="btn-large button-black">
+                <a href="{{ url_for('index') }}">Bring me back</i></a>
+            </div>
         </div>
         <div class="col s12 m6">
             <img src="{{ url_for('static', filename='images/404-not-found.png') }}" alt="404 not found">

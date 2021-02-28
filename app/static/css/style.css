@@ -319,9 +319,7 @@
 }
 
 .my-tenancies .card-buttons {
-  display: grid;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .modal-content {
@@ -501,12 +499,12 @@
 }
 
 .card-content {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   display: block;
   clear: both;
 }
 .card-content__key, .card-content__value {
-  padding-right: 8px;
+  padding-right: 0.8rem;
   display: inline-block;
 }
 .card-content__key p, .card-content__value p {
@@ -630,7 +628,12 @@ footer {
 }
 .button-white a, .button-white i {
   color: black;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
 }
 
 .form-margin {

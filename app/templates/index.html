@@ -63,19 +63,19 @@
         <div class="row center-align">
             {% if session.user %}
             <div class="col s12">
-                <button class="btn-large button-black">
+                <div class="btn-large button-black">
                     <a href="{{ url_for('add_tenancy') }}">
                         Add Tenancy <i class="fas fa-map-marked-alt"></i></i>
                     </a>
-                </button>
+                </div>
             </div>
             {% else %}
             <div class="col s12">
-                <button class="btn-large button-black">
+                <div class="btn-large button-black">
                     <a href="{{ url_for('register') }}">
                         Register here <i class="fas fa-sign-in-alt"></i>
                     </a>
-                </button>
+                </div>
             </div>
             {% endif %}
         </div>
@@ -145,9 +145,10 @@
         </div>
         <div class="row center-align">
             <div class="col s12">
-                <button class="btn-large button-white">
-                <a href="{{ url_for('contact') }}">Contact us <i class="fas fa-paper-plane"></i></a>
-                </button>
+                <div class="btn-large button-white">
+                    <a href="{{ url_for('contact') }}">
+                        Contact us <i class="fas fa-paper-plane"></i></a>
+                </div>
             </div>
         </div>
     </div>

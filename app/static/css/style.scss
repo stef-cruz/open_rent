@@ -76,8 +76,13 @@ footer {
 
   a, i {
     color: black;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
+}
+
+button {
+  font-family: $paragraph;
+  font-size: 1rem;
 }
 
 // Form

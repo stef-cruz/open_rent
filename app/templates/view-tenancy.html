@@ -38,16 +38,16 @@
     <div class="row center-align">
         <!--Edit Tenancy -->
         <div class="col s12 m6">
-            <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">
-                <button class="btn-large button-black" type="submit">Edit Tenancy <i class="fas fa-edit"></i></button>
-            </a>
+            <div class="btn-large button-black" type="submit">
+                <a href="{{ url_for('edit_tenancy', tenancy_id=tenancy._id) }}">Edit Tenancy <i class="fas fa-edit"></i></a>
+            </div>
         </div>
         <!-- ./Edit Tenancy -->
         <!--View Map / All Tenancies -->
         <div class="col s12 m6">
-            <a href="{{ url_for('rent_register') }}">
-                <button class="btn-large button-black" type="submit">View Map <i class="fas fa-map-marked-alt"></i></button>
-            </a>
+            <div class="btn-large button-black" type="submit">
+                <a href="{{ url_for('rent_register') }}">View Map <i class="fas fa-map-marked-alt"></i></a>
+            </div>
         </div>
     </div>
 

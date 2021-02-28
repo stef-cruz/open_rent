@@ -32,7 +32,8 @@
                 <div class="col s12 form-margin">
                     <label for="address_2">Address Line 2</label>
                     <input id="address_2" name="address_2" type="text" class="validate" required>
-                    <span class="helper-text" data-error="Please enter complement of the address" data-success="Correct"></span>
+                    <span class="helper-text" data-error="Please enter complement of the address"
+                          data-success="Correct"></span>
                 </div>
                 <!-- ./Address Line 2 -->
                 <!-- Accommodation Type -->
@@ -41,9 +42,9 @@
                     <select id="accommodation_type" name="accommodation_type" class="validate" required>
                         <option value="" disabled selected>Choose Accommodation Type</option>
                         {% for type in accommodation_types %}
-                            <option value="{{ type.accommodation_type }}">{{
-                                type.accommodation_type }}
-                            </option>
+                        <option value="{{ type.accommodation_type }}">{{
+                            type.accommodation_type }}
+                        </option>
                         {% endfor %}
                     </select>
                     <span id="js-helper-text-select" class="helper-text">Please select one of the options</span>
@@ -67,8 +68,10 @@
                 <div class="col s12 m4 form-margin">
                     <label for="price">Price</label>
                     <!-- Regex for price, source https://www.html5pattern.com/-->
-                    <input id="price" name="price" type="text" class="validate" pattern="\d{3,4}(,\d{2})*(\.\d{2})?" required>
-                    <span class="helper-text" data-error="Only numbers, dots, commas, min 100, max 9999" data-success="Correct"></span>
+                    <input id="price" name="price" type="text" class="validate" pattern="\d{3,4}(,\d{2})*(\.\d{2})?"
+                           required>
+                    <span class="helper-text" data-error="Only numbers, dots, commas, min 100, max 9999"
+                          data-success="Correct"></span>
                 </div>
                 <!-- ./Price -->
             </div>
@@ -84,9 +87,11 @@
         <!-- Return button -->
         <div class="row center-align">
             <div class="col s12">
-                <a href="{{ url_for('profile') }}">
-                    <button class="btn-small button-black"><i class="fas fa-long-arrow-alt-left"></i> Return</button>
-                </a>
+                <div class="btn-small button-black">
+                    <a href="{{ url_for('profile') }}">
+                        <i class="fas fa-long-arrow-alt-left"></i> Return
+                    </a>
+                </div>
             </div>
         </div>
         <!-- ./Return button -->
