@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align heading-section">Contact</h3>
-
 <section class="container contact-form">
+
+    <h3 class="center-align heading-section">Contact</h3>
+
     <div class="card-panel">
         <form id="contact-form">
 
@@ -45,7 +46,7 @@
                 <!-- Message -->
                 <div class="col s12 form-margin">
                     <label for="message">Message</label>
-                    <textarea type="text" id="message" name="message" minlength="3" class="validate materialize-textarea" required></textarea>
+                    <textarea id="message" name="message" minlength="3" class="validate materialize-textarea" required></textarea>
                     <span class="helper-text" data-error="Message cannot be blank" data-success="Correct"></span>
                 </div>
                 <!-- ./Message -->
@@ -53,9 +54,10 @@
             <!-- Submit Update -->
             <div class="row center-align">
                 <div class="col s12">
-                    <a href="#modal-positive" id="js-modal-trigger">
-                        <button class="btn-large button-black" type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+                    <button class="btn-large button-black" type="submit">
+                    <a href="#modal-positive" id="js-modal-trigger">Submit <i class="fas fa-paper-plane"></i>
                     </a>
+                    </button>
                 </div>
             </div>
             <!-- ./Submit Update -->

@@ -102,9 +102,10 @@
 .rent-register__bg--left .content-left {
   padding: 4rem 0;
 }
-.rent-register__bg--left .content-left p {
+.rent-register__bg--left .content-left h3 {
   font-family: "Bebas Neue", serif;
   font-size: 4rem;
+  margin: 0;
 }
 .rent-register__bg--left .content-left span {
   font-family: "Bebas Neue", serif;
@@ -611,6 +612,10 @@ footer {
 .button-black:focus {
   background-color: #ff6d00;
 }
+.button-black a, .button-black i {
+  color: white;
+  font-size: 1.1rem;
+}
 
 .button-white {
   margin: 1rem 0;
@@ -622,6 +627,10 @@ footer {
 }
 .button-white:focus {
   background-color: #68ff5b;
+}
+.button-white a, .button-white i {
+  color: black;
+  font-size: 1.1rem;
 }
 
 .form-margin {

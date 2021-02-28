@@ -43,6 +43,13 @@
 </details>
 
 <details>
+  <summary>Database Schema</summary>
+
+- [Database Schema](#database-schema)
+
+</details>
+
+<details>
   <summary>Technologies</summary>
 
   - [Technologies Section](#technologies-section)
@@ -96,7 +103,7 @@ As the rent register user...
 - I want to delete a tenancy
 - I want to edit a tenancy
 - I want to view the rent register map
-- I want to be able to contact the register
+- I want to be able to contact the rent register
 
 ### Wireframes
 
@@ -338,6 +345,42 @@ If it was not for the time constraint, this application could have had the follo
 - Ability to export the data from the website that could allow for manipulation of results in Excel, for example
 - Dashboard page displaying all tenancies and various different graphs
 - Automated unit tests
+
+## Database Schema
+
+The database has three collections and follow the structure below.
+
+Accommodation Types collection:
+
+``{``  
+``"_id":                  <ObjectID>,``  
+``"accommodation_type":    <string>``  
+``}``
+
+Tenancies collection:
+
+``{``  
+``"_id": <ObjectID>,``  
+``"address_1": <string>``  
+``"address_2": <string>``  
+``"latitude": <double>``  
+``"longitude": <double>``  
+``"accommodation_type": <string>``  
+``"start_date": <string>``  
+``"end_date": <string>``  
+``"price": <string>``  
+``}``  
+
+Users collection:
+
+``{``  
+``"_id": <ObjectID>,``  
+``"username": <string>``  
+``"password": <string>``  
+``"email_address": <double>``  
+``"first_name": <double>``  
+``"last_name": <double>``  
+``}``  
 
 ## Technologies
 

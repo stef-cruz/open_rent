@@ -54,6 +54,11 @@ footer {
   &:focus {
     background-color: $sec-colour;
   }
+
+  a, i {
+    color: white;
+    font-size: 1.1rem;
+  }
 }
 
 .button-white {
@@ -67,6 +72,11 @@ footer {
 
   &:focus {
     background-color: $prim-colour;
+  }
+
+  a, i {
+    color: black;
+    font-size: 1.1rem;
   }
 }
 

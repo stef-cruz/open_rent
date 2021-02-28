@@ -20,7 +20,7 @@
 </section>
 
 <!--Content divider-->
-<section class="divider">
+<div class="divider">
     <div class="container">
         <div class="row">
             <div class="col s12 divider__content">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-</section>
+</div>
 
 <!--How it works-->
 <section class="steps">
@@ -63,19 +63,19 @@
         <div class="row center-align">
             {% if session.user %}
             <div class="col s12">
-                <a href="{{ url_for('add_tenancy') }}">
-                    <button class="btn-large button-black">
+                <button class="btn-large button-black">
+                    <a href="{{ url_for('add_tenancy') }}">
                         Add Tenancy <i class="fas fa-map-marked-alt"></i></i>
-                    </button>
-                </a>
+                    </a>
+                </button>
             </div>
             {% else %}
             <div class="col s12">
-                <a href="{{ url_for('register') }}">
-                    <button class="btn-large button-black">
+                <button class="btn-large button-black">
+                    <a href="{{ url_for('register') }}">
                         Register here <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </a>
+                    </a>
+                </button>
             </div>
             {% endif %}
         </div>
@@ -87,7 +87,7 @@
     <div class="row center-align">
         <div class="col s12 m8 rent-register__bg--left">
             <div class="content-left">
-                <p>Rent Register</p><span>Check out the map</span>
+                <h3>Rent Register</h3><span>Check out the map</span>
             </div>
         </div>
         <a href="{{ url_for('rent_register') }}">
@@ -145,9 +145,9 @@
         </div>
         <div class="row center-align">
             <div class="col s12">
-                <a href="{{ url_for('contact') }}">
-                    <button class="btn-large button-white">Contact us <i class="fas fa-paper-plane"></i></button>
-                </a>
+                <button class="btn-large button-white">
+                <a href="{{ url_for('contact') }}">Contact us <i class="fas fa-paper-plane"></i></a>
+                </button>
             </div>
         </div>
     </div>
