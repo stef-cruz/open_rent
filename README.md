@@ -36,8 +36,8 @@
      * [Edit tenancy](#edit-tenancy)
      * [Delete tenancy](#delete-tenancy)
      * [Rent register page](#rent-register-page)
-     * [Tenancy card](#tenancy-card)
      * [Contact page](#contact-page)
+     * [Error pages](#error-pages)
   - [Features Left to Implement](#features-left-to-implement)
 
 </details>
@@ -54,7 +54,7 @@
 <details>
   <summary>Testing</summary>
 
-  - [Testing Documentation](#testing-documentaion)
+  - [Testing Documentation](https://github.com/stefcruz/ci_milestone3/blob/master/TESTING.md)
 </details>
 
 <details>
@@ -337,3 +337,134 @@ If it was not for the time constraint, this application could have had the follo
 - Option to see all tenancies on a page, where user could search, sort and filter results
 - Ability to export the data from the website that could allow for manipulation of results in Excel, for example
 - Dashboard page displaying all tenancies and various different graphs
+- Automated unit tests
+
+## Technologies
+
+### Programming Languages
+
+- Flask  
+  Main framework for this application.
+- Python  
+  Back end & data manipulation
+- Jinja  
+  Templating language for template manipulation.
+- MongoDB  
+  Non-relational database used in this application.
+- HTML5  
+  Markup language used across the app.
+- CSS3  
+  Page style.
+- JavaScript  
+  Front end functionalities & API calls.
+- SASS  
+  CSS preprocessor.
+- Materialize  
+  This project used Materialize design elements such as navbar, grid & cards.
+
+### Other Tools
+
+- GitHub  
+  Used to store this project's source code.
+- Heroku  
+  Used to host this app.
+- WebStorm  
+  IDE used to write HTML, SASS and Jinja.
+- Pycharm  
+  IDE used to write Python.
+- Figma  
+  Creation of wireframes.
+- [Email JS](https://www.emailjs.com/)  
+  Tool used to send emails from JS.
+
+## Testing
+
+Testing documentation is available [here](https://github.com/stefcruz/ci_milestone3/blob/master/TESTING.md).
+
+## Deployment
+
+This project's source code is hosted on GitHub and deployed to Heroku. It was created using WebStorm and Pycharm IDEs.
+
+A clone of this repository was made locally, and the changes were deployed directly in the master branch. The commands used to push the changes were `git add .`, `git commit -m "message"` and `git push`. All the commits can be clearly identified by a concise and meaningful message.
+
+### How to deploy to Heroku
+
+There are two ways to deploy to Heroku. One is installing Heroku on your project and push changes to Heroku and the other is setting the automatic deployment from GitHub, which is easier.
+
+Both require the creation of the app on Heroku website or through the CLI (instructions [here](https://devcenter.heroku.com/articles/creating-apps)).
+
+Enabling automatic deployment from GitHub:
+
+1. Create requirements.txt file so Heroku knows which dependencies to install. To create one ``pip3 freeze --local > requirements.txt``
+2. Create procfile echo web: ``python run.py > Procfile``, then push requirements and procfile to git
+3. Create the app on Heroku website
+4. If your project uses any keys hidden in the gitignore file, go to Heroku and add them there in Settings > Config Vars
+5. Go to Deploy > connect the repo name > enable automatic deploy from master branch > go to the next section ‘Manual Deploy’ and click on ‘Deploy Branch’
+
+Installing Heroku on your project:
+1. Create app on Heroku website
+2. Make sure your project has requirements.txt file so Heroku knows which dependencies to install. To create one ``pip3 freeze --local > requirements.txt``
+3. Install Heroku on your project ``npm install -g heroku``
+4. Before pushing to Heroku, use the command git remote -v and see that only github links are listed
+5. Add your project to heroku with the command ``git remote add heroku project-link``. Project link can be found at your Heroku app > Settings > Heroku git URL
+7. Push to heroku ``git push -u heroku master``
+8. Create procfile ``echo web: python run.py > Procfile``, then ``git add -A``, ``git commit -m "Add Procfile"``, ``git push``
+9. If your project uses any keys hidden in the gitignore file, go to Heroku and add them there in Settings > Config Vars
+
+More information about deploying with Git [here](https://devcenter.heroku.com/articles/git).
+
+### How to fork this repository
+
+If you would like to experiment with this project without changing it, follow the steps below.
+
+1. After logging into your GitHub account, open up [this GitHub repository](https://stefcruz.github.io/ci_milestone3/)
+2. Click on the 'Fork' button at the top right-hand corner of the page
+3. Start coding!
+
+### How to open this project locally
+
+There are two options to clone this project to your local machine, using the command line and using GitHub desktop. Both are detailed [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+#### Using the command line
+
+1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone2).
+2. Click on 'Code'.
+3. First select whether you want to clone this repo using HTTPS, SSH or CLI, then click on the clipboard icon.
+4. Open Terminal on your computer or the terminal from your IDE.
+5. Change the current working directory to the location where you want the directory to be cloned.
+6. Type `git clone`, and then paste the URL you copied earlier.
+
+   ```shell
+   $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   ```
+
+7. Press Enter to create your local clone.
+
+#### Using GitHub Desktop
+
+1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone2).
+2. Click on 'Code'.
+3. Click 'Open with GitHub Desktop'.
+4. Click  'Choose...' and select the location where you want to save this repo on your machine.
+5. Open the project on your favourite IDE.
+
+More information can be found [here](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/cloning-a-repository-from-github-to-github-desktop).
+
+## Credits
+
+### Images
+- [Illustrations](https://icons8.com/illustrations/style--pablita)
+- [Icons](http://icons8.com/)
+
+## Acknowledgements
+
+### Design
+- [Colour theme and home page layout](https://www.squadeasy.com/en/)
+
+### Code
+- [App Structure](https://pythonise.com/series/learning-flask)
+- [Extract lat and long from geocode_result](https://stackoverflow.com/questions/37311687/extracting-lat-lon-from-geocode-result-list-with-python-google-maps-api)
+- [Google Maps Services Python](https://github.com/googlemaps/google-maps-services-python)
+- [JS used to calculate duration of tenancy](https://stackoverflow.com/questions/2536379/difference-in-months-between-two-dates-in-javascript)
+- [JS ensure infoWindow closes every time a new marker is clicked](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked)
+- [JS user cannot select end date of tenancy that is less than 1 month from start date](https://codepen.io/luv2code/pen/oNvrWyZ)
