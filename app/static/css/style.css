@@ -54,8 +54,8 @@
 .hero .hero-container__icons {
   text-align: center;
   display: flex;
-  align-items: space-between;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   width: 40%;
   margin: 0 auto;
 }
