@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bebas+Neue:100,200,300,400,500,600,700|Open+Sans:100,200,300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue:100,200,300,400,500,600,700|Open+Sans:100,200,300,400,500,600,700&display=swap");
 .logo {
   font-family: "Bebas Neue", serif;
 }
@@ -198,9 +198,9 @@
 .footer__logo-heading {
   font-family: "Bebas Neue", serif;
   margin-bottom: 0;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
-.footer__logo p {
+.footer__logo span {
   font-size: 1.2rem;
 }
 .footer__nav {

@@ -15,17 +15,11 @@
 
 ## W3C HTML Validator
 
-Both index.html and contact.html presented a few errors/warnings that were fixed and finally passed the W3C HTML validation.
-
-![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-html-validator.png)
-
+All HTML pages have passed the W3C HTML validation.
 
 ## W3C CSS Validator
 
-The CSS also returned no errors.
-
-![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-css-validator.png)
-
+The CSS only returns an error related to the Materialize stylesheet. This app's custom CSS returns no error.
 
 ## Google Lighthouse
 
