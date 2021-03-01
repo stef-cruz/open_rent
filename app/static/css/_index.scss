@@ -12,7 +12,7 @@
 
     &__icons {
       text-align: center;
-      @include flexbox(flex, center, space-between);
+      @include flexbox(flex, center, center);
       width: 40%;
       margin: 0 auto;
 
