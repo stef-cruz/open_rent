@@ -1,12 +1,9 @@
 # OpenRent - Rent Register Dublin
 
 
-
 ## Overview
 
-[OpenRent](http://ci-milestone3.herokuapp.com/) is a Rent Register for Dublin. Users can insert the tenancy and then rent amount. The objective is to deliver a service to society which will aid in the fight for illegal rent increases. This public register can also help identifying pressure zones with accurate and up to date information.
-
-
+[OpenRent](http://ci-milestone3.herokuapp.com/) is a Rent Register for Dublin city. The objective is to deliver a service to society which will aid in the fight for illegal rent increases. This public register can also help identifying pressure zones with accurate and up to date information.
 
 ## Table of Contents
 
@@ -97,6 +94,7 @@
 As the rent register user...
 
 - I want to create an account
+- I want to log in to my account
 - I want to update my personal information
 - I want to delete my account
 - I want to add a tenancy

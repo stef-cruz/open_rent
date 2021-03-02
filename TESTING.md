@@ -196,19 +196,19 @@ The website was tested on the browsers and devices as follows. The website was n
 
 | ID              | Device  | Browser                | OS                   | Compatibility |
 | --------------- | ------- | ---------------------- | -------------------- | ------------- |
-| D_Chrome_Win    | Desktop | Chrome 86.0            | Windows              |      |
-| D_Firefox_Win   | Desktop | Firefox 79.0           | Windows              |      |
-| D_Edge_Win      | Desktop | Microsoft Edge 44      | Windows              |           |
-| D_IE_Win        | Desktop | Internet Explorer 11.1 | Windows              |            |
-| D_Chrome_Linux  | Desktop | Chrome                 | Linux                |      |
-| D_Firefox_Linux | Desktop | Firefox                | Linux                |      |
-| D_Opera_Linux   | Desktop | Opera                  | Linux                |      |
-| D_Chrome_Mac    | Desktop | Chrome                 | Mac                  |      |
-| D_Firefox_Mac   | Desktop | Firefox                | Mac                  |      |
-| D_Safari_Mac    | Desktop | Safari                 | Mac                  |           |
-| M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 |      |
+| D_Chrome_Win    | Desktop | Chrome 86.0            | Windows              |  Excellent    |
+| D_Firefox_Win   | Desktop | Firefox 79.0           | Windows              |  Excellent    |
+| D_Edge_Win      | Desktop | Microsoft Edge 44      | Windows              |  Excellent    |
+| D_IE_Win        | Desktop | Internet Explorer 11.1 | Windows              |  Good         |
+| D_Chrome_Linux  | Desktop | Chrome                 | Linux                |  Excellent    |
+| D_Firefox_Linux | Desktop | Firefox                | Linux                |  Excellent    |
+| D_Opera_Linux   | Desktop | Opera                  | Linux                |  Excellent    |
+| D_Chrome_Mac    | Desktop | Chrome                 | Mac                  |  Excellent    |
+| D_Firefox_Mac   | Desktop | Firefox                | Mac                  |  Excellent    |
+| D_Safari_Mac    | Desktop | Safari                 | Mac                  |  Excellent    |
+| M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 |  Excellent    |
 | M_Safari_iPhone | Mobile  | Safari                 | iPhone X             |           |
-| M_Chrome_iPhone | Mobile  | Chrome                 | iPhone X             |           |
+| M_Chrome_iPhone | Mobile  | Chrome                 | iPhone X             |  Excellent     |
 
 ### Bugs and Fixes
 
@@ -218,6 +218,19 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 This section only highlights the browsers and devices in which compatibility are not excellent, referencing the ID as per table above. The bugs in this section were not fixed.
 
+
+- D_IE_Win
+  - Add Tenancy button does not work. It does not bring user back to profile page as expected.
+  - Duration of tenancy javascript function does not work. Field is blank.
+  
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-ie-windows-2.png" width="400">
+
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-ie-windows.png" width="400">
+
+- D_Safari_Mac
+  - Button "Edit Tenancy" does not have CSS applied
+
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-safari-edit-profile.png" width="400">
 
 #### General bugs
 
