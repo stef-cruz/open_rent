@@ -46,7 +46,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-register.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-register.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-register.png" width="250">
 
 - I want to log in to my account.
   - _Goal achieved_: User clicks on "Log In" in the navbar or footer.
@@ -55,7 +55,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-login.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-login.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-login.png" width="250">
 
 - I want to update my personal information
   - _Goal achieved_: User logs in, expands the heading "My Details" and clicks the "Edit Profile" button.
@@ -64,7 +64,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-edit-profile.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-edit-profile.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-edit-profile.png" width="250">
 
 - I want to delete my account
   - _Goal achieved_: On my profile page, user expands heading "Privacy" and clicks the anchor link.
@@ -73,7 +73,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-delete-profile.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-delete-profile.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-delete-profile.png" width="250">
 
 - I want to add a tenancy
   - _Goal achieved_: On my profile page, user expands heading "My Tenancies" and clicks the "Add Tenancy" button.
@@ -82,7 +82,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-add-tenancy.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-add-tenancy.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-add-tenancy.png" width="250">
 
 - I want to edit a tenancy
   - _Goal achieved_: Within the tenancy card under the "My Tenancies" heading, user clicks the "Edit Tenancy" button.
@@ -91,7 +91,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-edit-tenancy.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-edit-tenancy.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-edit-tenancy.png" width="250">
 
 - I want to delete a tenancy
   - _Goal achieved_: Within the tenancy card under the "My Tenancies" heading, user clicks the "Delete Tenancy" button.
@@ -100,7 +100,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-delete-tenancy.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-delete-tenancy.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-delete-tenancy.png" width="250">
 
 - I want to view the rent register map
   - _Goal achieved_: User navigates to "Rent Register" page and see the map with the markers.
@@ -109,7 +109,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-rent-register.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-rent-register.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-rent-register.png" width="250">
 
 
 - I want to be able to contact the rent register
@@ -119,7 +119,7 @@ Desktop:
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-desktop-contact.png" width="400">
 
 Mobile:  
-<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-contact.png" width="400">
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-mobile-contact.png" width="250">
 
 ## Manual Testing
 
@@ -218,5 +218,5 @@ A few bugs were encountered during the testing, which were addressed accordingly
 This section only highlights the browsers and devices in which compatibility are not excellent, referencing the ID as per table above. The bugs in this section were not fixed.
 
 
-
 #### General bugs
+

@@ -125,7 +125,7 @@ Following the package method from [this Pythonise tutorial](https://pythonise.co
 │   ├── contact.py
 │   ├── database.py
 │   ├── errors.py
-│   ├── init.py
+│   ├── __init__.py
 │   ├── login.py
 │   ├── profile.py
 │   ├── tenancy.py
@@ -206,9 +206,9 @@ Nav desktop:
 ![Nav desktop unregistered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-desktop-unregistered-user.png)
 
 Nav mobile and tablet:  
-![Nav mobile and tablet](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-mobile-tablet.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-mobile-tablet.png" width="250">
 
-![Nav mobile sidenav](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-mobile-sidenav.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-mobile-sidenav.png" width="250">
 
 Favicon:  
 ![Nav favicon](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-favicon.png)
@@ -222,71 +222,71 @@ When logged in, the user can hover over their username and they can log out or g
 The content on the home page looks the same for registered and unregistered users, except the call to action on the "How does it work?" section.
 
 Registered user:  
-![Home page registered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-registered-user.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-registered-user.png" width="450">
 
 Unregistered user:  
-![Home page unregistered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-unregistered-user.png)
-
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-unregistered-user.png" width="450">
 
 #### Footer
 
 The footer has links to the sections of the homepage and also social media. Different links are displayed when the user is logged in.
 
 Desktop & mobile unregistered user:  
-![Desktop footer unregistered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-desktop-unreg-user.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-desktop-unreg-user.png" width="450">
 
-![Mobile footer unregistered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-mobile-unreg-user.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-mobile-unreg-user.png" width="250">
 
 Desktop & mobile registered user:  
-![Desktop footer registered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-desktop-reg-user.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-desktop-reg-user.png" width="450">
 
-![Mobile footer registered user](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-mobile-reg-user.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/footer-mobile-reg-user.png" width="250">
+
 
 #### Log in
 
 Users can log in to the app by typing their combination of username and password, which is validated by the Flask app and will throw an error in case of unmatch. All passwords are hashed. Users can create an account by  clicking on "sign up here".
 
-![Log in](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/log-in.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/log-in.png" width="400">
 
 #### Sign up
 
 The sign up is a simple solution where only username and password is required. The password is verified twice to ensure they match before signing user in and writing to the database.
 
-![Sign up](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/sign-up.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/sign-up.png" width="400">
 
 #### Profile page
 
 The profile page uses the Materialize accordion, which is collasped when the user first land on this page. The sections expand when clicking and reveal the user's details, tenancies uploaded and the option to delete the profile under the privacy heading.
 
 Accordion collapsed:  
-![Profile page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-desktop.png" width="400">
 
 My details:  
-![My details profile page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-my-details.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-my-details.png" width="400">
 
 My Tenancies:  
-![My tenancies profile page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-my-tenancies.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-my-tenancies.png" width="400">
 
 Privacy:  
-![Privacy profile page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-privacy.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-privacy.png" width="400">
 
 #### Edit profile
 
 Within the profile page, the user has the ability to edit their personal information such as first name, last name and email address.
 
-![Edit profile](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-profile.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-profile.png" width="400">
 
 #### Delete profile
 
 The option to delete the profile sits under the privacy tab, where the user is prompted with the option to delete profile or cancel action.
 
-![Delete profile](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/delete-profile.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/delete-profile.png" width="400">
 
 #### Add tenancy
 
 Users can add a tenancy by clicking the button add tenancy on their profile, which will be plotted in a map on the Rent Register page.
 
-![Add tenancy page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/add-tenancy.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/add-tenancy.png" width="400">
 
 The Address Line 1 field is hooked up to Google Maps Autocomplete address, which triggers once user starts typing. It is configured to allow addresses from Dublin only.
 
@@ -294,7 +294,7 @@ The Address Line 1 field is hooked up to Google Maps Autocomplete address, which
 
 The user also has to select the start and end date for the tenancy, which utilises the Materialize Date Picker. 
 
-![Add tenancy date picker](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/add-tenancy-date-picker.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/add-tenancy-date-picker.png" width="300">
 
 All the fields in the form are validated, example below for the price where only numbers, dots, commas and numbers can be entered. The date is also validated, not allowing users to insert a tenancy of less than 1 month.
 
@@ -304,37 +304,37 @@ All the fields in the form are validated, example below for the price where only
 
 Once a tenancy is inserted, the user can edit the tenancy and the same validation of address, date and  apply. 
 
-![Edit tenancy](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-tenancy.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-tenancy.png" width="400">
 
-![Edit tenancy page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-tenancy-page.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-tenancy-page.png" width="400">
 
 #### Delete tenancy
 
 The tenancy can be deleted by clicking the delete button from the profile page. User will be prompted with a modal to confirm the action.
 
-![Delete tenancy](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/delete-tenancy.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/delete-tenancy.png" width="400">
 
 #### Rent register page
 
 The rent register page shows Google Maps with markers which are the tenancies added by the users.
 
-![Rent register page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/rent-register-page.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/rent-register-page.png" width="400">
 
 Clicking on the marker opens up an info window and a card underneath the map with the tenancy details.
 
-![Rent register info window](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/rent-register-page-tenancy-card.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/rent-register-page-tenancy-card.png" width="400">
 
 #### Contact page
 
 The contact form contains a simple form with name, surname, email address and a message. EmailJS was used to enable this page to send emails.
 
-![Contact page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/contact-page.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/contact-page.png" width="400">
 
 #### Error pages
 
 The application displays custom error pages when something goes wrong.
 
-![Error page](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/404-page.png)
+<img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/404-page.png" width="400">
 
 ### Features Left to Implement
 
@@ -348,7 +348,7 @@ If it was not for the time constraint, this application could have had the follo
 
 ## Database Schema
 
-The database has three collections and follow the structure below.
+The database has three collections and follows the structure below.
 
 Accommodation Types collection:
 
@@ -389,7 +389,7 @@ Users collection:
 - Flask  
   Main framework for this application.
 - Python  
-  Back end & data manipulation
+  Back end & data manipulation.
 - Jinja  
   Templating language for template manipulation.
 - MongoDB  
@@ -470,22 +470,20 @@ There are two options to clone this project to your local machine, using the com
 
 #### Using the command line
 
-1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone2).
+1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone3).
 2. Click on 'Code'.
 3. First select whether you want to clone this repo using HTTPS, SSH or CLI, then click on the clipboard icon.
 4. Open Terminal on your computer or the terminal from your IDE.
 5. Change the current working directory to the location where you want the directory to be cloned.
 6. Type `git clone`, and then paste the URL you copied earlier.
-
    ```shell
    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
    ```
-
 7. Press Enter to create your local clone.
 
 #### Using GitHub Desktop
 
-1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone2).
+1. Go to the main page of [this GitHub repository](https://github.com/stefcruz/ci_milestone3).
 2. Click on 'Code'.
 3. Click 'Open with GitHub Desktop'.
 4. Click  'Choose...' and select the location where you want to save this repo on your machine.
@@ -502,7 +500,7 @@ More information can be found [here](https://docs.github.com/en/free-pro-team@la
 ## Acknowledgements
 
 ### Design
-- [Colour theme and home page layout](https://www.squadeasy.com/en/)
+- [Colour theme and home page inspiration](https://www.squadeasy.com/en/)
 
 ### Code
 - [App Structure](https://pythonise.com/series/learning-flask)

@@ -51,15 +51,8 @@ def add_tenancy():
                     DB_TENANCIES.insert_one(tenancy)
                     flash("Tenancy Successfully Added")
 
-                    # get ID from tenancy added
-                    tenancy_added = DB_TENANCIES.find_one({'address_1': address_1})
-                    tenancy_id = tenancy_added.get('_id')
-
-                    if not tenancy_id:
-                        abort(500)
-
-                    # display tenancy added
-                    return redirect(url_for("view_tenancy", tenancy_id=tenancy_id))
+                    # redirect user to profile
+                    return redirect(url_for("profile"))
 
                 flash('Please enter an address in Dublin City.')
                 return redirect(url_for("add_tenancy"))
@@ -72,21 +65,6 @@ def add_tenancy():
         return render_template("add-tenancy.html", accommodation_types=accommodation_types, current_user=current_user)
 
     # If user not logged in
-    else:
-        return redirect(url_for("login"))
-
-
-# VIEW TENANCY
-@app.route("/view_tenancy/<tenancy_id>")
-def view_tenancy(tenancy_id):
-    """Return tenancy added in add_tenancy function"""
-    if not session.get("user") is None:
-        username = session["user"]
-        current_user = DB_USERS.find_one({'username': username})
-        tenancy = DB_TENANCIES.find_one({'_id': ObjectId(tenancy_id)})
-        if not tenancy:
-            abort(404)
-        return render_template("view-tenancy.html", tenancy=tenancy, current_user=current_user)
     else:
         return redirect(url_for("login"))
 
