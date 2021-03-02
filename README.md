@@ -188,8 +188,7 @@ Following the package method from [this Pythonise tutorial](https://pythonise.co
 │   │   ├── login.html
 │   │   ├── profile.html
 │   │   ├── register.html
-│   │   ├── rent-register.html
-│   │   └── view-tenancy.html
+│   │   └──  rent-register.html
 ├── README.md
 ├── requirements.txt
 └──  run.py

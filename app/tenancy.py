@@ -35,7 +35,7 @@ def add_tenancy():
             if geocode_result:
                 latitude = geocode_result[0]["geometry"]["location"]["lat"]
                 longitude = geocode_result[0]["geometry"]["location"]["lng"]
-                if 53.20 >= latitude >= 53.50 or -6.50 <= longitude <= -6.00:
+                if 53.20 >= latitude >= 53.50 or -6.50 <= longitude <= -6.25:
                     tenancy = {
                         "address_1": request.form.get("address_1"),
                         "address_2": request.form.get("address_2"),
@@ -93,7 +93,7 @@ def edit_tenancy(tenancy_id):
             if geocode_result:
                 latitude = geocode_result[0]["geometry"]["location"]["lat"]
                 longitude = geocode_result[0]["geometry"]["location"]["lng"]
-                if 53.25 <= latitude <= 53.41 or -6.36 <= longitude <= -6.26:
+                if 53.20 <= latitude <= 53.50 or -6.50 <= longitude <= -6.25:
                     edited_tenancy = {
                         "address_1": request.form.get("address_1"),
                         "address_2": request.form.get("address_2"),
@@ -108,6 +108,7 @@ def edit_tenancy(tenancy_id):
                     }
                     DB_TENANCIES.update({"_id": ObjectId(tenancy_id)}, edited_tenancy)
                     flash("Tenancy Successfully Updated")
+                    return redirect(url_for("profile"))
 
                 flash('Please enter an address in Dublin City.')
                 return redirect(url_for("edit_tenancy", tenancy_id=tenancy_id))

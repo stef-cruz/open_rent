@@ -170,6 +170,7 @@ Edit Tenancy:
 - [x] Within the tenancy card, click on "Edit" and land on Edit Tenancy page.
 - [x] On the Edit Tenancy page, the address of the tenancy clicked should be populated.
 - [x] Change the value of an input and click on the button "Edit Tenancy", a success message should display.
+- [x] If the change made is in the Address Line 1 field, type address outside Dublin and see error message.
 
 Delete Tenancy:
 - [x] Within the tenancy card, click on "Delete" and see modal.
