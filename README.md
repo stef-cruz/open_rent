@@ -3,7 +3,7 @@
 
 ## Overview
 
-[OpenRent](http://ci-milestone3.herokuapp.com/) is a Rent Register for Dublin city. The objective is to deliver a service to society which will aid in the fight for illegal rent increases. This public register can also help identifying pressure zones with accurate and up to date information.
+[OpenRent](http://ci-milestone3.herokuapp.com/) is the first user driven Rent Register for Dublin city. The objective is to deliver a service to society which will aid in the fight for illegal rent increases. This public register can also help identifying pressure zones with accurate and up to date information.
 
 ## Table of Contents
 
@@ -115,7 +115,7 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/PP
 
 #### App structure
 
-Following the package method from [this Pythonise tutorial](https://pythonise.com/series/learning-flask/flask-application-structure), the application is structured as a package and was imported within the different python files. This strategy allows for scale and maintains the files organised.
+Following the package method from [this Pythonise tutorial](https://pythonise.com/series/learning-flask/flask-application-structure), the application is structured as a package and is imported into the multiple python files. Breaking down the app into smaller files allows for better readability and is also easier to maintain and navigate.
 
 ```bash
 .
@@ -210,7 +210,7 @@ Nav mobile and tablet:
 Favicon:  
 ![Nav favicon](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-favicon.png)
 
-When logged in, the user can hover over their username and they can log out or go to profile page.
+When logged in, the user can hover over their username and can choose between logging out or going to the profile page.
 
 ![Nav username hover](https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/nav-username-hover.png)
 
@@ -218,10 +218,10 @@ When logged in, the user can hover over their username and they can log out or g
 
 The content on the home page looks the same for registered and unregistered users, except the call to action on the "How does it work?" section.
 
-Registered user:  
+Registered user sees "Add Tenancy" button:  
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-registered-user.png" width="450">
 
-Unregistered user:  
+Unregistered user sees "Register Here" button:  
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/home-page-cta-unregistered-user.png" width="450">
 
 #### Footer
@@ -241,19 +241,19 @@ Desktop & mobile registered user:
 
 #### Log in
 
-Users can log in to the app by typing their combination of username and password, which is validated by the Flask app and will throw an error in case of unmatch. All passwords are hashed. Users can create an account by  clicking on "sign up here".
+Users can log in to the app by typing their combination of username and password, which is validated by the Flask app and will throw an error if they unmatch. All passwords are hashed. Users can create an account by  clicking on "sign up here".
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/log-in.png" width="400">
 
 #### Sign up
 
-The sign up is a simple solution where only username and password is required. The password is verified twice to ensure they match before signing user in and writing to the database.
+The sign up is a simple solution where only username and password is required. The password is verified twice to ensure they match before signing the user in and writing to the database.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/sign-up.png" width="400">
 
 #### Profile page
 
-The profile page uses the Materialize accordion, which is collasped when the user first land on this page. The sections expand when clicking and reveal the user's details, tenancies uploaded and the option to delete the profile under the privacy heading.
+The profile page uses the Materialize accordion, which is collapsed when the user first lands on this page. The sections expand when clicking and reveal the user's details, tenancies uploaded and the option to delete the profile under the privacy heading.
 
 Accordion collapsed:  
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/profile-desktop.png" width="400">
@@ -275,7 +275,7 @@ Within the profile page, the user has the ability to edit their personal informa
 
 #### Delete profile
 
-The option to delete the profile sits under the privacy tab, where the user is prompted with the option to delete profile or cancel action.
+The option to delete the profile sits under the privacy tab, where the modal gives the user the option to delete profile or cancel action.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/delete-profile.png" width="400">
 
@@ -299,7 +299,7 @@ All the fields in the form are validated, example below for the price where only
 
 #### Edit tenancy
 
-Once a tenancy is inserted, the user can edit the tenancy and the same validation of address, date and  apply. 
+Once a tenancy is inserted, the user can edit the tenancy and the form validation also applies. 
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/edit-tenancy.png" width="400">
 
@@ -313,7 +313,7 @@ The tenancy can be deleted by clicking the delete button from the profile page. 
 
 #### Rent register page
 
-The rent register page shows Google Maps with markers which are the tenancies added by the users.
+The rent register page shows the Google Maps with markers which are the tenancies added by the users.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/rent-register-page.png" width="400">
 
@@ -323,7 +323,7 @@ Clicking on the marker opens up an info window and a card underneath the map wit
 
 #### Contact page
 
-The contact form contains a simple form with name, surname, email address and a message. EmailJS was used to enable this page to send emails.
+The contact form contains a simple form with name, surname, email address and a message. EmailJS was used to enable this functionality.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/readme_md/contact-page.png" width="400">
 
@@ -376,9 +376,9 @@ Users collection:
 ``"_id": <ObjectID>,``  
 ``"username": <string>``  
 ``"password": <string>``  
-``"email_address": <double>``  
-``"first_name": <double>``  
-``"last_name": <double>``  
+``"email_address": <string>``  
+``"first_name": <string>``  
+``"last_name": <string>``  
 ``}``  
 
 ## Technologies
@@ -398,7 +398,7 @@ Users collection:
 - CSS3  
   Page style.
 - JavaScript  
-  Front end functionalities & API calls.
+  Front end functionalities & Google Maps API call.
 - SASS  
   CSS preprocessor.
 - Materialize  
@@ -431,16 +431,16 @@ A clone of this repository was made locally, and the changes were deployed direc
 
 ### How to deploy to Heroku
 
-There are two ways to deploy to Heroku. One is installing Heroku on your project and push changes to Heroku and the other is setting the automatic deployment from GitHub, which is easier.
+There are two ways to deploy to Heroku. One is installing Heroku on your project and pushing changes to Heroku and the other is setting the automatic deployment from GitHub, which is easier.
 
-Both require the creation of the app on Heroku website or through the CLI (instructions [here](https://devcenter.heroku.com/articles/creating-apps)).
+Both require the creation of the app on the Heroku website or through the CLI (instructions [here](https://devcenter.heroku.com/articles/creating-apps)).
 
 Enabling automatic deployment from GitHub:
 
 1. Create requirements.txt file so Heroku knows which dependencies to install. To create one ``pip3 freeze --local > requirements.txt``
 2. Create procfile echo web: ``python run.py > Procfile``, then push requirements and procfile to git
 3. Create the app on Heroku website
-4. If your project uses any keys hidden in the gitignore file, go to Heroku and add them there in Settings > Config Vars
+4. If your project uses any keys hidden on the gitignore file, go to Heroku and add them there in Settings > Config Vars
 5. Go to Deploy > connect the repo name > enable automatic deploy from master branch > go to the next section ‘Manual Deploy’ and click on ‘Deploy Branch’
 
 Installing Heroku on your project:
@@ -451,7 +451,7 @@ Installing Heroku on your project:
 5. Add your project to heroku with the command ``git remote add heroku project-link``. Project link can be found at your Heroku app > Settings > Heroku git URL
 7. Push to heroku ``git push -u heroku master``
 8. Create procfile ``echo web: python run.py > Procfile``, then ``git add -A``, ``git commit -m "Add Procfile"``, ``git push``
-9. If your project uses any keys hidden in the gitignore file, go to Heroku and add them there in Settings > Config Vars
+9. If your project uses any keys hidden on the gitignore file, go to Heroku and add them there in Settings > Config Vars
 
 More information about deploying with Git [here](https://devcenter.heroku.com/articles/git).
 
@@ -505,6 +505,6 @@ More information can be found [here](https://docs.github.com/en/free-pro-team@la
 - [App Structure](https://pythonise.com/series/learning-flask)
 - [Extract lat and long from geocode_result](https://stackoverflow.com/questions/37311687/extracting-lat-lon-from-geocode-result-list-with-python-google-maps-api)
 - [Google Maps Services Python](https://github.com/googlemaps/google-maps-services-python)
-- [JS used to calculate duration of tenancy](https://stackoverflow.com/questions/2536379/difference-in-months-between-two-dates-in-javascript)
+- [JS used to calculate duration of tenancy](https://stackoverflow.com/questions/12251325/javascript-date-to-calculate-age-work-by-the-day-months-years)
 - [JS ensure infoWindow closes every time a new marker is clicked](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked)
 - [JS user cannot select end date of tenancy that is less than 1 month from start date](https://codepen.io/luv2code/pen/oNvrWyZ)
