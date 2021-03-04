@@ -228,7 +228,7 @@ This section only highlights the browsers and devices in which compatibility are
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-ie-windows.png" width="400">
 
 - D_Safari_Mac
-  - Button "Edit Tenancy" does not have CSS applied
+  - Button "Edit Profile" does not have CSS applied
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-safari-edit-profile.png" width="400">
 
