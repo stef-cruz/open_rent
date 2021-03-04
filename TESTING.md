@@ -207,7 +207,8 @@ The website was tested on the browsers and devices as follows. The website was n
 | D_Firefox_Mac   | Desktop | Firefox                | Mac                  |  Excellent    |
 | D_Safari_Mac    | Desktop | Safari                 | Mac                  |  Excellent    |
 | M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 |  Excellent    |
-| M_Safari_iPhone | Mobile  | Safari                 | iPhone X             |           |
+| M_Safari_iPhone | Mobile  | Safari                 | iPhone 6             |  Excellent    |
+| M_Chrome_iPhone | Mobile  | Chrome                 | iPhone 6             |  Excellent     |
 | M_Chrome_iPhone | Mobile  | Chrome                 | iPhone X             |  Excellent     |
 
 ### Bugs and Fixes
@@ -216,8 +217,7 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 #### Browser bugs
 
-This section only highlights the browsers and devices in which compatibility are not excellent, referencing the ID as per table above. The bugs in this section were not fixed.
-
+This section only highlights the browsers and devices in which compatibility are not excellent, referencing the ID as per table above. The only bug fixed in this section was the CSS applied to the button "Edit Profile" on Safari.
 
 - D_IE_Win
   - Add Tenancy button does not work. It does not bring user back to profile page as expected.
@@ -228,9 +228,6 @@ This section only highlights the browsers and devices in which compatibility are
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-ie-windows.png" width="400">
 
 - D_Safari_Mac
-  - Button "Edit Profile" does not have CSS applied
+  - Button "Edit Profile" did not have CSS applied, which was corrected by removing the submit type from the button.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-safari-edit-profile.png" width="400">
-
-#### General bugs
-

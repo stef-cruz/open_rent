@@ -338,7 +338,9 @@ The application displays custom error pages when something goes wrong.
 If it was not for the time constraint, this application could have had the following features:
 
 - Log in with email address instead of username and email verification
+- Option for the user to recover password from login page
 - Option to see all tenancies on a page, where user could search, sort and filter results
+- Add number of rooms if user selects the options entire apartment or entire house 
 - Ability to export the data from the website that could allow for manipulation of results in Excel, for example
 - Dashboard page displaying all tenancies and various different graphs
 - Automated unit tests

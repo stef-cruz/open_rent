@@ -50,6 +50,7 @@ def edit_profile(user_id):
                           "email_address": request.form.get("email_address")}
                  })
             flash("Profile Successfully Updated")
+            return redirect(url_for("profile"))
 
         # Search for user id in DB
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
