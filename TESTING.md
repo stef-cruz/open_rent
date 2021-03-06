@@ -147,16 +147,21 @@ Sign Up:
 
 Profile:
 - [x] Click on the 3 headings and expand the accordion.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/profile and expect to see the 404 page.
   
 Edit Profile:
 - [x] Expand heading "My Details", click on the button "Edit profile" and land on Edit Profile page.
 - [x] Enter different first name, last name or email address and hit Edit Profile, see message "Profile successfully updated" and return to profile page.
 - [x] Expand heading "My Details" and see the different value inserted for first name, last name and/or email address.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/edit_profile and expect to see the 404 page.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/edit_profile/60412c99a3baf38b6b8ca989 (user ID) and redirect to login page.
 
 Delete Profile:
 - [x] Expand heading "Privacy" click on the link "click here" and see modal.
 - [x] Within the modal, click cancel and return to profile.
 - [x] Within the modal, click delete and note that you have been logged out and landed on the home page.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/delete_profile and expect to see the 404 page.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/edit_profile/60412c99a3baf38b6b8ca989 (user ID) and redirect to login page.
 
 Add Tenancy:
 - [x] Expand heading "My Tenancies" click on the button "Add Tenancy" and land on Add Tenancy page.
@@ -165,17 +170,22 @@ Add Tenancy:
 - [x] In the Address Line 1 field, type address within Dublin, click on "Add Tenancy" button and move on.
 - [x] Pick start date and when selecting end date, inspect that dates which are less than 1 month from start date are grayed out.
 - [x] In the price field, an error message should display if characters other than dot, comma and numbers not ranging from 100 to 9999 are entered. 
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/add_tenancy and redirect to login page.
 
 Edit Tenancy:
 - [x] Within the tenancy card, click on "Edit" and land on Edit Tenancy page.
 - [x] On the Edit Tenancy page, the address of the tenancy clicked should be populated.
 - [x] Change the value of an input and click on the button "Edit Tenancy", a success message should display.
 - [x] If the change made is in the Address Line 1 field, type address outside Dublin, hit "Edit Tenancy" and see error message.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/edit_tenancy and expect to see the 404 page.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/edit_tenancy/60412d6da3baf38b6b8ca98a (tenancy ID) and redirect to login page.
 
 Delete Tenancy:
 - [x] Within the tenancy card, click on "Delete" and see modal.
 - [x] Within the modal, click cancel and return to profile.
 - [x] Within the modal, click delete and note that tenancy has been deleted from list.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/delete_tenancy and expect to see the 404 page.
+- [x] Try to access the url http://ci-milestone3.herokuapp.com/delete_tenancy/60412d6da3baf38b6b8ca98a (tenancy ID) and redirect to login page.
 
 Rent Register:
 - [x] Click on the markers and see info window above the pin and tenancy card displayed below the map.
@@ -215,7 +225,7 @@ The website was tested on the browsers and devices as follows. Unfortunately I d
 
 A few bugs were encountered during the testing, which were addressed accordingly where possible.
 
-#### Browser bugs
+#### Browser specific bugs
 
 This section only highlights the browsers and devices in which compatibility are not excellent, referencing the ID as per table above. The only bug fixed in this section was the CSS applied to the button "Edit Profile" on Safari for both mobile and desktop.
 
@@ -231,3 +241,7 @@ This section only highlights the browsers and devices in which compatibility are
   - Button "Edit Profile" did not have CSS applied, which was corrected by removing the submit type from the button.
 
 <img src="https://github.com/stefcruz/ci_milestone3/blob/master/app/static/images/testing_md/testing-safari-edit-profile.png" width="400">
+
+#### General bugs
+
+- When user is logged in and navigates to page http://ci-milestone3.herokuapp.com/login, error message was being displayed. This was corrected to redirect to profile.

@@ -1,6 +1,6 @@
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, abort)
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app import app
@@ -11,6 +11,10 @@ from app.database import DB_USERS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     """Create user in database and return user's profile page"""
+
+    if session.get("user"):
+        abort(404)
+
     if request.method == 'POST':
 
         if request.form.get('confirm-password') != request.form.get('password'):
@@ -48,6 +52,10 @@ def register():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     """Log in user in the app and return user's profile page"""
+
+    if session.get("user"):
+        abort(404)
+
     if request.method == 'POST':
         # check if username exists in db
         existing_user = DB_USERS.find_one(

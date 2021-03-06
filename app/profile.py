@@ -13,11 +13,11 @@ def profile():
     """Fetch username from db and return the user's profile page
     source: https://pythonise.com/series/learning-flask/flask-session-object"""
 
-    # User exists in DB
+    # User exists in session
     if not session.get("user") is None:
         username = session["user"]
 
-        # Fetch user, user tenancies and details
+        # Fetch user, user tenancies and details from DB
         current_user = DB_USERS.find_one({'username': username})
         user_id = current_user.get('_id')
         user_tenancies = DB_TENANCIES.find({'created_by': username})
@@ -27,7 +27,7 @@ def profile():
                                user_details=user_details)
 
     else:
-        return redirect(url_for("login"))
+        abort(404)
 
 
 # EDIT PROFILE
