@@ -6,7 +6,8 @@ import os
 import googlemaps
 
 from app import app
-from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, DB_USERS, TODAY_DATE
+from app.database import DB_TENANCIES, DB_ACCOMMODATION_TYPES, \
+    DB_USERS, TODAY_DATE
 
 # GOOGLE API KEY
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
@@ -62,7 +63,9 @@ def add_tenancy():
 
         # Get accommodation type from db
         accommodation_types = DB_ACCOMMODATION_TYPES.find()
-        return render_template("add-tenancy.html", accommodation_types=accommodation_types, current_user=current_user)
+        return render_template("add-tenancy.html",
+                               accommodation_types=accommodation_types,
+                               current_user=current_user)
 
     # If user not logged in
     else:
@@ -121,7 +124,9 @@ def edit_tenancy(tenancy_id):
         if not tenancy:
             abort(404)
         accommodation_types = DB_ACCOMMODATION_TYPES.find()
-        return render_template("edit-tenancy.html", tenancy=tenancy, accommodation_types=accommodation_types, current_user=current_user)
+        return render_template("edit-tenancy.html", tenancy=tenancy,
+                               accommodation_types=accommodation_types,
+                               current_user=current_user)
 
     # If user not logged in
     else:
@@ -157,14 +162,15 @@ def delete_tenancy(tenancy_id):
 
 # GET TENANCIES
 @app.route("/rent_register")
-def rent_register ():
+def rent_register():
     if not session.get("user") is None:
         username = session["user"]
         current_user = DB_USERS.find_one({'username': username})
         tenancies = DB_TENANCIES.find()
         if not tenancies:
             abort(404)
-        return render_template("rent-register.html", tenancies=tenancies, current_user=current_user)
+        return render_template("rent-register.html", tenancies=tenancies,
+                               current_user=current_user)
     else:
         tenancies = DB_TENANCIES.find()
         if not tenancies:

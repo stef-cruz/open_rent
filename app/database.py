@@ -4,7 +4,7 @@ from datetime import date
 from app import app
 from flask_pymongo import PyMongo
 if os.path.exists("env.py"):
-   import env
+    import env
 
 # MongoDB credentials
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
@@ -20,4 +20,3 @@ DB_ACCOMMODATION_TYPES = MONGO.db.accommodation_types
 
 # Today's date
 TODAY_DATE = date.today().strftime("%d/%b/%Y")
-

@@ -16,13 +16,13 @@ function initMap() {
     };
 
     //Adding markers
-    let latLong = document.querySelectorAll(".js-lat-long")
-    let latValue = document.getElementsByClassName("js-lat")
-    let longValue = document.getElementsByClassName("js-long")
-    let price = document.getElementsByClassName("js-price")
-    let addressOne = document.getElementsByClassName("js-address-1")
-    let addressTwo = document.getElementsByClassName("js-address-2")
-    let type = document.getElementsByClassName("js-type")
+    let latLong = document.querySelectorAll(".js-lat-long");
+    let latValue = document.getElementsByClassName("js-lat");
+    let longValue = document.getElementsByClassName("js-long");
+    let price = document.getElementsByClassName("js-price");
+    let addressOne = document.getElementsByClassName("js-address-1");
+    let addressTwo = document.getElementsByClassName("js-address-2");
+    let type = document.getElementsByClassName("js-type");
 
     //Convert lat and long to float, source https://stackoverflow.com/questions/20585055/how-to-fix-uncaught-invalidvalueerror-setposition-not-a-latlng-or-latlnglitera/20585117
     for (let i = 0; i < latLong.length; i++) {
@@ -43,7 +43,7 @@ function initMap() {
             '<p id="js-infowindow__long">' + longValue[i].innerHTML + '</p>' +
             '</div>';
 
-        InfoWindow(marker, content)
+        InfoWindow(marker, content);
     }
 
     //Add Info Window, source https://developers.google.com/maps/documentation/javascript/events#MarkerEvents

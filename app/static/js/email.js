@@ -15,4 +15,4 @@ forms.addEventListener('submit', function(evt){
             console.log('FAILED...', error);
             document.getElementById("js-negative-feedback").style.display = "block";
         });
-})
+});

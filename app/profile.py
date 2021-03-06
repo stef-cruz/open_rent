@@ -1,7 +1,7 @@
 from bson.objectid import ObjectId
 from flask import (
     flash, render_template,
-    redirect, session, url_for, request)
+    redirect, session, url_for, request, abort)
 
 from app import app
 from app.database import DB_USERS, DB_TENANCIES
@@ -23,7 +23,8 @@ def profile():
         user_tenancies = DB_TENANCIES.find({'created_by': username})
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
 
-        return render_template("profile.html", current_user=current_user, user_tenancies=user_tenancies,
+        return render_template("profile.html", current_user=current_user,
+                               user_tenancies=user_tenancies,
                                user_details=user_details)
 
     else:
@@ -54,7 +55,8 @@ def edit_profile(user_id):
 
         # Search for user id in DB
         user_details = DB_USERS.find_one({'_id': ObjectId(user_id)})
-        return render_template("edit-profile.html", user_details=user_details, current_user=current_user)
+        return render_template("edit-profile.html", user_details=user_details,
+                               current_user=current_user)
 
     else:
         return redirect(url_for("login"))

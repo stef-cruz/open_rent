@@ -7,16 +7,11 @@ let endDates = document.querySelectorAll('.js-end-date');
 for (let i = 0; i < tenancies.length; i++) {
 
     let startDate = new Date(startDates[i].innerHTML);
-    console.log(startDate)
     let endDate = new Date(endDates[i].innerHTML);
-    console.log(endDate)
 
     let years = endDate.getFullYear() - startDate.getFullYear();
-    console.log(years)
     let months = endDate.getMonth() - startDate.getMonth();
-    console.log(months)
     let days = endDate.getDate() - startDate.getDate();
-    console.log(days)
 
     // Work out the difference in months.
     months += years * 12;
@@ -43,13 +38,13 @@ for (let i = 0; i < tenancies.length; i++) {
         if  (output.length) {
             output = output + ", ";
         }
-        output = output + months + (months > 1 ? " months" : " month")
+        output = output + months + (months > 1 ? " months" : " month");
     }
     if (days) {
         if  (output.length) {
             output = output + ", ";
         }
-        output = output + days + (days > 1 ? " days" : " day")
+        output = output + days + (days > 1 ? " days" : " day");
     }
     durationOfTenancy[i].innerHTML = output;
 }

@@ -1,4 +1,4 @@
-from flask import (render_template,session)
+from flask import (render_template, session)
 
 from app import app
 from app.database import DB_USERS

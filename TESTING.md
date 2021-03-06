@@ -4,6 +4,7 @@
 
 - [W3C HTML Validator](#w3c-html-validator)
 - [W3C CSS Validator](#w3c-css-validator)
+- [JSHint Validator](#w3c-css-validator)
 - [Google Lighthouse](#Google-lighthouse)
 - [User Stories Testing](#user-stories-testing)
 - [Manual Testing](#manual-testing)
@@ -20,6 +21,10 @@ All HTML pages passed the W3C HTML validation with no errors.
 ## W3C CSS Validator
 
 The CSS only returns an error related to the Materialize stylesheet. This app's custom CSS returns no error.
+
+## JSHint
+
+The JS code passed the JSHint validation with no major issues.
 
 ## Google Lighthouse
 
