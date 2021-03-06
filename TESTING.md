@@ -244,4 +244,4 @@ This section only highlights the browsers and devices in which compatibility are
 
 #### General bugs
 
-- When user is logged in and navigates to page http://ci-milestone3.herokuapp.com/login, error message was being displayed. This was corrected to redirect to profile.
+- When user is logged in and navigates to page http://ci-milestone3.herokuapp.com/login and http://ci-milestone3.herokuapp.com/register, error message was being displayed. This was corrected to show 404 page instead.
