@@ -13,4 +13,4 @@ googleapis-common-protos==1.52.0
 googlemaps==4.4.2
 itsdangerous==2.1.2
 pymongo==3.11.2
-Werkzeug==2.2.2
+Werkzeug==2.2.3
